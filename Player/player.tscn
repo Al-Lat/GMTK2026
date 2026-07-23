@@ -1,12 +1,49 @@
 [gd_scene format=3 uid="uid://b035fodg8tfp7"]
 
 [ext_resource type="Script" uid="uid://ckvbdol08hs82" path="res://Player/player.gd" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://c1tsyrs8dikaj" path="res://Graphics/tilesheet-v01.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://mitwrja8klgt" path="res://Graphics/Player/cyber prisoner Light attack slash-Sheet.png" id="2_btcbx"]
+[ext_resource type="Texture2D" uid="uid://c1tsyrs8dikaj" path="res://Graphics/Player/tilesheet-v01.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlnr4"]
 size = Vector2(18, 30)
 
 [sub_resource type="GDScript" id="GDScript_onrkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwnis"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k53q1"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhl08"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtle1"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3vf3"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(384, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apopc"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(448, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5htga"]
+atlas = ExtResource("2_btcbx")
+region = Rect2(512, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("2_onrkg")
@@ -156,6 +193,38 @@ region = Rect2(224, 32, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gwnis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k53q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhl08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtle1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od3ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00tjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3vf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apopc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5htga")
+}],
+"loop": 1,
+"name": &"attack_slash",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_onrkg")
 }, {
 "duration": 1.0,
@@ -298,7 +367,8 @@ shape = SubResource("RectangleShape2D_dlnr4")
 script = SubResource("GDScript_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1543947423]
+offset = Vector2(0, -50)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=316748901]
 sprite_frames = SubResource("SpriteFrames_bowxp")
-animation = &"hit"
+animation = &"idle"
