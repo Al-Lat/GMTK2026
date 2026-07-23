@@ -1,30 +1,24 @@
 extends CharacterBody2D
 
 
-@export var gravity = 340
-@export var speed = 500
-@export var jump_force = 220
+@export var gravity:float = 1000.0
+@export var speed:float = 500.0
+@export var jump_force:float = 800.0
 
-@export var acceleration = 0.2
+@export var acceleration:float = 0.2
 
-@export var facing_direction = 1  # 1 = droite, -1 = gauche
+@export var facing_direction:int = 1  # 1 = droite, -1 = gauche
 
 @export var direction_to_mouse: Vector2 = Vector2.ZERO
 
-const SPECIAL_ATTACK_HITBOX = preload("res://Scenes/static_fire_attack.tscn")
-const SPECIAL_ATTACK_OFFSET = 300.0
-
-const RANGED_ATTACK_HITBOX = preload("res://Scenes/remote_attack.tscn")
-const RANGED_ATTACK_OFFSET = 40.0
-
-#const MELEE_ATTACK_HITBOX = 
-const MELEE_ATTACK_OFFSET = 40.0
-
 @onready var animated_sprite = $AnimatedSprite2D
+
+func _ready() -> void:
+	animated_sprite.play("idle")
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		velocity.y = clamp(velocity.y + gravity * delta, -500, 500)
+		velocity.y = clamp(velocity.y + gravity * delta, -800, 1000)
 
 	var direction_movment = Input.get_axis("player_move_left", "player_move_right")
 	

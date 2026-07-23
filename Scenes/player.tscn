@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b035fodg8tfp7"]
 
-
-[ext_resource type="Script" uid="uid://cp8ns05rvivuo" path="res://Player/player.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://eyafbor2yu46" path="res://Scripts/player_script.gd" id="1_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://mitwrja8klgt" path="res://Graphics/Player/cyber prisoner Light attack slash-Sheet.png" id="2_btcbx"]
 [ext_resource type="Texture2D" uid="uid://c1tsyrs8dikaj" path="res://Graphics/Player/tilesheet-v01.png" id="2_onrkg"]
 
@@ -358,8 +357,13 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2142611481]
 scale = Vector2(5, 5)
-
-script = ExtResource("1_i3pqv")
+script = ExtResource("1_6t5aa")
+gravity = null
+speed = null
+jump_force = null
+acceleration = null
+facing_direction = null
+direction_to_mouse = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1461677739]
 position = Vector2(0, 1)
@@ -369,6 +373,5 @@ shape = SubResource("RectangleShape2D_dlnr4")
 offset = Vector2(0, -50)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=316748901]
-position = Vector2(16.000002, 0)
 sprite_frames = SubResource("SpriteFrames_bowxp")
-animation = &"attack_slash"
+animation = &"idle"
