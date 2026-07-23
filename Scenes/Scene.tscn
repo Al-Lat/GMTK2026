@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1u1csqba6taq"]
 
-[ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://player.tscn" id="1_ulcgi"]
+[ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Player/player.tscn" id="1_jp0d8"]
 
 [sub_resource type="Gradient" id="Gradient_dlnr4"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -21,9 +21,12 @@ position = Vector2(609.24994, -2)
 scale = Vector2(30.742188, 1)
 texture = SubResource("GradientTexture2D_bowxp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=749187431]
+[node name="platform(CollisionShape2D)" type="CollisionShape2D" parent="StaticBody2D" unique_id=749187431]
 position = Vector2(609, -1.75)
 shape = SubResource("RectangleShape2D_7kbr2")
 
-[node name="CharacterBody2D" parent="StaticBody2D/CollisionShape2D" unique_id=2142611481 instance=ExtResource("1_ulcgi")]
+[node name="player(CharacterBody2D)" parent="StaticBody2D/platform(CollisionShape2D)" unique_id=2142611481 instance=ExtResource("1_jp0d8")]
 position = Vector2(-37, -120.25006)
+input_pickable = true
+
+[connection signal="input_event" from="StaticBody2D/platform(CollisionShape2D)/player(CharacterBody2D)" to="StaticBody2D/platform(CollisionShape2D)/player(CharacterBody2D)" method="_on_input_event"]
