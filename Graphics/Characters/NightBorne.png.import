@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1tsyrs8dikaj"
-path="res://.godot/imported/tilesheet-v01.png-9483d7bee73994ca058c9e93478db33e.ctex"
+uid="uid://delr1vkq4rjjw"
+path="res://.godot/imported/NightBorne.png-27f4a7626307569a3d29459d20addf05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/tilesheet-v01.png"
-dest_files=["res://.godot/imported/tilesheet-v01.png-9483d7bee73994ca058c9e93478db33e.ctex"]
+source_file="res://Graphics/Characters/NightBorne.png"
+dest_files=["res://.godot/imported/NightBorne.png-27f4a7626307569a3d29459d20addf05.ctex"]
 
 [params]
 
