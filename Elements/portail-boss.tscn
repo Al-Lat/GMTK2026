@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c0h1puysgefka"]
+
+[ext_resource type="Texture2D" uid="uid://dshic5v561tmh" path="res://Graphics/Elements/portail-boss.png" id="1_32rc3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwg6a"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kba0a"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkn3p"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdhox"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80sr3"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iogru"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb466"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkpx0"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk47q"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgeh1"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_keyjb"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcod3"]
+atlas = ExtResource("1_32rc3")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bowxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwg6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kba0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkn3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdhox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80sr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iogru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qb466")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkpx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk47q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgeh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_keyjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcod3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1990816068]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=392985418]
+sprite_frames = SubResource("SpriteFrames_bowxp")
+frame_progress = 0.50143296
