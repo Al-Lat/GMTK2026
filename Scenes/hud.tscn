@@ -2,34 +2,49 @@
 
 [ext_resource type="Script" uid="uid://c66c7pq00jrun" path="res://script/hud.gd" id="1_fccik"]
 [ext_resource type="PackedScene" uid="uid://d3ixtrk5c0flv" path="res://Scenes/life_is_life.tscn" id="2_bjfho"]
+[ext_resource type="PackedScene" uid="uid://doyjb2cm5siyk" path="res://Scenes/speedrun.tscn" id="3_t1xeu"]
+[ext_resource type="PackedScene" uid="uid://dvxnrv4i3jbgj" path="res://Scenes/kill_them_all.tscn" id="4_36asn"]
+[ext_resource type="PackedScene" uid="uid://dicr8vhni6wnn" path="res://Scenes/kill_them_fast.tscn" id="5_8jye8"]
 
 [node name="HUD" type="CanvasLayer" unique_id=311553630]
 script = ExtResource("1_fccik")
 
 [node name="the_world" type="Label" parent="." unique_id=638232136]
-offset_left = 118.0
-offset_top = 265.0
-offset_right = 373.0
-offset_bottom = 490.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 54.0
+offset_bottom = 27.0
+text = "0"
 
 [node name="speed_ressources" type="Label" parent="." unique_id=715699626]
-offset_left = 421.0
-offset_top = 33.0
-offset_right = 681.0
-offset_bottom = 139.0
+offset_left = 1.0
+offset_top = 29.0
+offset_right = 89.0
+offset_bottom = 56.0
+text = "0"
 
 [node name="strength_ressources" type="Label" parent="." unique_id=972013720]
-offset_left = 405.0
-offset_top = 216.0
-offset_right = 676.0
-offset_bottom = 345.0
+offset_left = 1.0
+offset_top = 59.0
+offset_right = 84.0
+offset_bottom = 85.0
+text = "0"
 
 [node name="attack_speed_ressources" type="Label" parent="." unique_id=2125838633]
-offset_left = 725.0
-offset_top = 23.0
-offset_right = 1032.0
-offset_bottom = 132.0
+offset_top = 88.0
+offset_right = 73.0
+offset_bottom = 120.0
+text = "0"
 
 [node name="life_is_life" parent="." unique_id=2116581593 instance=ExtResource("2_bjfho")]
 
-[connection signal="update" from="life_is_life" to="." method="update_time"]
+[node name="speedrun" parent="." unique_id=1563418718 instance=ExtResource("3_t1xeu")]
+
+[node name="kill_them_all" parent="." unique_id=433505889 instance=ExtResource("4_36asn")]
+
+[node name="kill_them_fast" parent="." unique_id=287396507 instance=ExtResource("5_8jye8")]
+
+[connection signal="update_temps" from="life_is_life" to="." method="update_time"]
+[connection signal="update_speed" from="speedrun" to="." method="update_speed"]
+[connection signal="update_strength" from="kill_them_all" to="." method="update_strength"]
+[connection signal="update_strength" from="kill_them_fast" to="." method="update_attack_speed"]

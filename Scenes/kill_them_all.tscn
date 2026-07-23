@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dvxnrv4i3jbgj"]
+
+[ext_resource type="Script" uid="uid://bkt8c0bys0yn6" path="res://script/kill_them_all.gd" id="1_xhgya"]
+
+[node name="kill_them_all" type="Node" unique_id=433505889]
+script = ExtResource("1_xhgya")

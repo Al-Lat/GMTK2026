@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dicr8vhni6wnn"]
+
+[ext_resource type="Script" uid="uid://8rgsue3enuq3" path="res://script/kill_them_fast.gd" id="1_255mv"]
+
+[node name="kill_them_fast" type="Node" unique_id=287396507]
+script = ExtResource("1_255mv")

@@ -1,5 +1,5 @@
 extends Node
-signal update
+signal update_temps
 
 var temps;
 # Called when the node enters the scene tree for the first time.
@@ -9,11 +9,11 @@ func _ready() -> void:
 
 func add_time(time:int) -> void:
 	temps += time;
-	update.emit()
+	update_temps.emit()
 
 func remove_time(time:int) -> void:
 	temps -= time;
-	update.emit()
+	update_temps.emit()
 
 func end_level() -> void:
 	$life_is_moins.stop();
