@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://gr433xggaun0"]
+
+[ext_resource type="Texture2D" uid="uid://rdds0nmx6uiw" path="res://drones/Idle.png" id="1_5yowu"]
+[ext_resource type="Script" uid="uid://dt167n7my8dxh" path="res://drones/drone_01.gd" id="1_v25yf"]
+[ext_resource type="Script" uid="uid://3nifqenhlplr" path="res://drones/animated_sprite_2d.gd" id="2_aoiaq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoiaq"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v25yf"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jie0f"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of767"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bowxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoiaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v25yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jie0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_of767")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1803462422]
+script = ExtResource("1_v25yf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1242167695]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_bowxp")
+animation = &"idle"
+frame_progress = 0.47648153
+script = ExtResource("2_aoiaq")

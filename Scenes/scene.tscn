@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b15ihchclmm42" path="res://Graphics/Elements/Free P all.png" id="6_ubbiv"]
 [ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Graphics/Elements/portal.tscn" id="8_f6sb3"]
 [ext_resource type="Script" uid="uid://lcgcs8vefyqu" path="res://Graphics/Elements/portal.gd" id="9_mn0nn"]
+[ext_resource type="PackedScene" uid="uid://gr433xggaun0" path="res://drones/drone_01.tscn" id="10_mn0nn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("6_ubbiv")
@@ -1631,7 +1632,7 @@ text = "Next Level"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Node2D" parent="." unique_id=2132436189 instance=ExtResource("8_f6sb3")]
+[node name="portal" parent="." unique_id=2132436189 instance=ExtResource("8_f6sb3")]
 position = Vector2(3428, 36)
 scale = Vector2(4, 4)
 script = ExtResource("9_mn0nn")
@@ -1639,3 +1640,6 @@ script = ExtResource("9_mn0nn")
 [node name="CharacterBody2D" parent="." unique_id=2142611481 instance=ExtResource("1_ulcgi")]
 position = Vector2(2493.0002, 27.999985)
 jump_force = 250
+
+[node name="Node2D2" parent="." unique_id=1803462422 instance=ExtResource("10_mn0nn")]
+position = Vector2(2834, -82)
