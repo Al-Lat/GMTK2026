@@ -358,12 +358,6 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2142611481]
 scale = Vector2(5, 5)
 script = ExtResource("1_6t5aa")
-gravity = null
-speed = null
-jump_force = null
-acceleration = null
-facing_direction = null
-direction_to_mouse = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1461677739]
 position = Vector2(0, 1)
@@ -374,4 +368,6 @@ offset = Vector2(0, -50)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=316748901]
 sprite_frames = SubResource("SpriteFrames_bowxp")
-animation = &"idle"
+animation = &"attack_slash"
+
+[connection signal="facing_direction_changed" from="." to="." method="_on_facing_direction_changed"]
