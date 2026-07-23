@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://bu76g1t1e8uh"]
+
+[ext_resource type="Texture2D" uid="uid://dq4j58dh8ayl0" path="res://Graphics/Elements/Sprite-0005.png" id="1_myvm1"]
+[ext_resource type="Texture2D" uid="uid://6566ggc3j2ut" path="res://Graphics/Elements/Sprite-0002.png" id="2_q0mm3"]
+[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Graphics/Elements/portal.tscn" id="3_np2xp"]
+[ext_resource type="PackedScene" uid="uid://c0h1puysgefka" path="res://Elements/portail-boss.tscn" id="4_w7jjh"]
+
+[node name="Node2D" type="Node2D" unique_id=411695268]
+position = Vector2(-1, 0)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=94592051]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1579242291]
+position = Vector2(346, -115.249985)
+scale = Vector2(28.5, 58.28125)
+texture = ExtResource("1_myvm1")
+
+[node name="Path" type="Node" parent="." unique_id=190173954]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Path" unique_id=396921605]
+position = Vector2(443, 251.99997)
+rotation = -2.0943952
+scale = Vector2(6.32, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Path" unique_id=595601083]
+position = Vector2(250.00003, 257)
+rotation = -4.0893064
+scale = Vector2(5.804076, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path" unique_id=1354019168]
+position = Vector2(346, 182.99998)
+scale = Vector2(8.04, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Path" unique_id=1671294316]
+position = Vector2(349.00003, -40)
+scale = Vector2(8.04, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Path" unique_id=2052953332]
+position = Vector2(346.00003, -263)
+scale = Vector2(8.04, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Path" unique_id=2147312866]
+position = Vector2(166.00003, -149)
+scale = Vector2(8.04, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Path" unique_id=723779553]
+position = Vector2(466, -300.00003)
+rotation = -0.64751714
+scale = Vector2(8.04, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Path" unique_id=1975399326]
+position = Vector2(211, -297)
+rotation = 0.54803336
+scale = Vector2(8.04, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Path" unique_id=219182917]
+position = Vector2(165.00003, 74)
+scale = Vector2(8.04, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Path" unique_id=1723469442]
+position = Vector2(519.00006, 122)
+scale = Vector2(6.389, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Path" unique_id=1689803196]
+position = Vector2(518.00006, -92)
+scale = Vector2(8.163, 5)
+texture = ExtResource("2_q0mm3")
+
+[node name="Label" type="Label" parent="Path" unique_id=101430021]
+offset_left = 316.0
+offset_top = -577.0
+offset_right = 361.0
+offset_bottom = -553.0
+text = "BOSS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Elements" type="Node" parent="." unique_id=920206340]
+
+[node name="Portals" type="Node" parent="Elements" unique_id=1757262849]
+
+[node name="Node2D" parent="Elements/Portals" unique_id=2132436189 instance=ExtResource("3_np2xp")]
+position = Vector2(347, 74)
+
+[node name="Node2D3" parent="Elements/Portals" unique_id=554766844 instance=ExtResource("3_np2xp")]
+position = Vector2(518, 19)
+
+[node name="Node2D2" parent="Elements/Portals" unique_id=1513484065 instance=ExtResource("3_np2xp")]
+position = Vector2(346, 304)
+
+[node name="Node2D4" parent="Elements/Portals" unique_id=1164817500 instance=ExtResource("3_np2xp")]
+position = Vector2(166, 191)
+
+[node name="Node2D5" parent="Elements/Portals" unique_id=1360559847 instance=ExtResource("3_np2xp")]
+position = Vector2(162, -30)
+
+[node name="Node2D6" parent="Elements/Portals" unique_id=1187280225 instance=ExtResource("3_np2xp")]
+position = Vector2(350, -146)
+
+[node name="Node2D7" parent="Elements/Portals" unique_id=132626636 instance=ExtResource("3_np2xp")]
+position = Vector2(514, -197)
+
+[node name="Node2D8" parent="Elements/Portals" unique_id=1990816068 instance=ExtResource("4_w7jjh")]
+position = Vector2(340, -445.00003)
+scale = Vector2(3, 3)
