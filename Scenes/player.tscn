@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://b035fodg8tfp7"]
 
-[ext_resource type="Script" uid="uid://eyafbor2yu46" path="res://Player/player_script.gd" id="1_btcbx"]
+
+[ext_resource type="Script" uid="uid://cp8ns05rvivuo" path="res://Player/player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://mitwrja8klgt" path="res://Graphics/Player/cyber prisoner Light attack slash-Sheet.png" id="2_btcbx"]
 [ext_resource type="Texture2D" uid="uid://c1tsyrs8dikaj" path="res://Graphics/Player/tilesheet-v01.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlnr4"]
 size = Vector2(18, 30)
-
-[sub_resource type="GDScript" id="GDScript_onrkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwnis"]
 atlas = ExtResource("2_btcbx")
@@ -359,12 +358,12 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2142611481]
 scale = Vector2(5, 5)
-script = ExtResource("1_btcbx")
+
+script = ExtResource("1_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1461677739]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_dlnr4")
-script = SubResource("GDScript_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1543947423]
 offset = Vector2(0, -50)
