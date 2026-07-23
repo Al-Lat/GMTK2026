@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fu85tobtxrj7"]
 
-[ext_resource type="Script" uid="uid://tyqir35acmnl" path="res://Player/chrono_guard.gd" id="1_36i7w"]
+[ext_resource type="Script" uid="uid://tyqir35acmnl" path="res://Scripts/chrono_guard.gd" id="1_36i7w"]
 [ext_resource type="Texture2D" uid="uid://delr1vkq4rjjw" path="res://Graphics/Characters/NightBorne.png" id="1_ad8dv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_36i7w"]
@@ -57,18 +57,11 @@ animations = [{
 radius = 15.6
 height = 81.79997
 
-[node name="Chrono_Guard" type="CharacterBody2D" unique_id=954976129 node_paths=PackedStringArray("patrol_points")]
+[node name="Chrono_Guard" type="CharacterBody2D" unique_id=954976129]
 scale = Vector2(10, 10)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_36i7w")
-patrol_points = [NodePath("Point_1"), NodePath("Point_2")]
-
-[node name="Point_1" type="Marker2D" parent="." unique_id=1439317479]
-position = Vector2(15, 0.2)
-scale = Vector2(0.99999976, 0.99999976)
-
-[node name="Point_2" type="Marker2D" parent="." unique_id=326279791]
-position = Vector2(80, 0)
-scale = Vector2(0.99999976, 0.99999976)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=124505197]
 texture_filter = 1
@@ -85,8 +78,9 @@ wait_time = 2.0
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=752777228]
+position = Vector2(0.20000002, 0.100000225)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=758718213]
-position = Vector2(46.799988, 8.500019)
+position = Vector2(46.6, 8.699999)
 rotation = -4.712389
 shape = SubResource("CapsuleShape2D_idooy")

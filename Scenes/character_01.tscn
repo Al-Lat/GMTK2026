@@ -420,6 +420,8 @@ animations = [{
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=89239342]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1815527213]
+position = Vector2(2.9999962, -5)
+scale = Vector2(7.6281247, 7.5093756)
 sprite_frames = SubResource("SpriteFrames_bowxp")
-animation = &"run"
-frame_progress = 0.34166864
+animation = &"idle"
+frame_progress = 0.52773386
