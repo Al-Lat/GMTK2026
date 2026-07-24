@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://ctvdw2ql2dd1v" path="res://Graphics/Backgrounds/city/Buildings 3.png" id="2_lrus4"]
 [ext_resource type="Texture2D" uid="uid://cu3fcps71sbhr" path="res://Graphics/Backgrounds/city/Buildings 2.png" id="3_yp48q"]
 [ext_resource type="Texture2D" uid="uid://de8gp70m7pt8e" path="res://Graphics/Backgrounds/city/Buildings 1.png" id="4_3bdrj"]
-[ext_resource type="Texture2D" uid="uid://tlie27fuxtjq" path="res://Graphics/plateforms/Sprite-0001.png" id="5_6yy46"]
+[ext_resource type="Texture2D" uid="uid://cjij41wluh7jr" path="res://Graphics/plateforms/Sprite-0001.png" id="5_6yy46"]
 [ext_resource type="Texture2D" uid="uid://b15ihchclmm42" path="res://Graphics/Elements/Free P all.png" id="6_ubbiv"]
 [ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/portal.tscn" id="8_f6sb3"]
 [ext_resource type="Script" uid="uid://lcgcs8vefyqu" path="res://Scripts/portal.gd" id="9_mn0nn"]
-[ext_resource type="PackedScene" uid="uid://gr433xggaun0" path="res://Scenes/drone_01.tscn" id="10_mn0nn"]
+[ext_resource type="PackedScene" uid="uid://gr433xggaun0" path="res://Scenes/drone.tscn" id="10_mn0nn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("6_ubbiv")

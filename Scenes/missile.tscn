@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://mm58lod1ailp"]
+
+[ext_resource type="Texture2D" uid="uid://dywrapmk3q11l" path="res://Graphics/Characters/Drone/missile.png" id="1_1g1yv"]
+[ext_resource type="Script" uid="uid://bdlkjbf8og6m8" path="res://Scripts/missile.gd" id="1_u28tq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u28tq"]
+radius = 3.0
+height = 14.0
+
+[node name="misile" type="RigidBody2D" unique_id=402320420]
+script = ExtResource("1_u28tq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1696929401]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_u28tq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1530424274]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("1_1g1yv")
+
+[node name="disparition" type="Timer" parent="." unique_id=2078942143]
+wait_time = 5.0
+
+[connection signal="timeout" from="disparition" to="." method="_on_disparition_timeout"]
