@@ -30,6 +30,8 @@ func update_animations(direction):
 			animated_sprite.play("dead")
 		elif Input.is_key_pressed(KEY_J):
 			animated_sprite.play("hit")
+		elif Input.is_key_pressed(KEY_K):
+			animated_sprite.play("attack_slash")
 		else:
 			if direction == 0:
 				animated_sprite.play("idle")
