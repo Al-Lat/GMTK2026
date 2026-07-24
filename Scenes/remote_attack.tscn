@@ -60,7 +60,7 @@
 [ext_resource type="Texture2D" uid="uid://bvrb5udqrykua" path="res://Graphics/dual_orb_shot_blue/1_57.png" id="58_0jk2x"]
 [ext_resource type="Texture2D" uid="uid://cm65cgrfiuodg" path="res://Graphics/dual_orb_shot_blue/1_58.png" id="59_vxt3b"]
 [ext_resource type="Texture2D" uid="uid://c3r6deat73a72" path="res://Graphics/dual_orb_shot_blue/1_59.png" id="60_csjjo"]
-[ext_resource type="Script" uid="uid://ccjx51yuo56dl" path="res://Scenes/ranged_blue_shot.gd" id="61_hsgsx"]
+[ext_resource type="Script" uid="uid://ccjx51yuo56dl" path="res://Scripts/ranged_blue_shot.gd" id="61_hsgsx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5qthr"]
 animations = [{
