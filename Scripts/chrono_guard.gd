@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-@onready var run_anim: AnimatedSprite2D = $RunAnim
 @export var patrol_points: Array[Marker2D] = []
 @onready var detection_area: Area2D = $detection_area
 
