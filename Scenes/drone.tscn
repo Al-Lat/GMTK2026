@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://gr433xggaun0"]
+
+[ext_resource type="Texture2D" uid="uid://rdds0nmx6uiw" path="res://Graphics/Characters/Drone/Idle.png" id="1_5yowu"]
+[ext_resource type="Script" uid="uid://dt167n7my8dxh" path="res://Scripts/drone.gd" id="1_v25yf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoiaq"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v25yf"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jie0f"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of767"]
+atlas = ExtResource("1_5yowu")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bowxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoiaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v25yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jie0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_of767")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqhsf"]
+radius = 24.0
+height = 136.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x74uf"]
+radius = 473.00107
+
+[node name="drone" type="CharacterBody2D" unique_id=2065636564]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_v25yf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1242167695]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_bowxp")
+animation = &"idle"
+frame_progress = 0.47648153
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=262924056]
+position = Vector2(0, -6)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_dqhsf")
+
+[node name="detection" type="Area2D" parent="." unique_id=1404593767]
+
+[node name="detction_zone" type="CollisionShape2D" parent="detection" unique_id=1907194796]
+shape = SubResource("CircleShape2D_x74uf")
+
+[node name="couldown" type="Timer" parent="." unique_id=1635696348]
+one_shot = true
+
+[connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]
+[connection signal="timeout" from="couldown" to="." method="_on_timer_timeout"]

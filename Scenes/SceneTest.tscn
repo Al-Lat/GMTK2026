@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cc0l2xdyeibij"]
+
+[ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="1_740v5"]
+
+[sub_resource type="Gradient" id="Gradient_dlnr4"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bowxp"]
+gradient = SubResource("Gradient_dlnr4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kbr2"]
+size = Vector2(1968, 63.5)
+
+[node name="level" type="Node2D" unique_id=84989578]
+position = Vector2(562, 560)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=289482050]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1449497400]
+position = Vector2(609.24994, -2)
+scale = Vector2(30.742188, 1)
+texture = SubResource("GradientTexture2D_bowxp")
+
+[node name="platform(CollisionShape2D)" type="CollisionShape2D" parent="StaticBody2D" unique_id=749187431]
+position = Vector2(609, -1.75)
+shape = SubResource("RectangleShape2D_7kbr2")
+
+[node name="CharacterBody2D" parent="." unique_id=2142611481 instance=ExtResource("1_740v5")]
+position = Vector2(397.99997, -137.99998)
