@@ -6,6 +6,7 @@ const MISSILE = preload("res://Scenes/missile.tscn")
 var in_range = false
 var player = null
 var couldown_end = true
+var life = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
