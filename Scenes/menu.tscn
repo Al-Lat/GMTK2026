@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bw3pxfcyk4fpc"]
+
+[ext_resource type="Texture2D" uid="uid://b1acai5x07f6y" path="res://Graphics/UI/menu.png" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://bvxcbbi8f62gd" path="res://Graphics/UI/Sprite-0005.png" id="1_xhh6f"]
+[ext_resource type="Script" uid="uid://bkggmksmo71if" path="res://Scripts/menu.gd" id="2_cayip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bowxp"]
+size = Vector2(540, 108)
+
+[node name="Menu" type="Node2D" unique_id=408599506]
+position = Vector2(576, 370)
+script = ExtResource("2_cayip")
+
+[node name="Sprite0005" type="Sprite2D" parent="." unique_id=1490402759]
+position = Vector2(-0.25, -45.499992)
+scale = Vector2(75.59375, 55.4375)
+texture = ExtResource("1_xhh6f")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1934526984]
+scroll_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1864149320]
+position = Vector2(-22.999998, -44.999996)
+scale = Vector2(2.620743, 2.076324)
+texture = ExtResource("1_1rerr")
+
+[node name="play" type="CollisionShape2D" parent="." unique_id=1516068299]
+position = Vector2(-21.749939, -69.99994)
+shape = SubResource("RectangleShape2D_bowxp")
+
+[node name="quit" type="CollisionShape2D" parent="." unique_id=1668157319]
+position = Vector2(-24, 135)
+shape = SubResource("RectangleShape2D_bowxp")

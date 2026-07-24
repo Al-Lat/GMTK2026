@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://co8vase448a65"]
+
+[ext_resource type="Script" uid="uid://0dsjuwtgs2lx" path="res://Scripts/scene_debut.gd" id="1_u5muq"]
+[ext_resource type="AudioStream" uid="uid://gkgbxseh7o72" path="res://Song/intro.mp3" id="2_80k1h"]
+
+[node name="CinematiqueIntro" type="Control" unique_id=1206888635]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u5muq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1629923149]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1649280006]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -160.0
+offset_right = 388.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=535987373]
+stream = ExtResource("2_80k1h")

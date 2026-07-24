@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="7_e8uax"]
 [ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/portal.tscn" id="8_6031c"]
 [ext_resource type="PackedScene" uid="uid://gr433xggaun0" path="res://Scenes/drone.tscn" id="10_sul83"]
+[ext_resource type="PackedScene" uid="uid://cp1y2sbwwn1v7" path="res://Scenes/hud.tscn" id="11_m8emv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("5_m8emv")
@@ -1150,3 +1151,5 @@ scale = Vector2(4, 4)
 
 [node name="drone" parent="ennemies" unique_id=1803462422 instance=ExtResource("10_sul83")]
 position = Vector2(-1267, -128)
+
+[node name="HUD" parent="." unique_id=311553630 instance=ExtResource("11_m8emv")]

@@ -1,0 +1,1 @@
+enum AttackType {RANGED,MELEE,SPECIAL}
