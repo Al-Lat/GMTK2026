@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bha5ow0wratmn"]
 
 [ext_resource type="Texture2D" uid="uid://cmydtyq6lf7e5" path="res://Graphics/Elements/sprite-sheet.png" id="1_csiht"]
+[ext_resource type="Script" uid="uid://lcgcs8vefyqu" path="res://Scripts/portal.gd" id="1_oi2tk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bowxp"]
 
@@ -62,6 +63,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=2132436189]
+script = ExtResource("1_oi2tk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1198686305]
 shape = SubResource("CapsuleShape2D_bowxp")
