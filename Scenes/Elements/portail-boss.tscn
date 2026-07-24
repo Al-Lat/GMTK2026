@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0h1puysgefka"]
 
 [ext_resource type="Texture2D" uid="uid://dshic5v561tmh" path="res://Graphics/Elements/portail-boss.png" id="1_32rc3"]
+[ext_resource type="Script" uid="uid://lcgcs8vefyqu" path="res://Scripts/portal.gd" id="1_mhbik"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwg6a"]
 atlas = ExtResource("1_32rc3")
@@ -95,7 +96,8 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=1990816068]
+script = ExtResource("1_mhbik")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=392985418]
 sprite_frames = SubResource("SpriteFrames_bowxp")
-frame_progress = 0.50143296
+frame_progress = 0.7842274

@@ -10,12 +10,12 @@ var textes_histoire : Array[String] = [
 	"1 week if you don't serve them...",
 	"Chronos corp became the king of time",
 	"It then became even more precious than before",
-	"Is it inevitable ?",
-	"Is there any way to avoid it ?",
 	"It is now a currency",
 	"Fear of death has grown stronger",
 	"Is death really invevitable ?",
+	"No... There is a way",
 	"Can't I really do something ?",
+	"I won't let time get the better out of me",
 	"I will kill time itself to live forever",
 	"It's the end of time",
 ]
@@ -52,10 +52,10 @@ func lancer_cinematique() -> void:
 	fin_de_cinematique()
 
 func fin_de_cinematique() -> void:
-	# get_tree().change_scene_to_file("res://Scenes/MonJeu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/map.tscn")
 	print("Fin de la cinématique !")
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Si le joueur appuie sur Espace ou Entrée
-	if event.is_action_pressed("ui_accept"):
+	if Input.is_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_ENTER):
 		fin_de_cinematique()
