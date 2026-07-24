@@ -61,25 +61,23 @@ func update_animations(direction_movment):
 				animated_sprite.play("idle")
 			else:
 				animated_sprite.play("run")
-		
-		#decalage du sprite pour animation melee
-		if animated_sprite.animation == "attack_slash" && !is_animation_melee_sprite_offset:
-			animated_sprite.position.x = 16 * facing_direction
-			is_animation_melee_sprite_offset = true
-		#sinon reset du decalage du sprite
-		elif animated_sprite.animation != "attack_slash" && is_animation_melee_sprite_offset:
-			#print("xpos : ",animated_sprite.position.x)
-			animated_sprite.position.x = 0
-			is_animation_melee_sprite_offset = false
-			
-		if (facing_direction != sign(direction_to_mouse.x)):
-			facing_direction = sign(direction_to_mouse.x)
-			animated_sprite.flip_h = (facing_direction == -1)
-			
-			#inverser le décalage du sprite pour animation melee
-			if animated_sprite.animation == "attack_slash" && is_animation_melee_sprite_offset:
-				animated_sprite.position.x *= -1
-			
-		
 	else:
 		animated_sprite.play("jump")
+		
+	#decalage du sprite pour animation melee
+	if animated_sprite.animation == "attack_slash" && !is_animation_melee_sprite_offset:
+		animated_sprite.position.x = 16 * facing_direction
+		is_animation_melee_sprite_offset = true
+	#sinon reset du decalage du sprite
+	elif animated_sprite.animation != "attack_slash" && is_animation_melee_sprite_offset:
+		#print("xpos : ",animated_sprite.position.x)
+		animated_sprite.position.x = 0
+		is_animation_melee_sprite_offset = false
+		
+	if (facing_direction != sign(direction_to_mouse.x)):
+		facing_direction = sign(direction_to_mouse.x)
+		animated_sprite.flip_h = (facing_direction == -1)
+		
+		#inverser le décalage du sprite pour animation melee
+		if animated_sprite.animation == "attack_slash" && is_animation_melee_sprite_offset:
+			animated_sprite.position.x *= -1
