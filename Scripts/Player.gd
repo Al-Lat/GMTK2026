@@ -78,10 +78,3 @@ func update_animations(direction_movment):
 		
 	else:
 		animated_sprite.play("jump")
-
-
-func _unhandled_input(event):
-	if Input.is_action_pressed("player_attack_melee"):
-	#AttackClass.player_melee_attack(self,self.direction_to_mouse)
-		if animated_sprite.animation != "attack_slash":
-			animated_sprite.play("attack_slash")

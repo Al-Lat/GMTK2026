@@ -21,7 +21,9 @@ func _init() -> void:
 	self.special_attack = AttackFactory.get_player_attack(AttackFactory.PlayerAttack.STATIC_FIRE)
 
 func process_attacks(delta: float) -> void:
-	if ranged_attack.isInputPatternOk():
+	if melee_attack.isInputPatternOk() && not is_melee_attacking:
+		player_melee_attack()
+	elif ranged_attack.isInputPatternOk():
 		player_ranged_attack()
 	elif special_attack.isInputPatternOk():
 		player_special_attack()
@@ -40,7 +42,9 @@ func player_ranged_attack():
 
 func player_melee_attack():
 	print("melee attack called")
+	is_melee_attacking = true
 	self.melee_attack.summon(self.player)
+	is_melee_attacking = false
 	
 	
 	

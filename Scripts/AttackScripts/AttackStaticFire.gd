@@ -1,7 +1,7 @@
 class_name AttackStaticFire extends Attack
 
 func _init():
-	self.attack_type = AttackType.RANGED
+	self.attack_type = AttackType.SPECIAL
 	self.attack_scene = preload("res://Scenes/AttackScenes/static_fire.tscn")
 
 func summon(entity) -> void:

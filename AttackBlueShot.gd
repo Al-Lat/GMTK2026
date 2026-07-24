@@ -10,3 +10,4 @@ func summon(entity) -> void:
 	projectile.global_position = entity.global_position + entity.direction_to_mouse * entity.RANGED_ATTACK_OFFSET
 	projectile.rotation = entity.direction_to_mouse.angle()
 	projectile.direction = entity.direction_to_mouse.normalized()
+	

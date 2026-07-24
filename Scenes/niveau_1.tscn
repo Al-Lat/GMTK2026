@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://de8gp70m7pt8e" path="res://Graphics/Backgrounds/city/Buildings 1.png" id="4_sul83"]
 [ext_resource type="Texture2D" uid="uid://b15ihchclmm42" path="res://Graphics/Elements/Free P all.png" id="5_m8emv"]
 [ext_resource type="Texture2D" uid="uid://tlie27fuxtjq" path="res://Graphics/plateforms/Sprite-0001.png" id="6_3xrf5"]
-[ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Player/player.tscn" id="7_e8uax"]
-[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Graphics/Elements/portal.tscn" id="8_6031c"]
+[ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="7_e8uax"]
+[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/portal.tscn" id="8_6031c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("5_m8emv")
@@ -924,4 +924,3 @@ scale = Vector2(4, 4)
 
 [node name="CharacterBody2D" parent="." unique_id=2142611481 instance=ExtResource("7_e8uax")]
 position = Vector2(2493.0002, 27.999985)
-jump_force = 1000

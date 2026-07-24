@@ -13,3 +13,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+#TODO traitement collision
+
+func _on_attack_animation_animation_finished() -> void:
+	queue_free()

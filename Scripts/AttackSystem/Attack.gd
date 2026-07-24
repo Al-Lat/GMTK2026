@@ -13,7 +13,7 @@ var __default_input_pattern = func(attack_type:AttackType):
 		button = "player_attack_ranged"
 	elif attack_type == AttackType.SPECIAL:
 		button = "player_attack_special"
-	else : 
+	elif attack_type == AttackType.MELEE : 
 		button = "player_attack_melee"
 	#pattern par defaut
 	return Input.is_action_just_pressed(button)
@@ -34,4 +34,4 @@ func get_default_side_summon_function() -> Callable:
 		print("default summon")
 		var attackElement = self.attack_scene.instantiate()
 		entity.get_parent().add_child(attackElement)
-		attackElement.global_position = entity.global_position + entity.facing_direction * entity.MELEE_ATTACK_OFFSET
+		attackElement.global_position = entity.global_position + Vector2(entity.facing_direction * entity.MELEE_ATTACK_OFFSET,0)
