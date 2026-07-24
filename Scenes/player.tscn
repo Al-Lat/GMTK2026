@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b035fodg8tfp7"]
 
-[ext_resource type="Script" uid="uid://eyafbor2yu46" path="res://Scripts/player_script.gd" id="1_6t5aa"]
+[ext_resource type="Script" uid="uid://eyafbor2yu46" path="res://Scripts/Player.gd" id="1_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://mitwrja8klgt" path="res://Graphics/Player/cyber prisoner Light attack slash-Sheet.png" id="2_btcbx"]
 [ext_resource type="Texture2D" uid="uid://c1tsyrs8dikaj" path="res://Graphics/Player/tilesheet-v01.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://bpqcrav1tvy8p" path="res://Scripts/AttackSystem/PlayerAttackManager.gd" id="4_vgqql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlnr4"]
 size = Vector2(18, 30)
@@ -367,7 +368,9 @@ shape = SubResource("RectangleShape2D_dlnr4")
 offset = Vector2(0, -50)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=316748901]
+scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_bowxp")
-animation = &"attack_slash"
+animation = &"dead"
 
-[connection signal="facing_direction_changed" from="." to="." method="_on_facing_direction_changed"]
+[node name="attack_manager" type="Node2D" parent="." unique_id=711593596]
+script = ExtResource("4_vgqql")

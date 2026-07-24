@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://c8dubmc3n42ae"]
+
+[ext_resource type="Script" uid="uid://cmgsieuugubc4" path="res://Scripts/AttackScripts/blue_slash.gd" id="1_cymqo"]
+[ext_resource type="Texture2D" uid="uid://mitwrja8klgt" path="res://Graphics/Player/cyber prisoner Light attack slash-Sheet.png" id="2_po8gb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwnis"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k53q1"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhl08"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtle1"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3vf3"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(384, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apopc"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(448, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5htga"]
+atlas = ExtResource("2_po8gb")
+region = Rect2(512, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke31i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwnis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k53q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhl08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtle1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od3ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00tjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3vf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apopc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5htga")
+}],
+"loop": 1,
+"name": &"attack_slash",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kj16k"]
+radius = 12.599999
+height = 50.8
+
+[node name="player_melee_attack" type="Area2D" unique_id=411615381]
+script = ExtResource("1_cymqo")
+
+[node name="attack_animation" type="AnimatedSprite2D" parent="." unique_id=1939326448]
+position = Vector2(16, 0)
+sprite_frames = SubResource("SpriteFrames_ke31i")
+animation = &"attack_slash"
+
+[node name="attack_colision2d" type="CollisionShape2D" parent="." unique_id=973317916]
+position = Vector2(23.599998, 1)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_kj16k")
