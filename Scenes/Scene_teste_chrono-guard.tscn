@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://1u1csqba6taq"]
+
+[ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="1_nk6kt"]
+[ext_resource type="PackedScene" uid="uid://fu85tobtxrj7" path="res://Scenes/Chrono-Guard.tscn" id="2_nk6kt"]
+
+[sub_resource type="Gradient" id="Gradient_dlnr4"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bowxp"]
+gradient = SubResource("Gradient_dlnr4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kbr2"]
+size = Vector2(1968, 63.5)
+
+[node name="level" type="Node2D" unique_id=84989578]
+position = Vector2(562, 560)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=289482050]
+position = Vector2(-919, 0)
+scale = Vector2(4, 1)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1449497400]
+position = Vector2(609.24994, -2)
+scale = Vector2(30.742188, 1)
+texture = SubResource("GradientTexture2D_bowxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=749187431]
+position = Vector2(609, -1.75)
+shape = SubResource("RectangleShape2D_7kbr2")
+
+[node name="Player" parent="." unique_id=2142611481 instance=ExtResource("1_nk6kt")]
+position = Vector2(1879, -129.00002)
+
+[node name="Ennemies" type="Node2D" parent="." unique_id=1803241134]
+
+[node name="Chrono_Guard" parent="Ennemies" unique_id=954976129 node_paths=PackedStringArray("patrol_points") instance=ExtResource("2_nk6kt")]
+position = Vector2(319.99997, -271.99997)
+patrol_points = [NodePath("../../Point_1"), NodePath("../../Point_2")]
+
+[node name="Point_1" type="Marker2D" parent="." unique_id=735262569]
+position = Vector2(800, -200)
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Point_2" type="Marker2D" parent="." unique_id=1994494969]
+position = Vector2(0, -200)
+scale = Vector2(0.99999976, 0.99999976)
