@@ -7,12 +7,16 @@ var in_range = false
 var player = null
 var couldown_end = true
 var life = 10
+var orientation = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animated_sprite.play("idle")
 
 func _process(delta: float) -> void:
+	if in_range && (player.global_position.x - self.global_position.x) * orientation < 0:
+		orientation *= -1
+		animated_sprite.flip_h = not animated_sprite.flip_h
 	if (in_range && couldown_end): 
 		couldown_end = false
 		$couldown.start()

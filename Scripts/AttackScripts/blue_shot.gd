@@ -19,5 +19,7 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	
 	print("Touché : ", body.name)
+	if (body.is_in_group("missiles")):
+		body.queue_free()
 		# body.take_damage(10) plus tard
 	queue_free()  # le projectile disparaît à tout impact, y compris un mur

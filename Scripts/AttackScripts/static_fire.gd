@@ -18,6 +18,8 @@ func _ready() -> void:
 
 func _on_body_entered(body):
 	print("Touché : ", body.name) #TODO implementer les effets sur les mobs
+	if (body.is_in_group("missiles")):
+		body.queue_free()
 
 func _on_timer_timeout() -> void:
 	animated_sprite.play("end")

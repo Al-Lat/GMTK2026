@@ -10,7 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var direction = (player.global_position - self.global_position).normalized()
 	self.rotation = direction.angle()
-	move_and_collide(direction * speed * delta)
 	var collision = move_and_collide(direction * speed * delta);
 	if collision :
 		collision_detected();

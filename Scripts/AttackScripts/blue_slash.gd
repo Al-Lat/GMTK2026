@@ -34,6 +34,8 @@ func _ready() -> void:
 #TODO traitement collision
 func _on_body_entered(body: Node) -> void:
 	print("blue_slash : Touché : ", body.name)
+	if (body.is_in_group("missiles")):
+		body.queue_free()
 
 
 

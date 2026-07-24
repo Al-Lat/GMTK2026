@@ -7,7 +7,7 @@
 radius = 3.0
 height = 14.0
 
-[node name="misile" type="RigidBody2D" unique_id=402320420]
+[node name="missile" type="RigidBody2D" unique_id=402320420 groups=["missiles"]]
 script = ExtResource("1_u28tq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1696929401]
@@ -23,4 +23,6 @@ texture = ExtResource("1_1g1yv")
 [node name="disparition" type="Timer" parent="." unique_id=2078942143]
 wait_time = 5.0
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="timeout" from="disparition" to="." method="_on_disparition_timeout"]
