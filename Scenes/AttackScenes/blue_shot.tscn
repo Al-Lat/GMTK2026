@@ -254,7 +254,7 @@ animations = [{
 size = Vector2(58, 47)
 
 [node name="blue_shot" type="Area2D" unique_id=1465479808]
-scale = Vector2(0.15, 0.15)
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_m0c2v")
 
 [node name="attack_animation" type="AnimatedSprite2D" parent="." unique_id=519434378]
@@ -262,7 +262,8 @@ scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_5qthr")
 frame_progress = 0.79564095
 speed_scale = 12.0
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135571586]
-position = Vector2(-2, -1.5)
+position = Vector2(6.666666, 0)
 shape = SubResource("RectangleShape2D_lgns8")

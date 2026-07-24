@@ -16,6 +16,7 @@ const RANGED_ATTACK_OFFSET = 110
 const MELEE_ATTACK_OFFSET = 40.0
 
 @onready var animated_sprite = $playerAnimation
+@onready var ranged_cooldown = $ranged_cooldown
 @onready var attack_manager:PlayerAttackManager = $attack_manager
 var is_animation_melee_sprite_offset:bool = false
 

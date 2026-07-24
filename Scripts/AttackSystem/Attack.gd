@@ -5,6 +5,7 @@ const AttackType = enumClass.AttackType
 
 var attack_type : AttackType
 var attack_scene : RefCounted
+var timer : Timer #joueur ou mob
 
 var __default_input_pattern = func(attack_type:AttackType):
 	#adaptation aux types d'attaque
@@ -18,9 +19,8 @@ var __default_input_pattern = func(attack_type:AttackType):
 	#pattern par defaut
 	return Input.is_action_just_pressed(button)
 
-func _init(type:AttackType,scene:RefCounted) -> void:
-	self.attack_type = type
-	self.attack_scene = scene
+
+
 
 ##Indique si le joueur appuie sur la/les touches nécéssaire à l'invocation de cette attaque
 func isInputPatternOk()->bool:

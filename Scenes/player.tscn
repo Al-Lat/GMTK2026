@@ -374,3 +374,7 @@ animation = &"blue_slash"
 
 [node name="attack_manager" type="Node2D" parent="." unique_id=711593596]
 script = ExtResource("4_vgqql")
+
+[node name="ranged_cooldown" type="Timer" parent="." unique_id=1663103256]
+process_callback = 0
+one_shot = true

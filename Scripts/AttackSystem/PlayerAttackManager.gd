@@ -2,8 +2,7 @@ class_name PlayerAttackManager extends Node2D
 
 
 
-
-@onready var player:Player = $".." #noeud parent player
+@onready var player:Player = $".." #parent type player
 
 var is_melee_attacking
 var is_ranged_attacking
@@ -12,11 +11,14 @@ var ranged_attack : Attack
 var melee_attack : Attack
 var special_attack : Attack
 
-func _init() -> void:
+func _ready() -> void:
+	var ranged_cooldown = self.player.get_node("ranged_cooldown")
+	
 	self.is_melee_attacking = false
 	self.is_ranged_attacking = false
 	
 	self.ranged_attack = AttackFactory.get_player_attack(AttackFactory.PlayerAttack.BLUE_SHOT)
+	self.ranged_attack.timer = ranged_cooldown
 	self.melee_attack = AttackFactory.get_player_attack(AttackFactory.PlayerAttack.BLUE_SLASH)
 	self.special_attack = AttackFactory.get_player_attack(AttackFactory.PlayerAttack.STATIC_FIRE)
 

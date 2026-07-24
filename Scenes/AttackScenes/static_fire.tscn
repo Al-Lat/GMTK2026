@@ -57,6 +57,127 @@ resource_local_to_scene = true
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_fevpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_omtfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_oeskq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gyjw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gwso3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6vgfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_k6k83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cs8pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_quym4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ut7ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xomrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_q0ivo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_hpe11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xrgyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_r3jnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_c1s5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_gjtm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vg0sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_3g23h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_b1443")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3jqw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_myhq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_71ye4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_o2ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_h7die")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_rhg82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_fd5p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_xr8xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_5omq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_0s5lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_xmh04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_i18fy")
+}],
+"loop": 1,
+"name": &"burning",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_ek1m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_mp6t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_iltmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_femx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_fr3pk")
+}],
+"loop": 0,
+"name": &"end",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_xdfjf")
 }, {
 "duration": 1.0,
@@ -207,20 +328,56 @@ animations = [{
 "texture": ExtResource("51_fr3pk")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xdfjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eqhwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ltxsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cgd15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cw78k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j4xk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ibglq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_utlyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cprkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1r6xt")
+}],
+"loop": 0,
+"name": &"start",
 "speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgns8"]
 
 [node name="static_fire_attack(Area2D)" type="Area2D" unique_id=1490592663]
+position = Vector2(0, -2.9999998)
 scale = Vector2(10, 10)
 script = ExtResource("1_fpiyx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1253731852]
 scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_lgns8")
-frame_progress = 0.6330218
+animation = &"start"
 speed_scale = 2.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539634465]
@@ -230,4 +387,5 @@ shape = SubResource("CircleShape2D_lgns8")
 [node name="Timer" type="Timer" parent="." unique_id=366286150]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
