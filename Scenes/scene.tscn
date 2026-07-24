@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://c8rup6vjv68uh"]
+[gd_scene format=4 uid="uid://1u1csqba6taq"]
 
 [ext_resource type="Texture2D" uid="uid://cebyvldryubsc" path="res://Graphics/Backgrounds/city/Sky.png" id="1_p6gg1"]
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="1_ulcgi"]
@@ -1642,4 +1642,4 @@ position = Vector2(2493.0002, 27.999985)
 jump_force = 250
 
 [node name="drone" parent="." unique_id=1803462422 instance=ExtResource("10_mn0nn")]
-position = Vector2(2834, -82)
+position = Vector2(2879, -72)
