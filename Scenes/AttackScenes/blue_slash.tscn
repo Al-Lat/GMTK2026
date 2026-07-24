@@ -4,120 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://mitwrja8klgt" path="res://Graphics/Player/cyber prisoner Light attack slash-Sheet.png" id="2_tg0q4"]
 [ext_resource type="Texture2D" uid="uid://c1tsyrs8dikaj" path="res://Graphics/Player/tilesheet-v01.png" id="3_tg0q4"]
 
-[sub_resource type="Animation" id="Animation_muyl2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("playerAnimation:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"blue_slash"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("playerAnimation:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("attack_colision2d:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("attack_colision2d:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(23.599998, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_njv2b"]
-resource_name = "blue_slash"
-length = 0.6
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("playerAnimation:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"blue_slash"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("playerAnimation:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("attack_colision2d:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("attack_colision2d:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(23.599998, 1), Vector2(23.599998, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_b8k0t"]
-_data = {
-&"RESET": SubResource("Animation_muyl2"),
-&"blue_slash": SubResource("Animation_njv2b")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kj16k"]
-radius = 12.599999
-height = 50.8
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwnis"]
 atlas = ExtResource("2_tg0q4")
 region = Rect2(0, 0, 64, 32)
@@ -330,7 +216,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"blue_slash",
-"speed": 15.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -466,20 +352,111 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kj16k"]
+radius = 7.0
+height = 16.0
+
+[sub_resource type="Animation" id="Animation_e5x8b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("playerAnimation:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"blue_slash"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("playerAnimation:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("attack_colision2d:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tg0q4"]
+resource_name = "new_animation"
+length = 2.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("playerAnimation:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("playerAnimation:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("attack_colision2d:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.30795345, 0.31875885, 0.6969473, 1.2156057, 1.4695323, 1.8044991, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-13, 1), Vector2(-4, 1), Vector2(12, 1), Vector2(22, 1), Vector2(21, 1), Vector2(-17, 1), Vector2(-7, 1), Vector2(22, 1), Vector2(-17, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e5x8b"]
+_data = {
+&"RESET": SubResource("Animation_e5x8b"),
+&"new_animation": SubResource("Animation_tg0q4")
+}
+
 [node name="player_melee_attack" type="Area2D" unique_id=411615381]
 script = ExtResource("1_affs7")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1370010081]
-libraries/ = SubResource("AnimationLibrary_b8k0t")
-
-[node name="attack_colision2d" type="CollisionShape2D" parent="." unique_id=973317916]
-position = Vector2(23.599998, 1)
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_kj16k")
-
 [node name="playerAnimation" type="AnimatedSprite2D" parent="." unique_id=1659364206]
+position = Vector2(-1.000001, 1.1920929e-07)
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_e5x8b")
 animation = &"blue_slash"
+
+[node name="attack_colision2d" type="CollisionShape2D" parent="." unique_id=973317916]
+position = Vector2(-11, 1)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_kj16k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1778662067]
+libraries/ = SubResource("AnimationLibrary_e5x8b")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
