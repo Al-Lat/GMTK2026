@@ -5,19 +5,19 @@ extends Control
 
 var textes_histoire : Array[String] = [
 	"tic, tac, tic, tac, tic, tac",
-	"These days, time is far more precious than anything else",
-	"Time has become the currency of this world",
-	"The fear of death has intensified, it has grown stronger",
-	"But before that, we’d… die",
-	"But what is death ?",
+	"When you die, you can live a second time",
+	"Second life is dictated by a countdown",
+	"1 week if you don't serve them...",
+	"Chronos corp became the king of time",
+	"It then became even more precious than before",
 	"Is it inevitable ?",
 	"Is there any way to avoid it ?",
-	"awaits",
-	"I can do it",
-	"These days, weapons are more powerful than ever",
-	"I won’t let time get the better of me",
-	"I would kill Time itself to live forever",
-	"Let the carnage begin",
+	"It is now a currency",
+	"Fear of death has grown stronger",
+	"Is death really invevitable ?",
+	"Can't I really do something ?",
+	"I will kill time itself to live forever",
+	"It's the end of time",
 ]
 
 var temps_apparition : float = 1.5
