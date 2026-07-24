@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var anim_running_2d : AnimatedSprite2D = $AnimatedSprite2D
+@onready var run_anim: AnimatedSprite2D = $RunAnim
 @export var patrol_points: Array[Marker2D] = []
 @onready var detection_area: Area2D = $detection_area
 
@@ -8,6 +8,9 @@ var current_point_index = 0
 var player : Node2D = null
 var speed = 250.0
 var orientation = 1
+var tourner_gauche = false
+var tourner_droit = true
+var ancienne_pos_x = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,12 +24,17 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if player:
-		speed = 350
+		speed = 550
 		chase()
 	else:	
 		speed = 250
 		roaming()
 	move_and_slide()
+	if velocity.x * orientation > 0:
+		scale.x = abs(scale.x)
+	elif velocity.x * orientation < 0:
+		scale.x = -abs(scale.x)
+		orientation *= -1
 
 func roaming() -> void:
 	if patrol_points.size() > 0 :
@@ -34,16 +42,13 @@ func roaming() -> void:
 		velocity = (target - position).normalized() * speed
 		if position.distance_to(target) < 65:
 			current_point_index += 1
-			scale.x *=-1
+			#scale.x *=-1
 			if current_point_index >= patrol_points.size():
 				current_point_index = 0
 			print(current_point_index)	
 
 func chase() -> void:
 	velocity = (player.global_position - global_position).normalized() * speed
-	if (player.global_position.x - global_position.x) * orientation < 0 : 
-		scale.x *=-1
-		orientation *= -1
 
 func on_player_detected(body: Node2D) -> void:
 	if body.name == "Player" : 

@@ -3,6 +3,54 @@
 [ext_resource type="Script" uid="uid://tyqir35acmnl" path="res://Scripts/chrono_guard.gd" id="1_36i7w"]
 [ext_resource type="Texture2D" uid="uid://delr1vkq4rjjw" path="res://Graphics/Characters/NightBorne.png" id="1_ad8dv"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ncn7"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(0, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odahn"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(80, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wlu5"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(160, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h0vs"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(240, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugsth"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(320, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woiah"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(400, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4ns0"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(480, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moup2"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(560, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0560"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(640, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdndy"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(720, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0s3s"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(800, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6bco"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(880, 160, 80, 80)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_36i7w"]
 atlas = ExtResource("1_ad8dv")
 region = Rect2(0, 80, 80, 80)
@@ -31,6 +79,47 @@ region = Rect2(400, 80, 80, 80)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_3ncn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odahn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wlu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h0vs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugsth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woiah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4ns0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moup2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0560")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdndy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0s3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6bco")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_36i7w")
 }, {
 "duration": 1.0,
@@ -53,18 +142,93 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="Animation" id="Animation_36i7w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sword_Attack/CollisionPolygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array()]
+}
+
+[sub_resource type="Animation" id="Animation_7i8ua"]
+resource_name = "attack"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RunAnim:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RunAnim:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sword_Attack/CollisionPolygon2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9, 0.9465057, 0.99948186),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sword_Attack/CollisionPolygon2D:polygon")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.8, 0.89951074, 0.9, 0.9465057, 0.99948186, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(), PackedVector2Array(), PackedVector2Array(), PackedVector2Array(13.299999, -21.699999, 24.499998, -14.4, 26.599998, 2.8999999, 17.199999, 12.499999, 2.7999997, 15.899999, 3.2999997, 30.499998, 26.3, 29.599998, 46.199997, 6.2999997, 40.899998, -15.799999, 22.899998, -27.899998), PackedVector2Array(13.299999, -21.699999, 24.499998, -14.4, 26.599998, 2.8999999, 17.199999, 12.499999, 2.7999997, 15.899999, 3.2999997, 30.499998, 26.3, 29.599998, 46.199997, 6.2999997, 40.899998, -15.799999, 22.899998, -27.899998), PackedVector2Array(23.499998, -20.499998, 30.799997, -1.9999999, 25.999998, 12.699999, 14.199999, 14.599999, -0.099999994, 15.199999, -0.29999998, 28.099998, 14.599999, 29.099998, 30.199999, 26.999998, 41.6, 7.4999995, 34.3, -17.4), PackedVector2Array(26.3, 12.4, 14.299999, 16.8, 9.999999, 18.4, 3.1999998, 16.8, -5.8999996, 12.199999, -13.999999, 22.3, 1.4999999, 27.699999, 9.7, 27.3, 22.599998, 21.499998, 28.899998, 15.299999), PackedVector2Array(26.3, 12.4, 14.299999, 16.8, 9.999999, 18.4, 3.1999998, 16.8, -5.8999996, 12.199999, -13.999999, 22.3, 1.4999999, 27.699999, 9.7, 27.3, 22.599998, 21.499998, 28.899998, 15.299999), PackedVector2Array()]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_igqgg"]
+_data = {
+&"RESET": SubResource("Animation_36i7w"),
+&"attack": SubResource("Animation_7i8ua")
+}
+
 [node name="Chrono_Guard" type="CharacterBody2D" unique_id=954976129]
 scale = Vector2(10, 10)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_36i7w")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=124505197]
+[node name="RunAnim" type="AnimatedSprite2D" parent="." unique_id=124505197]
 texture_filter = 1
 position = Vector2(-0.099999905, -2.980232e-08)
 sprite_frames = SubResource("SpriteFrames_idooy")
-animation = &"running"
+animation = &"attack"
 autoplay = "running"
+frame = 11
 
 [node name="EnnemyCollision" type="CollisionPolygon2D" parent="." unique_id=283109774]
 scale = Vector2(0.99999976, 0.99999976)
@@ -77,3 +241,11 @@ position = Vector2(0.20000002, 0.100000225)
 position = Vector2(-37.000004, -2.1000004)
 scale = Vector2(2.3110254, 1.2304811)
 polygon = PackedVector2Array(13.673586, -8.451979, 54.3049, -13.978272, 55.08378, 29.988272, 6.2999997, 23.599998, 5.105961, 10.483705)
+
+[node name="AttackAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1444332173]
+libraries/ = SubResource("AnimationLibrary_igqgg")
+
+[node name="Sword_Attack" type="Area2D" parent="." unique_id=1296492017]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sword_Attack" unique_id=1790542854]
+disabled = true
