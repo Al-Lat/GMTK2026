@@ -1,14 +1,14 @@
 extends Area2D
 
-const SPEED = 800.0
+const SPEED = 200.0
 const LIFETIME = 3.0  # sécurité si rien n'est touché (évite un projectile infini)
 
 var direction: Vector2 = Vector2.RIGHT
 
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $attack_animation
 
 func _ready() -> void:
-	animated_sprite.flip_h = !animated_sprite.flip_h #correction du sens du sprite
+	animated_sprite.flip_h = not animated_sprite.flip_h #correction du sens du sprite
 	animated_sprite.play("default")
 	body_entered.connect(_on_body_entered)
 	get_tree().create_timer(LIFETIME).timeout.connect(queue_free)

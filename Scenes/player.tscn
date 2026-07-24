@@ -219,7 +219,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5htga")
 }],
 "loop": 1,
-"name": &"attack_slash",
+"name": &"blue_slash",
 "speed": 15.0
 }, {
 "frames": [{
@@ -367,10 +367,10 @@ shape = SubResource("RectangleShape2D_dlnr4")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1543947423]
 offset = Vector2(0, -50)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=316748901]
+[node name="playerAnimation" type="AnimatedSprite2D" parent="." unique_id=316748901]
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_bowxp")
-animation = &"dead"
+animation = &"blue_slash"
 
 [node name="attack_manager" type="Node2D" parent="." unique_id=711593596]
 script = ExtResource("4_vgqql")

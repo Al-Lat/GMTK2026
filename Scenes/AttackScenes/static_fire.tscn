@@ -214,13 +214,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgns8"]
 
 [node name="static_fire_attack(Area2D)" type="Area2D" unique_id=1490592663]
-scale = Vector2(5, 5)
+scale = Vector2(10, 10)
 script = ExtResource("1_fpiyx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1253731852]
 scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_lgns8")
-frame_progress = 0.717676
+frame_progress = 0.6330218
 speed_scale = 2.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539634465]

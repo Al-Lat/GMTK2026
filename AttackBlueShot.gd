@@ -6,7 +6,7 @@ func _init():
 
 func summon(entity) -> void:
 	var projectile = self.attack_scene.instantiate()
-	entity.get_parent().add_child(projectile)
+	entity.add_child(projectile)
 	projectile.global_position = entity.global_position + entity.direction_to_mouse * entity.RANGED_ATTACK_OFFSET
 	projectile.rotation = entity.direction_to_mouse.angle()
 	projectile.direction = entity.direction_to_mouse.normalized()

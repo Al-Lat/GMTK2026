@@ -1,5 +1,6 @@
 class_name Player extends CharacterBody2D
 
+var player_singleton = PlayerSingleton
 
 @export var gravity:float = 1000.0
 @export var speed:float = 500.0
@@ -14,13 +15,16 @@ const SPECIAL_ATTACK_OFFSET = 300.0
 const RANGED_ATTACK_OFFSET = 110
 const MELEE_ATTACK_OFFSET = 40.0
 
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite = $playerAnimation
 @onready var attack_manager:PlayerAttackManager = $attack_manager
 var is_animation_melee_sprite_offset:bool = false
 
 
 func _ready() -> void:
+	player_singleton.player = self
+	
 	animated_sprite.play("idle")
+	print("Player :",self)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

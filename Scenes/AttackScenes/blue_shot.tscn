@@ -247,20 +247,21 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 30.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgns8"]
 size = Vector2(58, 47)
 
 [node name="blue_shot" type="Area2D" unique_id=1465479808]
+scale = Vector2(0.15, 0.15)
 script = ExtResource("1_m0c2v")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=519434378]
+[node name="attack_animation" type="AnimatedSprite2D" parent="." unique_id=519434378]
 scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_5qthr")
-frame_progress = 0.15888155
-speed_scale = 5.0
+frame_progress = 0.79564095
+speed_scale = 12.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135571586]
 position = Vector2(-2, -1.5)

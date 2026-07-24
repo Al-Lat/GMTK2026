@@ -33,5 +33,5 @@ func get_default_side_summon_function() -> Callable:
 	return func (entity) :
 		print("default summon")
 		var attackElement = self.attack_scene.instantiate()
-		entity.get_parent().add_child(attackElement)
+		entity.add_child(attackElement)
 		attackElement.global_position = entity.global_position + Vector2(entity.facing_direction * entity.MELEE_ATTACK_OFFSET,0)
