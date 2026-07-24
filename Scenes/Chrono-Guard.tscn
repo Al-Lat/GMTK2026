@@ -53,10 +53,6 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_idooy"]
-radius = 15.6
-height = 81.79997
-
 [node name="Chrono_Guard" type="CharacterBody2D" unique_id=954976129]
 scale = Vector2(10, 10)
 collision_layer = 2
@@ -70,17 +66,14 @@ sprite_frames = SubResource("SpriteFrames_idooy")
 animation = &"running"
 autoplay = "running"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=283109774]
+[node name="EnnemyCollision" type="CollisionPolygon2D" parent="." unique_id=283109774]
+scale = Vector2(0.99999976, 0.99999976)
 polygon = PackedVector2Array(-0.6999999, -0.19999999, -0.19999999, 1.6999999, -7.7999997, 2.6999998, -20.999998, 14.4, -21.4, 18.999998, -15.799999, 23.099998, -7.9999995, 20.499998, -1.0999999, 22.3, 7.9999995, 17.8, 14.899999, 11.699999, 15.299999, 1.5999999, 13.099999, -2.7999997, 6.7, -2.1999998)
 
-[node name="Timer" type="Timer" parent="." unique_id=2061467000]
-wait_time = 2.0
-autostart = true
-
-[node name="Area2D" type="Area2D" parent="." unique_id=752777228]
+[node name="detection_area" type="Area2D" parent="." unique_id=752777228]
 position = Vector2(0.20000002, 0.100000225)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=758718213]
-position = Vector2(46.6, 8.699999)
-rotation = -4.712389
-shape = SubResource("CapsuleShape2D_idooy")
+[node name="EnnemySightCollision" type="CollisionPolygon2D" parent="detection_area" unique_id=1594157006]
+position = Vector2(-37.000004, -2.1000004)
+scale = Vector2(2.3110254, 1.2304811)
+polygon = PackedVector2Array(13.673586, -8.451979, 54.3049, -13.978272, 55.08378, 29.988272, 6.2999997, 23.599998, 5.105961, 10.483705)
