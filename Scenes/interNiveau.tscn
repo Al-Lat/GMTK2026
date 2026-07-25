@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://de8gp70m7pt8e" path="res://Graphics/Backgrounds/city/Buildings 1.png" id="4_3bdrj"]
 [ext_resource type="Texture2D" uid="uid://cjij41wluh7jr" path="res://Graphics/plateforms/Sprite-0001.png" id="5_6yy46"]
 [ext_resource type="Texture2D" uid="uid://b15ihchclmm42" path="res://Graphics/Elements/Free P all.png" id="6_ubbiv"]
-[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/portal.tscn" id="8_f6sb3"]
-[ext_resource type="Script" uid="uid://lcgcs8vefyqu" path="res://Scripts/portal.gd" id="9_mn0nn"]
-[ext_resource type="PackedScene" uid="uid://gr433xggaun0" path="res://Scenes/drone.tscn" id="10_mn0nn"]
+[ext_resource type="PackedScene" uid="uid://bwvx5qirfged" path="res://Scenes/portal_niveau.tscn" id="7_bg6r1"]
+[ext_resource type="PackedScene" uid="uid://b305fg1i42t25" path="res://Scenes/Elements/bus_shop.tscn" id="9_pci2g"]
+[ext_resource type="PackedScene" uid="uid://cp1y2sbwwn1v7" path="res://Scenes/hud.tscn" id="10_i6wvx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("6_ubbiv")
@@ -1632,14 +1632,17 @@ text = "Next Level"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="portal" parent="." unique_id=2132436189 instance=ExtResource("8_f6sb3")]
-position = Vector2(3428, 36)
-scale = Vector2(4, 4)
-script = ExtResource("9_mn0nn")
+[node name="portail" parent="." unique_id=1727511125 instance=ExtResource("7_bg6r1")]
+position = Vector2(3429, 34)
 
-[node name="CharacterBody2D" parent="." unique_id=2142611481 instance=ExtResource("1_ulcgi")]
-position = Vector2(2493.0002, 27.999985)
-jump_force = 250
+[node name="Bus_Shop" parent="." unique_id=1432902507 instance=ExtResource("9_pci2g")]
+position = Vector2(2800.0002, 0)
+scale = Vector2(4.5, 4.5)
 
-[node name="drone" parent="." unique_id=1803462422 instance=ExtResource("10_mn0nn")]
-position = Vector2(2879, -72)
+[node name="Player" parent="." unique_id=2142611481 instance=ExtResource("1_ulcgi")]
+position = Vector2(2492.0005, 28)
+
+[node name="start" type="Marker2D" parent="." unique_id=318440981]
+position = Vector2(1876, 33)
+
+[node name="HUD" parent="." unique_id=311553630 instance=ExtResource("10_i6wvx")]

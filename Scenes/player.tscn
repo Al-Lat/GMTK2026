@@ -378,3 +378,7 @@ script = ExtResource("4_vgqql")
 [node name="ranged_cooldown" type="Timer" parent="." unique_id=1663103256]
 process_callback = 0
 one_shot = true
+
+[node name="melee_cooldown" type="Timer" parent="." unique_id=1463005188]
+
+[node name="special_cooldown" type="Timer" parent="." unique_id=1106062099]

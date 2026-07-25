@@ -3,13 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://dq4j58dh8ayl0" path="res://Graphics/Elements/Sprite-0005.png" id="1_myvm1"]
 [ext_resource type="Script" uid="uid://bjjbumhujjish" path="res://Scripts/map.gd" id="1_q0mm3"]
 [ext_resource type="Texture2D" uid="uid://6566ggc3j2ut" path="res://Graphics/Elements/Sprite-0002.png" id="2_q0mm3"]
-[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/portal.tscn" id="3_np2xp"]
-[ext_resource type="PackedScene" uid="uid://c0h1puysgefka" path="res://Scenes/Elements/portail-boss.tscn" id="4_w7jjh"]
+[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/map_item.tscn" id="3_np2xp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bowxp"]
 radius = 38.013157
 
-[node name="Node2D" type="Node2D" unique_id=411695268]
+[node name="map" type="Node2D" unique_id=411695268]
 position = Vector2(376.14398, 621.64)
 script = ExtResource("1_q0mm3")
 
@@ -35,9 +34,9 @@ scale = Vector2(5.804076, 3.7749417)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Path" unique_id=1354019168]
-position = Vector2(792.144, 332.64)
+position = Vector2(812.644, 332.64)
 rotation = 1.5707964
-scale = Vector2(8.04, 5)
+scale = Vector2(8.04, 3.7187505)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Path" unique_id=1671294316]
@@ -47,9 +46,9 @@ scale = Vector2(8.04, 5)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D10" type="Sprite2D" parent="Path" unique_id=2052953332]
-position = Vector2(446.14398, 193.64)
+position = Vector2(469.3258, 193.64)
 rotation = 1.5707964
-scale = Vector2(8.04, 5)
+scale = Vector2(8.04, 3.5511363)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Path" unique_id=2147312866]
@@ -59,9 +58,15 @@ scale = Vector2(8.015001, 5.125)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D11" type="Sprite2D" parent="Path" unique_id=723779553]
-position = Vector2(563.144, 330.64)
+position = Vector2(648.7521, 336)
 rotation = 1.5707964
-scale = Vector2(8.04, 5)
+scale = Vector2(8.04, 3.140496)
+texture = ExtResource("2_q0mm3")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Path" unique_id=813516997]
+position = Vector2(466.16946, 335)
+rotation = 1.5707964
+scale = Vector2(8.04, 3.6980875)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D9" type="Sprite2D" parent="Path" unique_id=1975399326]
@@ -71,9 +76,9 @@ scale = Vector2(8.04, 5.3364635)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Path" unique_id=219182917]
-position = Vector2(325.14398, 335.64)
+position = Vector2(300.5985, 335.64)
 rotation = 1.5707964
-scale = Vector2(8.04, 5)
+scale = Vector2(8.04, 3.4659088)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Path" unique_id=1723469442]
@@ -83,12 +88,12 @@ scale = Vector2(6.389, 3.6334372)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Path" unique_id=1689803196]
-position = Vector2(450.144, 489.63998)
+position = Vector2(472.87128, 489.63998)
 rotation = 1.5707964
-scale = Vector2(8.163, 5)
+scale = Vector2(8.163, 3.579545)
 texture = ExtResource("2_q0mm3")
 
-[node name="Label" type="Label" parent="Path" unique_id=101430021]
+[node name="level_1" type="Label" parent="Path" unique_id=101430021]
 anchors_preset = -1
 anchor_top = -0.0030864198
 anchor_right = 0.0026041667
@@ -104,7 +109,7 @@ justification_flags = 171
 uppercase = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Label5" type="Label" parent="Path" unique_id=1411051696]
+[node name="level_2_1" type="Label" parent="Path" unique_id=1411051696]
 offset_left = 527.144
 offset_top = 130.64
 offset_right = 586.144
@@ -112,31 +117,55 @@ offset_bottom = 153.64
 text = "LEVEL 2"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label6" type="Label" parent="Path" unique_id=1231641606]
+[node name="boutique_2_1" type="Label" parent="Path" unique_id=1231641606]
 offset_left = 749.144
 offset_top = 128.64
 offset_right = 808.144
 offset_bottom = 151.64
-text = "LEVEL 3"
+text = "shop"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label8" type="Label" parent="Path" unique_id=856049367]
-offset_left = 648.144
-offset_top = 273.64
-offset_right = 707.144
-offset_bottom = 296.64
-text = "LEVEL 3"
+[node name="boutique_1_1" type="Label" parent="Path" unique_id=1206830131]
+offset_left = 349.0
+offset_top = 131.0
+offset_right = 420.0
+offset_bottom = 154.0
+text = "shop"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label3" type="Label" parent="Path" unique_id=1244632087]
+[node name="boutique_1_2" type="Label" parent="Path" unique_id=2138335054]
+offset_left = 350.0
+offset_top = 277.0
+offset_right = 421.0
+offset_bottom = 300.0
+text = "shop"
+metadata/_edit_use_anchors_ = true
+
+[node name="boutique_1_3" type="Label" parent="Path" unique_id=1695121492]
+offset_left = 358.0
+offset_top = 435.0
+offset_right = 429.0
+offset_bottom = 458.0
+text = "shop"
+metadata/_edit_use_anchors_ = true
+
+[node name="boutique_2_2" type="Label" parent="Path" unique_id=856049367]
+offset_left = 702.0
+offset_top = 278.0
+offset_right = 761.0
+offset_bottom = 301.0
+text = "shop"
+metadata/_edit_use_anchors_ = true
+
+[node name="level_2_2" type="Label" parent="Path" unique_id=1244632087]
 anchors_preset = -1
 anchor_top = -0.0030864198
 anchor_right = 0.0026041667
 anchor_bottom = 0.0030864198
-offset_left = 411.14398
-offset_top = 273.64
-offset_right = 467.14398
-offset_bottom = 297.64
+offset_left = 534.0
+offset_top = 275.0
+offset_right = 590.0
+offset_bottom = 299.0
 text = "LEVEL 2"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -144,7 +173,7 @@ justification_flags = 171
 uppercase = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Label4" type="Label" parent="Path" unique_id=1709150387]
+[node name="level_2_3" type="Label" parent="Path" unique_id=1709150387]
 anchors_preset = -1
 anchor_top = -0.0030864198
 anchor_right = 0.0026041667
@@ -160,7 +189,7 @@ justification_flags = 171
 uppercase = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="Path" unique_id=2053688797]
+[node name="boss" type="Label" parent="Path" unique_id=2053688797]
 anchors_preset = -1
 anchor_left = -11.466666
 anchor_top = -2.2083333
@@ -175,43 +204,55 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Label7" type="Label" parent="Path" unique_id=2127550146]
+[node name="boutique_2_3" type="Label" parent="Path" unique_id=2127550146]
 offset_left = 753.144
 offset_top = 427.64
 offset_right = 812.144
 offset_bottom = 450.64
-text = "LEVEL 3"
+text = "shop"
 metadata/_edit_use_anchors_ = true
 
 [node name="Elements" type="Node" parent="." unique_id=920206340]
 
 [node name="Portals" type="Node" parent="Elements" unique_id=1757262849]
 
-[node name="Node2D" parent="Elements/Portals" unique_id=2132436189 instance=ExtResource("3_np2xp")]
-position = Vector2(439.14398, 331.64)
+[node name="portail_1" parent="Elements/Portals" unique_id=2132436189 instance=ExtResource("3_np2xp")]
+position = Vector2(220, 336)
 
-[node name="Node2D3" parent="Elements/Portals" unique_id=554766844 instance=ExtResource("3_np2xp")]
-position = Vector2(782.144, 485.64)
+[node name="portail_2_1" parent="Elements/Portals" unique_id=529099378 instance=ExtResource("3_np2xp")]
+position = Vector2(557, 196)
 
-[node name="Node2D2" parent="Elements/Portals" unique_id=1513484065 instance=ExtResource("3_np2xp")]
-position = Vector2(213.144, 341.64)
+[node name="portail_2_2" parent="Elements/Portals" unique_id=1278450215 instance=ExtResource("3_np2xp")]
+position = Vector2(559, 336)
 
-[node name="Node2D4" parent="Elements/Portals" unique_id=1164817500 instance=ExtResource("3_np2xp")]
-position = Vector2(781.144, 190.64)
+[node name="portail_2_3" parent="Elements/Portals" unique_id=22647440 instance=ExtResource("3_np2xp")]
+position = Vector2(558, 492)
 
-[node name="Node2D5" parent="Elements/Portals" unique_id=1360559847 instance=ExtResource("3_np2xp")]
-position = Vector2(556.144, 486.64)
+[node name="boutique_1_1" parent="Elements/Portals" unique_id=554766844 instance=ExtResource("3_np2xp")]
+position = Vector2(383, 191)
 
-[node name="Node2D6" parent="Elements/Portals" unique_id=1187280225 instance=ExtResource("3_np2xp")]
-position = Vector2(553.144, 190.64)
+[node name="boutique_1_2" parent="Elements/Portals" unique_id=1513484065 instance=ExtResource("3_np2xp")]
+position = Vector2(380, 335)
 
-[node name="Node2D7" parent="Elements/Portals" unique_id=132626636 instance=ExtResource("3_np2xp")]
-position = Vector2(673.144, 331.64)
+[node name="boutique_1_3" parent="Elements/Portals" unique_id=1164817500 instance=ExtResource("3_np2xp")]
+position = Vector2(385, 492)
 
-[node name="Node2D8" parent="Elements/Portals" unique_id=1990816068 instance=ExtResource("4_w7jjh")]
-position = Vector2(934.144, 335.64)
-scale = Vector2(3, 3)
+[node name="boutique_2_1" parent="Elements/Portals" unique_id=1360559847 instance=ExtResource("3_np2xp")]
+position = Vector2(778, 193)
+
+[node name="boutique_2_2" parent="Elements/Portals" unique_id=1187280225 instance=ExtResource("3_np2xp")]
+position = Vector2(727, 333)
+
+[node name="boutique_2_3" parent="Elements/Portals" unique_id=132626636 instance=ExtResource("3_np2xp")]
+position = Vector2(782, 482)
+
+[node name="boss" parent="Elements/Portals" unique_id=22090782 instance=ExtResource("3_np2xp")]
+position = Vector2(928, 331)
 
 [node name="level1" type="CollisionShape2D" parent="." unique_id=233720120]
-position = Vector2(-164.14398, -279.64)
+position = Vector2(-158.14398, -284.64)
+shape = SubResource("CircleShape2D_bowxp")
+
+[node name="b_1_1" type="CollisionShape2D" parent="." unique_id=1409317728]
+position = Vector2(1.8560181, -430.64)
 shape = SubResource("CircleShape2D_bowxp")

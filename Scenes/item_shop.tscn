@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bs0mxi41w0k46"]
+
+[ext_resource type="Script" uid="uid://ki5u3wqe46mb" path="res://Scripts/item_shop.gd" id="1_1ekti"]
+[ext_resource type="Texture2D" uid="uid://dyf2tlsdgaykh" path="res://Graphics/icon.svg" id="1_utmhw"]
+[ext_resource type="Texture2D" uid="uid://bk4g5n2rfuwla" path="res://Graphics/ressources/Skillicon8_13.png" id="3_dy5ej"]
+[ext_resource type="Texture2D" uid="uid://dl6vv67ey10rx" path="res://Graphics/ressources/Skillicon8_32.png" id="4_t35fu"]
+[ext_resource type="Texture2D" uid="uid://cs4hyxiq1ilb4" path="res://Graphics/ressources/Skillicon8_29-export.png" id="5_rtm3b"]
+[ext_resource type="Texture2D" uid="uid://ccgccwf40v2s5" path="res://Graphics/ressources/Skillicon8_05.png" id="6_2x1yp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dqhsf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dqhsf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_utmhw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dy5ej")
+}],
+"loop": 1,
+"name": &"robot_arms",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t35fu")
+}],
+"loop": 1,
+"name": &"robot_gears",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rtm3b")
+}],
+"loop": 1,
+"name": &"robot_legs",
+"speed": 5.0
+}]
+
+[node name="item" type="Node2D" unique_id=415235894]
+script = ExtResource("1_1ekti")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=634390735]
+modulate = Color(0, 0, 0.13333334, 1)
+position = Vector2(65.49999, -16)
+scale = Vector2(275.00003, 182)
+texture = SubResource("CanvasTexture_dqhsf")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=732443949]
+position = Vector2(0, -50)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_dqhsf")
+animation = &"robot_legs"
+
+[node name="acheter" type="Button" parent="." unique_id=1964295167]
+offset_left = -43.0
+offset_top = 29.0
+offset_right = 44.0
+offset_bottom = 60.0
+text = "buy"
+
+[node name="nom" type="Label" parent="." unique_id=1839896031]
+offset_left = 100.0
+offset_top = -70.0
+offset_right = 130.0
+offset_bottom = -45.0
+text = "test"
+
+[node name="prix" type="Label" parent="." unique_id=210789587]
+offset_left = 100.0
+offset_top = 34.0
+offset_right = 130.0
+offset_bottom = 59.0
+text = "100"
+
+[node name="logo_temps" type="Sprite2D" parent="." unique_id=1070775658]
+position = Vector2(139.00002, 46)
+texture = ExtResource("6_2x1yp")
+
+[connection signal="pressed" from="acheter" to="." method="_on_acheter_pressed"]

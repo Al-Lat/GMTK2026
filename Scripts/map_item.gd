@@ -6,7 +6,5 @@ extends Node2D
 func _ready() -> void:
 	animated_sprite.play("default")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func animation_to_play(animation:String):
+	animated_sprite.play(animation)

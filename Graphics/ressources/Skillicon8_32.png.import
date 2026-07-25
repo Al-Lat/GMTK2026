@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1acai5x07f6y"
-path="res://.godot/imported/menu.png-a96dafc881d0b8d784c21b9d01eb1d3b.ctex"
+uid="uid://dl6vv67ey10rx"
+path="res://.godot/imported/Skillicon8_32.png-40912721ea4aeb26a3c0dbecc72f5062.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/UI/menu.png"
-dest_files=["res://.godot/imported/menu.png-a96dafc881d0b8d784c21b9d01eb1d3b.ctex"]
+source_file="res://Graphics/ressources/Skillicon8_32.png"
+dest_files=["res://.godot/imported/Skillicon8_32.png-40912721ea4aeb26a3c0dbecc72f5062.ctex"]
 
 [params]
 
