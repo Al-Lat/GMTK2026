@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk4g5n2rfuwla"
-path="res://.godot/imported/Skillicon8_13.png-ad14d9bccbb5e56bf0800527ddb797b0.ctex"
+uid="uid://cs4hyxiq1ilb4"
+path="res://.godot/imported/Skillicon8_29-export.png-f3ec6c6f1417838fec7a1e08952a2b5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Boutique/Skillicon8_13.png"
-dest_files=["res://.godot/imported/Skillicon8_13.png-ad14d9bccbb5e56bf0800527ddb797b0.ctex"]
+source_file="res://Graphics/ressources/Skillicon8_29-export.png"
+dest_files=["res://.godot/imported/Skillicon8_29-export.png-f3ec6c6f1417838fec7a1e08952a2b5c.ctex"]
 
 [params]
 

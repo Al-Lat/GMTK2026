@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nw4gilrpkh3w"
-path="res://.godot/imported/Pixel Clock.png-0c1300ae06de02ad23fa744c8c8a7f24.ctex"
+uid="uid://bk4g5n2rfuwla"
+path="res://.godot/imported/Skillicon8_13.png-c3158d963e3dd367ca1f532aea46eb27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/ressources/Pixel Clock.png"
-dest_files=["res://.godot/imported/Pixel Clock.png-0c1300ae06de02ad23fa744c8c8a7f24.ctex"]
+source_file="res://Graphics/ressources/Skillicon8_13.png"
+dest_files=["res://.godot/imported/Skillicon8_13.png-c3158d963e3dd367ca1f532aea46eb27.ctex"]
 
 [params]
 
