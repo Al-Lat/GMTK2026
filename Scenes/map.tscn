@@ -252,7 +252,54 @@ position = Vector2(928, 331)
 [node name="level1" type="CollisionShape2D" parent="." unique_id=233720120]
 position = Vector2(-158.14398, -284.64)
 shape = SubResource("CircleShape2D_bowxp")
+disabled = true
 
 [node name="b_1_1" type="CollisionShape2D" parent="." unique_id=1409317728]
-position = Vector2(1.8560181, -430.64)
+position = Vector2(4.856018, -429.64)
 shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="b_1_2" type="CollisionShape2D" parent="." unique_id=509560661]
+position = Vector2(2.856018, -285.64)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="b_1_3" type="CollisionShape2D" parent="." unique_id=971709306]
+position = Vector2(8.856018, -129.64001)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="level2_1" type="CollisionShape2D" parent="." unique_id=1482992722]
+position = Vector2(179.85602, -425.64)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="level2_2" type="CollisionShape2D" parent="." unique_id=1574065278]
+position = Vector2(183.85602, -285.64)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="level2_3" type="CollisionShape2D" parent="." unique_id=1385166255]
+position = Vector2(180.85602, -130.64001)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="b_2_1" type="CollisionShape2D" parent="." unique_id=2075598494]
+position = Vector2(401.85602, -428.64)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="b_2_2" type="CollisionShape2D" parent="." unique_id=1484106199]
+position = Vector2(349.85602, -287.64)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="b_2_3" type="CollisionShape2D" parent="." unique_id=498527881]
+position = Vector2(404.85602, -139.64001)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true
+
+[node name="level3" type="CollisionShape2D" parent="." unique_id=464402619]
+position = Vector2(549.856, -289.64)
+shape = SubResource("CircleShape2D_bowxp")
+disabled = true

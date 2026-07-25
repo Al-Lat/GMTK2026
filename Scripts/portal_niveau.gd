@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+
 var in_portal = false
 
 # Called when the node enters the scene tree for the first time.

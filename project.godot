@@ -18,6 +18,7 @@ config/icon="res://Graphics/icon.svg"
 [autoload]
 
 PlayerSingleton="*uid://bpbyhqiujicc6"
+MapSingleton="*uid://koawf2nogukn"
 
 [display]
 
