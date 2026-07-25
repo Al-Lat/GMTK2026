@@ -13,6 +13,8 @@ func _ready() -> void:
 	$Elements/Portals/boutique_2_1.animation_to_play("shop")
 	$Elements/Portals/boutique_2_2.animation_to_play("shop")
 	$Elements/Portals/boutique_2_3.animation_to_play("shop")
+	$Elements/Portals/boss.animation_to_play("boss")
+	$Elements/Portals/boss.scale *= 2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
