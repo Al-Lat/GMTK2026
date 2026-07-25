@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b305fg1i42t25"]
+
+[ext_resource type="Texture2D" uid="uid://dpou7jj30jqdd" path="res://Graphics/Player/bus.png" id="1_1t7u0"]
+[ext_resource type="Script" uid="uid://bvgrq5tbjpg0c" path="res://Scripts/bus_shop.gd" id="1_hfwon"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idooy"]
+size = Vector2(101, 47)
+
+[sub_resource type="LabelSettings" id="LabelSettings_idooy"]
+font_size = 12
+
+[node name="Bus_Shop" type="Area2D" unique_id=1432902507]
+script = ExtResource("1_hfwon")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=87833339]
+texture = ExtResource("1_1t7u0")
+
+[node name="CollisionInteraction" type="CollisionShape2D" parent="." unique_id=1725232648]
+position = Vector2(11.5, 4.5)
+shape = SubResource("RectangleShape2D_idooy")
+
+[node name="LabelTextShop" type="Label" parent="." unique_id=1697969039]
+visible = false
+offset_left = -71.0
+offset_top = -39.0
+offset_right = 76.0
+offset_bottom = -22.0
+text = "Press W to buy/sell"
+label_settings = SubResource("LabelSettings_idooy")
+horizontal_alignment = 1
