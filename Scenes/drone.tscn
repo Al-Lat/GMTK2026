@@ -67,9 +67,9 @@ shape = SubResource("CapsuleShape2D_dqhsf")
 [node name="detction_zone" type="CollisionShape2D" parent="detection" unique_id=1907194796]
 shape = SubResource("CircleShape2D_x74uf")
 
-[node name="couldown" type="Timer" parent="." unique_id=1635696348]
+[node name="cooldown" type="Timer" parent="." unique_id=1635696348]
 one_shot = true
 
 [connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]
-[connection signal="timeout" from="couldown" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="cooldown" to="." method="_on_timer_timeout"]
