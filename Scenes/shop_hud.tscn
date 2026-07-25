@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://2pkybpb6dv8c"]
+
+[ext_resource type="Texture2D" uid="uid://dyf2tlsdgaykh" path="res://Graphics/icon.svg" id="1_7e0eu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_idooy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idooy"]
+size = Vector2(171, 77)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1550887869]
+
+[node name="Item_1" type="Sprite2D" parent="." unique_id=1143367642]
+position = Vector2(208.00002, 176.00002)
+scale = Vector2(1.375, 2.4609375)
+texture = ExtResource("1_7e0eu")
+
+[node name="Item_2" type="Sprite2D" parent="." unique_id=2135138966]
+position = Vector2(846.00006, 176.00002)
+scale = Vector2(1.375, 2.4609375)
+texture = ExtResource("1_7e0eu")
+
+[node name="Item_3" type="Sprite2D" parent="." unique_id=1310645014]
+position = Vector2(530, 176)
+scale = Vector2(1.375, 2.4609375)
+texture = ExtResource("1_7e0eu")
+
+[node name="Label" type="Label" parent="." unique_id=1980918823]
+anchors_preset = -1
+anchor_left = 0.17400001
+anchor_top = 0.94600004
+anchor_right = 0.17400001
+anchor_bottom = 0.94600004
+offset_left = -67.44801
+offset_top = -120.007996
+offset_right = 83.55199
+offset_bottom = -97.007996
+text = "Item 1 : Description"
+label_settings = SubResource("LabelSettings_idooy")
+
+[node name="Label2" type="Label" parent="." unique_id=1250154407]
+anchors_preset = -1
+anchor_left = 0.17400001
+anchor_top = 0.94600004
+anchor_right = 0.17400001
+anchor_bottom = 0.94600004
+offset_left = 258.378
+offset_top = -120.257996
+offset_right = 409.378
+offset_bottom = -97.257996
+text = "Item 2 : Description"
+label_settings = SubResource("LabelSettings_idooy")
+
+[node name="Label3" type="Label" parent="." unique_id=731686827]
+anchors_preset = -1
+anchor_left = 0.17400001
+anchor_top = 0.94600004
+anchor_right = 0.17400001
+anchor_bottom = 0.94600004
+offset_left = 574.02997
+offset_top = -119.757996
+offset_right = 725.02997
+offset_bottom = -96.757996
+text = "Item 3 : Description"
+label_settings = SubResource("LabelSettings_idooy")
+
+[node name="Achat_1" type="Area2D" parent="." unique_id=1393017780]
+
+[node name="CollisionBuy1" type="CollisionShape2D" parent="Achat_1" unique_id=306858916]
+position = Vector2(209, 428)
+shape = SubResource("RectangleShape2D_idooy")
+
+[node name="Label" type="Label" parent="Achat_1" unique_id=468834863]
+offset_left = 176.0
+offset_top = 415.0
+offset_right = 237.0
+offset_bottom = 438.0
+text = "Acheter"
+
+[node name="Achat_2" type="Area2D" parent="." unique_id=482553925]
+
+[node name="CollisionBuy2" type="CollisionShape2D" parent="Achat_2" unique_id=833966098]
+position = Vector2(532, 429)
+shape = SubResource("RectangleShape2D_idooy")
+
+[node name="Label2" type="Label" parent="Achat_2" unique_id=1579699370]
+offset_left = 499.0
+offset_top = 415.0
+offset_right = 560.0
+offset_bottom = 438.0
+text = "Acheter"
+
+[node name="Achat_3" type="Area2D" parent="." unique_id=1545771175]
+
+[node name="CollisionBuy3" type="CollisionShape2D" parent="Achat_3" unique_id=1950610258]
+position = Vector2(846, 427)
+shape = SubResource("RectangleShape2D_idooy")
+
+[node name="Label3" type="Label" parent="Achat_3" unique_id=138325412]
+offset_left = 813.0
+offset_top = 415.0
+offset_right = 874.0
+offset_bottom = 438.0
+text = "Acheter"
