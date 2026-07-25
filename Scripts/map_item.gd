@@ -4,4 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	animated_sprite.play("idle")
+	animated_sprite.play("default")
+
+func animation_to_play(animation:String):
+	animated_sprite.play(animation)

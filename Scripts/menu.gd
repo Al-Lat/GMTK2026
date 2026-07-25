@@ -1,7 +1,12 @@
 extends Node2D
 
+@onready var animated_play = $playSprite
+@onready var animated_quit = $quitSprite
+
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	animated_play.play("default")
+	animated_quit.play("default")
 
 func _process(delta: float) -> void:
 	pass

@@ -13,6 +13,10 @@ func add_time(time:int) -> void:
 
 func remove_time(time:int) -> void:
 	temps -= time;
+	if temps <= 0:
+		temps = 0
+		PlayerSingleton.player.mort()
+		end_level()
 	update_temps.emit()
 
 func end_level() -> void:
