@@ -255,6 +255,8 @@ size = Vector2(58, 47)
 
 [node name="blue_shot" type="Area2D" unique_id=1465479808]
 scale = Vector2(0.25, 0.25)
+collision_layer = 0
+collision_mask = 3
 script = ExtResource("1_m0c2v")
 
 [node name="attack_animation" type="AnimatedSprite2D" parent="." unique_id=519434378]
