@@ -26,9 +26,16 @@ func _input(event: InputEvent) -> void:
 		
 		var mouse_pos = get_local_mouse_position()
 		
-		var play_rect = $level1.shape.get_rect()
-		play_rect.position += $level1.position 
+		var play_rect_l_1 = $level1.shape.get_rect()
+		play_rect_l_1.position += $level1.position 
 		
-		if play_rect.has_point(mouse_pos):
+		if play_rect_l_1.has_point(mouse_pos):
 			print("Clic sur Play !")
 			get_tree().change_scene_to_file("res://Scenes/niveau_1.tscn")
+		
+		var play_rect_b_1_1 = $b_1_1.shape.get_rect()
+		play_rect_b_1_1.position += $b_1_1.position 
+		
+		if play_rect_b_1_1.has_point(mouse_pos):
+			print("Clic sur Play !")
+			get_tree().change_scene_to_file("res://Scenes/interNiveau.tscn")
