@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://b15ihchclmm42" path="res://Graphics/Elements/Free P all.png" id="6_ubbiv"]
 [ext_resource type="PackedScene" uid="uid://bwvx5qirfged" path="res://Scenes/portal_niveau.tscn" id="7_bg6r1"]
 [ext_resource type="PackedScene" uid="uid://b305fg1i42t25" path="res://Scenes/Elements/bus_shop.tscn" id="9_pci2g"]
-[ext_resource type="PackedScene" uid="uid://2pkybpb6dv8c" path="res://Scenes/shop_hud.tscn" id="10_i6wvx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("6_ubbiv")
@@ -1641,12 +1640,6 @@ scale = Vector2(4.5, 4.5)
 
 [node name="Player" parent="." unique_id=2142611481 instance=ExtResource("1_ulcgi")]
 position = Vector2(2492.0005, 28)
-jump_force = 250
-
-[node name="shop_hud" parent="." unique_id=1550887869 instance=ExtResource("10_i6wvx")]
-layer = 2
-offset = Vector2(2800, 250)
-transform = Transform2D(1, 0, 0, 1, 2800, 250)
 
 [node name="start" type="Marker2D" parent="." unique_id=318440981]
 position = Vector2(1876, 33)
