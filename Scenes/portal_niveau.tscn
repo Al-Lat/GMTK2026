@@ -72,3 +72,6 @@ shape = SubResource("CapsuleShape2D_bowxp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2016662623]
 sprite_frames = SubResource("SpriteFrames_dlnr4")
 frame_progress = 0.76957357
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
