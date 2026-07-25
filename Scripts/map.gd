@@ -3,7 +3,16 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Elements/Portals/portail_1.animation_to_play("default")
+	$Elements/Portals/portail_2_1.animation_to_play("default")
+	$Elements/Portals/portail_2_2.animation_to_play("default")
+	$Elements/Portals/portail_2_3.animation_to_play("default")
+	$Elements/Portals/boutique_1_1.animation_to_play("shop")
+	$Elements/Portals/boutique_1_2.animation_to_play("shop")
+	$Elements/Portals/boutique_1_3.animation_to_play("shop")
+	$Elements/Portals/boutique_2_1.animation_to_play("shop")
+	$Elements/Portals/boutique_2_2.animation_to_play("shop")
+	$Elements/Portals/boutique_2_3.animation_to_play("shop")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

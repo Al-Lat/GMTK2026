@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dq4j58dh8ayl0" path="res://Graphics/Elements/Sprite-0005.png" id="1_myvm1"]
 [ext_resource type="Script" uid="uid://bjjbumhujjish" path="res://Scripts/map.gd" id="1_q0mm3"]
 [ext_resource type="Texture2D" uid="uid://6566ggc3j2ut" path="res://Graphics/Elements/Sprite-0002.png" id="2_q0mm3"]
-[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/portal.tscn" id="3_np2xp"]
+[ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/map_item.tscn" id="3_np2xp"]
 [ext_resource type="PackedScene" uid="uid://c0h1puysgefka" path="res://Scenes/Elements/portail-boss.tscn" id="4_w7jjh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bowxp"]
@@ -47,9 +47,9 @@ scale = Vector2(8.04, 5)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D10" type="Sprite2D" parent="Path" unique_id=2052953332]
-position = Vector2(446.14398, 193.64)
+position = Vector2(469.3258, 193.64)
 rotation = 1.5707964
-scale = Vector2(8.04, 5)
+scale = Vector2(8.04, 3.5511363)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Path" unique_id=2147312866]
@@ -71,9 +71,9 @@ scale = Vector2(8.04, 5.3364635)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Path" unique_id=219182917]
-position = Vector2(325.14398, 335.64)
+position = Vector2(300.5985, 335.64)
 rotation = 1.5707964
-scale = Vector2(8.04, 5)
+scale = Vector2(8.04, 3.4659088)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Path" unique_id=1723469442]
@@ -83,9 +83,9 @@ scale = Vector2(6.389, 3.6334372)
 texture = ExtResource("2_q0mm3")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Path" unique_id=1689803196]
-position = Vector2(450.144, 489.63998)
+position = Vector2(472.87128, 489.63998)
 rotation = 1.5707964
-scale = Vector2(8.163, 5)
+scale = Vector2(8.163, 3.579545)
 texture = ExtResource("2_q0mm3")
 
 [node name="Label" type="Label" parent="Path" unique_id=101430021]
@@ -187,25 +187,34 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Portals" type="Node" parent="Elements" unique_id=1757262849]
 
-[node name="Node2D" parent="Elements/Portals" unique_id=2132436189 instance=ExtResource("3_np2xp")]
-position = Vector2(439.14398, 331.64)
+[node name="portail_1" parent="Elements/Portals" unique_id=2132436189 instance=ExtResource("3_np2xp")]
+position = Vector2(384, 348)
 
-[node name="Node2D3" parent="Elements/Portals" unique_id=554766844 instance=ExtResource("3_np2xp")]
+[node name="portail_2_1" parent="Elements/Portals" unique_id=529099378 instance=ExtResource("3_np2xp")]
+position = Vector2(576, 239)
+
+[node name="portail_2_2" parent="Elements/Portals" unique_id=1278450215 instance=ExtResource("3_np2xp")]
+position = Vector2(451, 237)
+
+[node name="portail_2_3" parent="Elements/Portals" unique_id=22647440 instance=ExtResource("3_np2xp")]
+position = Vector2(348, 284)
+
+[node name="boutique_1_1" parent="Elements/Portals" unique_id=554766844 instance=ExtResource("3_np2xp")]
 position = Vector2(782.144, 485.64)
 
-[node name="Node2D2" parent="Elements/Portals" unique_id=1513484065 instance=ExtResource("3_np2xp")]
+[node name="boutique_1_2" parent="Elements/Portals" unique_id=1513484065 instance=ExtResource("3_np2xp")]
 position = Vector2(213.144, 341.64)
 
-[node name="Node2D4" parent="Elements/Portals" unique_id=1164817500 instance=ExtResource("3_np2xp")]
+[node name="boutique_1_3" parent="Elements/Portals" unique_id=1164817500 instance=ExtResource("3_np2xp")]
 position = Vector2(781.144, 190.64)
 
-[node name="Node2D5" parent="Elements/Portals" unique_id=1360559847 instance=ExtResource("3_np2xp")]
-position = Vector2(556.144, 486.64)
+[node name="boutique_2_1" parent="Elements/Portals" unique_id=1360559847 instance=ExtResource("3_np2xp")]
+position = Vector2(386, 488)
 
-[node name="Node2D6" parent="Elements/Portals" unique_id=1187280225 instance=ExtResource("3_np2xp")]
-position = Vector2(553.144, 190.64)
+[node name="boutique_2_2" parent="Elements/Portals" unique_id=1187280225 instance=ExtResource("3_np2xp")]
+position = Vector2(383, 189)
 
-[node name="Node2D7" parent="Elements/Portals" unique_id=132626636 instance=ExtResource("3_np2xp")]
+[node name="boutique_2_3" parent="Elements/Portals" unique_id=132626636 instance=ExtResource("3_np2xp")]
 position = Vector2(673.144, 331.64)
 
 [node name="Node2D8" parent="Elements/Portals" unique_id=1990816068 instance=ExtResource("4_w7jjh")]
@@ -213,5 +222,5 @@ position = Vector2(934.144, 335.64)
 scale = Vector2(3, 3)
 
 [node name="level1" type="CollisionShape2D" parent="." unique_id=233720120]
-position = Vector2(-164.14398, -279.64)
+position = Vector2(-164.14398, -278.64)
 shape = SubResource("CircleShape2D_bowxp")

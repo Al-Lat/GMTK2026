@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bha5ow0wratmn"]
 
 [ext_resource type="Texture2D" uid="uid://cmydtyq6lf7e5" path="res://Graphics/Elements/sprite-sheet.png" id="1_csiht"]
-[ext_resource type="Script" uid="uid://lcgcs8vefyqu" path="res://Scripts/portal.gd" id="1_oi2tk"]
+[ext_resource type="Script" uid="uid://lcgcs8vefyqu" path="res://Scripts/map_item.gd" id="1_juxy1"]
+[ext_resource type="Texture2D" uid="uid://dpou7jj30jqdd" path="res://Graphics/Player/bus.png" id="3_juxy1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8sdh4"]
 atlas = ExtResource("1_csiht")
@@ -58,11 +59,18 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_juxy1")
+}],
+"loop": 1,
+"name": &"shop",
+"speed": 5.0
 }]
 
-[node name="portail" type="Node2D" unique_id=529099378]
-script = ExtResource("1_oi2tk")
+[node name="map_item" type="Node2D" unique_id=529099378]
+script = ExtResource("1_juxy1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2016662623]
 sprite_frames = SubResource("SpriteFrames_dlnr4")
-frame_progress = 0.76957357
