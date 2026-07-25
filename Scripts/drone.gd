@@ -13,15 +13,16 @@ var attack : MobAttack
 func _ready() -> void:
 	self.health = 10
 	animated_sprite.play("idle")
-	self.attack = AttackFactory.get_mob_attack(AttackFactory.MobAttackEnum.MISSILE)
+	self.attack = AttackFactory.get_mob_attack(AttackFactory.MobAttackEnum.MISSILE,$cooldown)
 
 func _process(delta: float) -> void:
 	if in_range && (player.global_position.x - self.global_position.x) * orientation < 0:
 		orientation *= -1
 		animated_sprite.flip_h = not animated_sprite.flip_h
-	if (in_range && cooldown_end): 
-		cooldown_end = false
-		$cooldown.start()
+	if (in_range && cooldown_end):
+		print("drone firing : ",self.attack)
+		#cooldown_end = false
+		#$cooldown.start()
 		self.attack.summon(self)
 
 func _on_detection_body_entered(body: Node2D) -> void:

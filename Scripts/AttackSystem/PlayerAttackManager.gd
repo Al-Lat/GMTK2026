@@ -33,16 +33,16 @@ func set_ranged_attacks(boolValue:bool)->void:
 	self.is_ranged_attacking = boolValue
 
 func player_special_attack():
-	print("special attack called")
+	#print("special attack called")
 	self.special_attack.summon()
 	
 func player_ranged_attack():
-	print("ranged attack called")
+	#print("ranged attack called")
 	self.ranged_attack.summon()
 	
 
 func player_melee_attack():
-	print("melee attack called")
+	#print("melee attack called")
 	is_melee_attacking = true
 	self.melee_attack.summon()
 	is_melee_attacking = false

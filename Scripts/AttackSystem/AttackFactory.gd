@@ -28,9 +28,9 @@ static func get_player_attack(name:PlayerAttackEnum,player:Player)->PlayerAttack
 		_:
 			return null
 			
-static func get_mob_attack(name:MobAttackEnum)->MobAttack:
+static func get_mob_attack(name:MobAttackEnum,cooldown_timer:Timer)->MobAttack:
 	match name:
 		MobAttackEnum.MISSILE:
-			return AttackMissile.new()
+			return AttackMissile.new(cooldown_timer)
 		_:
 			return null

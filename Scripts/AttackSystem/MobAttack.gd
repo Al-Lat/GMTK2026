@@ -5,13 +5,20 @@ const enumClass = preload("res://Scripts/AttackSystem/AttackType.gd")
 const AttackType = enumClass.AttackType
 
 var cooldown : int
+var cooldown_timer : Timer
 var attack_type : AttackType
 var attack_scene : RefCounted
+var target
 
-func _ready():
-	var target = PlayerSingleton.player
+var is_allowed_fire = true
+
+func _init(cooldown_timer:Timer):
+	self.target = PlayerSingleton.player
+	self.cooldown_timer = cooldown_timer
 
 func summon(entity) -> void:
-	var attack = self.attack_scene.instantiate();
-	entity.add_child(attack);
-	attack.target = self.target
+	#methode par defaut -> none
+	pass
+
+func allow_fire()->void:
+	self.is_allowed_fire=true
