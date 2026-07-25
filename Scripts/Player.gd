@@ -10,6 +10,7 @@ var player_singleton = PlayerSingleton
 
 var facing_direction:int = 1  # 1 = droite, -1 = gauche
 var direction_to_mouse: Vector2 = Vector2.ZERO
+var start_point:Marker2D
 
 const SPECIAL_ATTACK_OFFSET = 300.0
 const RANGED_ATTACK_OFFSET = 110
@@ -23,6 +24,8 @@ var is_animation_melee_sprite_offset:bool = false
 
 func _ready() -> void:
 	player_singleton.player = self
+	start_point = get_node("../start")
+	self.global_position = start_point.global_position
 	
 	animated_sprite.play("idle")
 	print("Player :",self)
@@ -81,3 +84,8 @@ func update_animations(direction_movment):
 		#inverser le décalage du sprite pour animation melee
 		if animated_sprite.animation == "attack_slash" && is_animation_melee_sprite_offset:
 			animated_sprite.position.x *= -1
+
+
+func _on_death_zone_body_entered(body: Node2D) -> void:
+	if (body == self):
+		self.global_position = start_point.global_position
