@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4o8jo5tgcp2p" path="res://Scripts/skill_shop.gd" id="1_e38xw"]
 [ext_resource type="Texture2D" uid="uid://brakqc88ci7mt" path="res://Graphics/particles_fireball_small/0001.png" id="2_7ds17"]
+[ext_resource type="Texture2D" uid="uid://bd8eou8l2ngpk" path="res://Graphics/ressources/boutique_discount.png" id="2_8l7ox"]
 [ext_resource type="Texture2D" uid="uid://cad2a7404cmrg" path="res://Graphics/particles_fireball_small/0002.png" id="3_8l7ox"]
 [ext_resource type="Texture2D" uid="uid://deprafegh1oqa" path="res://Graphics/particles_fireball_small/0003.png" id="4_dkno5"]
 [ext_resource type="Texture2D" uid="uid://bvnvqyn5imnt5" path="res://Graphics/particles_fireball_small/0004.png" id="5_4j6dd"]
@@ -52,8 +53,6 @@
 [ext_resource type="Texture2D" uid="uid://cd3mbxw02f32k" path="res://Graphics/particles_fireball_small/0048.png" id="49_8s0uq"]
 [ext_resource type="Texture2D" uid="uid://dhc55hkmydr8s" path="res://Graphics/particles_fireball_small/0049.png" id="50_gy7o3"]
 [ext_resource type="Texture2D" uid="uid://b383x8vhott70" path="res://Graphics/particles_fireball_small/0050.png" id="51_afitn"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_dqhsf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqhsf"]
 animations = [{
@@ -217,30 +216,29 @@ animations = [{
 script = ExtResource("1_e38xw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=634390735]
-modulate = Color(1, 0, 0, 1)
-position = Vector2(65.49999, -29.5)
-scale = Vector2(275, 465)
-texture = SubResource("CanvasTexture_dqhsf")
+scale = Vector2(2, 2)
+texture = ExtResource("2_8l7ox")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=732443949]
-position = Vector2(62, 29)
+position = Vector2(50, -31.000004)
+scale = Vector2(0.171875, 0.18359375)
 sprite_frames = SubResource("SpriteFrames_dqhsf")
 frame_progress = 0.27905712
 
 [node name="acheter" type="Button" parent="." unique_id=1964295167]
-offset_left = -27.181602
-offset_top = 120.465904
-offset_right = 59.818398
-offset_bottom = 151.46591
+offset_left = -64.0
+offset_top = 35.0
+offset_right = 74.0
+offset_bottom = 77.0
 text = "buy"
 metadata/_edit_use_anchors_ = true
 
 [node name="nom" type="Label" parent="." unique_id=1839896031]
-offset_left = -28.0
-offset_top = -201.0
-offset_right = 166.0
-offset_bottom = -29.0
-theme_override_font_sizes/font_size = 23
+offset_left = -57.0
+offset_top = -44.0
+offset_right = 20.0
+offset_bottom = 33.0
+theme_override_font_sizes/font_size = 9
 text = "GET a NEW SKILL 
 only for YOU 
 in a SPECIAL 
@@ -251,74 +249,44 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="prix" type="Label" parent="." unique_id=210789587]
-offset_left = 106.8184
-offset_top = 151.46591
-offset_right = 136.81839
-offset_bottom = 176.46591
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 59.999992
+offset_bottom = 37.0
 theme_override_colors/font_color = Color(0, 0.96862745, 0, 1)
 text = "200"
 metadata/_edit_use_anchors_ = true
 
 [node name="ancien_prix" type="Label" parent="." unique_id=358917540]
-offset_left = 88.8184
-offset_top = 126.465904
-offset_right = 134.81839
-offset_bottom = 151.46591
+offset_left = 29.0
+offset_top = 3.0
+offset_right = 75.0
+offset_bottom = 28.000008
+theme_override_font_sizes/font_size = 10
 text = "50000"
 metadata/_edit_use_anchors_ = true
 
 [node name="logo_temps" type="Sprite2D" parent="." unique_id=1070775658]
-position = Vector2(147.81842, 138.46591)
+position = Vector2(65, 10)
+scale = Vector2(0.59375, 0.59375)
 texture = ExtResource("6_0oli4")
 
 [node name="special_discount" type="Label" parent="." unique_id=2087302537]
 offset_left = -64.0
-offset_top = -251.0
-offset_right = 194.0
-offset_bottom = -212.0
+offset_top = -65.0
+offset_right = 29.0
+offset_bottom = -51.0
 theme_override_colors/font_color = Color(1, 0.6627451, 0, 1)
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 9
 text = "SPECIAL DISCOUNT"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1087948135]
-position = Vector2(12.8183975, 27.465904)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(71, 113, 126, 113, 126, 109, 71, 109)
-
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1366513743]
-position = Vector2(12.8183975, 27.465904)
+position = Vector2(-10.495591, -102.00001)
+scale = Vector2(0.5471698, 1)
 color = Color(1, 0, 0, 1)
-polygon = PackedVector2Array(72, 112, 125, 112, 125, 110, 72, 110)
-
-[node name="Polygon2D3" type="Polygon2D" parent="." unique_id=89478544]
-position = Vector2(67.818405, 198.46588)
-rotation = 2.612758
-scale = Vector2(0.34146342, 0.52307695)
-color = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-28, 62, -8, 84, 13, 62, 3, 62, 3, 48.612183, 3, 19, -18, 19, -18, 62)
-
-[node name="Polygon2D4" type="Polygon2D" parent="." unique_id=1208496714]
-position = Vector2(-48.181595, 195.46591)
-rotation = -2.612758
-scale = Vector2(0.34146342, 0.52307695)
-color = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-28, 62, -8, 84, 13, 62, 3, 62, 3, 19, -18, 19, -18, 62)
-
-[node name="Polygon2D5" type="Polygon2D" parent="." unique_id=340290578]
-position = Vector2(-34.1816, 67.465904)
-rotation = -0.24958208
-scale = Vector2(0.34146342, 0.52307695)
-color = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-28, 62, -8, 84, 13, 62, 3, 62, 3, 19, -18, 19, -18, 62)
-
-[node name="Polygon2D6" type="Polygon2D" parent="." unique_id=1403172111]
-position = Vector2(80.8184, 73.465904)
-rotation = 0.49916416
-scale = Vector2(0.34146342, 0.52307695)
-color = Color(1, 1, 0, 1)
-polygon = PackedVector2Array(-28, 62, -8, 84, 13, 62, 3, 62, 3, 19, -18, 19, -18, 62)
+polygon = PackedVector2Array(72.1816, 112.534096, 89.85237, 112.5341, 125.1816, 112.534096, 125.1816, 111.534096, 72.1816, 111.534096)
 
 [connection signal="pressed" from="acheter" to="." method="_on_acheter_pressed"]
