@@ -26,14 +26,28 @@ func _on_acheter_pressed() -> void:
 	if acheter :
 		if nom == "robot legs":
 			print("buy legs")
+			if LifeIsLife.temps >= prix:
+				print("okay")
+				LifeIsLife.remove_time(prix)
+				Speedrun.add_time(1)
 		elif nom == "robot arms":
-			print("buy arms")
+			if LifeIsLife.temps >= prix:
+				LifeIsLife.remove_time(prix)
+				KillThemAll.add_time(1)
 		elif nom == "robot gears":
-			print("buy gears")
+			if LifeIsLife.temps >= prix:
+				LifeIsLife.remove_time(prix)
+				KillThemFast.add_time(1)
 	else :
 		if nom == "robot legs":
-			print("sell legs")
+			if Speedrun.we_are_speed >= 1:
+				Speedrun.remove_time(1)
+				LifeIsLife.add_time(prix)
 		elif nom == "robot arms":
-			print("sell arms")
+			if KillThemAll.force_pure >= 1:
+				KillThemAll.remove_time(1)
+				LifeIsLife.add_time(prix)
 		elif nom == "robot gears":
-			print("sell gears")
+			if KillThemFast.force_rapide >= 1:
+				KillThemFast.remove_time(1)
+				LifeIsLife.add_time(prix)

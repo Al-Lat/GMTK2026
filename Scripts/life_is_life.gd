@@ -1,15 +1,16 @@
 extends Node
-signal update_temps
 
 var temps;
+var hud:CanvasLayer
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	temps = 100;
-	start_level()
+	end_level()
 
 func add_time(time:int) -> void:
 	temps += time;
-	update_temps.emit()
+	hud.update_time()
 
 func remove_time(time:int) -> void:
 	temps -= time;
@@ -17,7 +18,7 @@ func remove_time(time:int) -> void:
 		temps = 0
 		PlayerSingleton.player.mort()
 		end_level()
-	update_temps.emit()
+	hud.update_time()
 
 func end_level() -> void:
 	$life_is_moins.stop();
