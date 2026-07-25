@@ -21,4 +21,3 @@ func _input(event: InputEvent) -> void:
 		if play_rect.has_point(mouse_pos):
 			print("Clic sur Play !")
 			get_tree().change_scene_to_file("res://Scenes/niveau_1.tscn")
-			return
