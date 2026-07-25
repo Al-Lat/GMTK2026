@@ -18,6 +18,10 @@ config/icon="res://Graphics/icon.svg"
 [autoload]
 
 PlayerSingleton="*uid://bpbyhqiujicc6"
+LifeIsLife="*uid://d3ixtrk5c0flv"
+Speedrun="*uid://doyjb2cm5siyk"
+KillThemAll="*uid://dvxnrv4i3jbgj"
+KillThemFast="*uid://dicr8vhni6wnn"
 
 [display]
 

@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 		self.attack.summon(self)
 
 func _on_detection_body_entered(body: Node2D) -> void:
-	print(body.name)
 	if (body.name == "Player"):
 		player = body
 		in_range = true

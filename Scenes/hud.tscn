@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cp1y2sbwwn1v7"]
 
-[ext_resource type="Script" uid="uid://c66c7pq00jrun" path="res://script/hud.gd" id="1_fccik"]
-[ext_resource type="PackedScene" uid="uid://d3ixtrk5c0flv" path="res://Scenes/life_is_life.tscn" id="2_bjfho"]
-[ext_resource type="PackedScene" uid="uid://doyjb2cm5siyk" path="res://Scenes/speedrun.tscn" id="3_t1xeu"]
-[ext_resource type="PackedScene" uid="uid://dvxnrv4i3jbgj" path="res://Scenes/kill_them_all.tscn" id="4_36asn"]
-[ext_resource type="PackedScene" uid="uid://dicr8vhni6wnn" path="res://Scenes/kill_them_fast.tscn" id="5_8jye8"]
+[ext_resource type="Script" uid="uid://c66c7pq00jrun" path="res://Scripts/hud.gd" id="1_fccik"]
+[ext_resource type="Texture2D" uid="uid://ccgccwf40v2s5" path="res://Graphics/ressources/Skillicon8_05.png" id="2_t1xeu"]
+[ext_resource type="Texture2D" uid="uid://cs4hyxiq1ilb4" path="res://Graphics/ressources/Skillicon8_29-export.png" id="3_36asn"]
+[ext_resource type="Texture2D" uid="uid://bk4g5n2rfuwla" path="res://Graphics/ressources/Skillicon8_13.png" id="4_8jye8"]
+[ext_resource type="Texture2D" uid="uid://dl6vv67ey10rx" path="res://Graphics/ressources/Skillicon8_32.png" id="5_43w4t"]
 
 [node name="HUD" type="CanvasLayer" unique_id=311553630]
 script = ExtResource("1_fccik")
@@ -36,15 +36,18 @@ offset_right = 73.0
 offset_bottom = 120.0
 text = "0"
 
-[node name="life_is_life" parent="." unique_id=2116581593 instance=ExtResource("2_bjfho")]
+[node name="sprite_the_world" type="Sprite2D" parent="." unique_id=1692684681]
+position = Vector2(40, 15)
+texture = ExtResource("2_t1xeu")
 
-[node name="speedrun" parent="." unique_id=1563418718 instance=ExtResource("3_t1xeu")]
+[node name="sprite_speed_ressources" type="Sprite2D" parent="." unique_id=969183537]
+position = Vector2(40, 45)
+texture = ExtResource("3_36asn")
 
-[node name="kill_them_all" parent="." unique_id=433505889 instance=ExtResource("4_36asn")]
+[node name="sprite_strength_ressources" type="Sprite2D" parent="." unique_id=190438105]
+position = Vector2(40, 70)
+texture = ExtResource("4_8jye8")
 
-[node name="kill_them_fast" parent="." unique_id=287396507 instance=ExtResource("5_8jye8")]
-
-[connection signal="update_temps" from="life_is_life" to="." method="update_time"]
-[connection signal="update_speed" from="speedrun" to="." method="update_speed"]
-[connection signal="update_strength" from="kill_them_all" to="." method="update_strength"]
-[connection signal="update_strength" from="kill_them_fast" to="." method="update_attack_speed"]
+[node name="sprite_attack_speed_ressources" type="Sprite2D" parent="." unique_id=1654146587]
+position = Vector2(40, 100)
+texture = ExtResource("5_43w4t")
