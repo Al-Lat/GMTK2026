@@ -4,7 +4,7 @@ extends Control
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer
 
 var textes_histoire : Array[String] = [
-	"tic, tac, tic, tac, tic, tac",
+	"Tick-tock, Tick-tock, Tick-tock",
 	"When you die, you can live a second time",
 	"Second life is dictated by a countdown",
 	"1 week if you don't serve them...",

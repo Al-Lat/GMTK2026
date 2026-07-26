@@ -1674,9 +1674,8 @@ tile_set = SubResource("TileSet_vnmm8")
 position = Vector2(0.25, 0)
 tile_set = SubResource("TileSet_vnmm8")
 
-[node name="boss" parent="." unique_id=1511067568 instance=ExtResource("14_17imm")]
-position = Vector2(1466, 1636)
-scale = Vector2(4, 4)
+[node name="boss" parent="." unique_id=1928229347 instance=ExtResource("14_17imm")]
+position = Vector2(1525, 1704)
 
 [node name="Player" parent="." unique_id=2142611481 instance=ExtResource("8_uyysf")]
 position = Vector2(-1535, -3)

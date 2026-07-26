@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bb7ofskejl61d"]
 
+[ext_resource type="Script" uid="uid://cup48nw8rx23q" path="res://Scripts/Mobs/boss.gd" id="1_cxrok"]
 [ext_resource type="Texture2D" uid="uid://c6m2bq8hes6hr" path="res://Graphics/Characters/boss/ArchDemonBasicAtk001-Sheet.png" id="1_jspv8"]
 [ext_resource type="Texture2D" uid="uid://dr31sctnvo1lx" path="res://Graphics/Characters/boss/boss.png" id="4_ukjjc"]
 
@@ -207,7 +208,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"dead",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -257,7 +258,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Boss_Anims:animation")
+tracks/0/path = NodePath("boss/Boss_Anims:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -269,7 +270,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Boss_Anims:frame")
+tracks/1/path = NodePath("boss/Boss_Anims:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -281,26 +282,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Attack_Ball_Collision/CollisionShape2D:position")
+tracks/2/path = NodePath("boss/Attack_Ball_Collision/CollisionShape2D:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.50421965, 0.7129673, 0.8043545, 0.923891, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.39825037, 0.40769506, 0.69260937, 0.702054, 0.82640886, 0.9933973, 1.0138607, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-47, -6), Vector2(8, -7), Vector2(18, -8), Vector2(25, -7), Vector2(25, -7)]
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(0.5, 0.5), Vector2(0.5, 0.5), Vector2(1.5, 1.5), Vector2(1.5, 1.5), Vector2(1.5, 1.5), Vector2(1e-05, 1e-05), Vector2(1.001358e-05, 1.001358e-05)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Attack_Ball_Collision/CollisionShape2D:scale")
+tracks/3/path = NodePath("boss/Attack_Ball_Collision/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.30071068, 0.50421965, 0.7129673, 0.8043545, 0.923891, 1.0009838, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.40769506, 0.69260937, 0.702054, 0.82640886, 0.9933973, 1.0138607, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1.5, 1.5), Vector2(2, 2), Vector2(2, 2), Vector2(1e-05, 1e-05), Vector2(1.001358e-05, 1.001358e-05)]
+"values": [Vector2(-48, -5), Vector2(-48, -5), Vector2(4, -5), Vector2(19, -5), Vector2(19, -5), Vector2(19, -5), Vector2(19, -5)]
 }
 
 [sub_resource type="Animation" id="Animation_n725y"]
@@ -308,7 +309,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Boss_Anims:animation")
+tracks/0/path = NodePath("boss/Boss_Anims:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -320,7 +321,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Boss_Anims:frame")
+tracks/1/path = NodePath("boss/Boss_Anims:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -332,26 +333,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Attack_Ball_Collision/CollisionShape2D:scale")
+tracks/2/path = NodePath("boss/Attack_Ball_Collision/CollisionShape2D:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1e-05, 1e-05)]
+"values": [Vector2(0.5, 0.5)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Attack_Ball_Collision/CollisionShape2D:position")
+tracks/3/path = NodePath("boss/Attack_Ball_Collision/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(8, -7)]
+"values": [Vector2(-48, -5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mh6p8"]
@@ -360,22 +361,39 @@ _data = {
 &"RESET": SubResource("Animation_n725y")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_idooy"]
-radius = 7.28011
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqslc"]
 
-[node name="boss" type="Node2D" unique_id=1511067568]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idooy"]
+size = Vector2(23, 41)
 
-[node name="Boss_Anims" type="AnimatedSprite2D" parent="." unique_id=752555888]
+[sub_resource type="CircleShape2D" id="CircleShape2D_xodl8"]
+radius = 17.029387
+
+[node name="boss" type="CharacterBody2D" unique_id=1928229347]
+motion_mode = 1
+script = ExtResource("1_cxrok")
+
+[node name="Boss_Anims" type="AnimatedSprite2D" parent="." unique_id=1475156514]
 position = Vector2(-1, 2)
 sprite_frames = SubResource("SpriteFrames_bowxp")
 animation = &"attack"
+autoplay = "idle"
 
-[node name="AttackAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1006412118]
+[node name="AttackAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1776809027]
+root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_mh6p8")
 
-[node name="Attack_Ball_Collision" type="Area2D" parent="." unique_id=9099205]
+[node name="Attack_Ball_Collision" type="Area2D" parent="." unique_id=746201599]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_Ball_Collision" unique_id=1670822837]
-position = Vector2(8, -7)
-scale = Vector2(1e-05, 1e-05)
-shape = SubResource("CircleShape2D_idooy")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_Ball_Collision" unique_id=921094457]
+position = Vector2(-48, -5)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_sqslc")
+
+[node name="Body" type="CollisionShape2D" parent="." unique_id=2046657775]
+position = Vector2(0.5, 13.5)
+shape = SubResource("RectangleShape2D_idooy")
+
+[node name="Clock" type="CollisionShape2D" parent="." unique_id=161910744]
+position = Vector2(-2, -6)
+shape = SubResource("CircleShape2D_xodl8")
