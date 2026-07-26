@@ -106,6 +106,15 @@ func take_damage(raw_damage:float)->void:
 		self.death()
 
 func death()->void:
+	var loot = randf()
+	if loot > 0.99:
+		Speedrun.add_time(2)
+	elif loot > 0.4:
+		Speedrun.add_time(1)
+	elif loot > 0.2:
+		KillThemFast.add_time(1)
+	elif loot > 0:
+		KillThemAll.add_time(1)
 	self.chrono_kamikaze.execute()
 	queue_free()
 

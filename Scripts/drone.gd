@@ -40,6 +40,15 @@ func take_damage(raw_damage:float)->void:
 	print("Drone : taking damage -> before : ",self.life," after : ",(self.life - raw_damage))
 	self.life -= raw_damage
 	if self.life <=0 :
+		var loot = randf()
+		if loot > 0.99:
+			KillThemFast.add_time(2)
+		elif loot > 0.4:
+			KillThemFast.add_time(1)
+		elif loot > 0.2:
+			KillThemAll.add_time(1)
+		elif loot > 0:
+			Speedrun.add_time(1)
 		self.death()
 
 func summon_missile(target) -> void:

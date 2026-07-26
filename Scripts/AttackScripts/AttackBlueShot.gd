@@ -1,5 +1,6 @@
 class_name AttackBlueShot extends PlayerAttack
 
+const BASE_COOLDOWN = 0.8
 
 func _init(player:Player):
 	super(player)
@@ -12,6 +13,9 @@ func isInputPatternOk()->bool:
 	return Input.is_action_pressed("player_attack_ranged")
 
 func summon() -> void:
+	self.cooldown = BASE_COOLDOWN * (1 - 0.05 * KillThemFast.force_rapide)
+	if self.cooldown <= 0.25:
+		self.cooldown = 0.25
 	if self.is_allowed_fire:
 		is_allowed_fire = false
 		var projectile = self.attack_scene.instantiate()
