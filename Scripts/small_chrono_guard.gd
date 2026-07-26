@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 		speed = 350
 		chase()
 	else:
-		speed = 150
+		speed = 250
 		roaming()
 	move_and_slide()
 	if velocity.x * orientation > 0:

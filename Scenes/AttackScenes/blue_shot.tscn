@@ -270,7 +270,7 @@ flip_h = true
 position = Vector2(6.666666, 0)
 shape = SubResource("RectangleShape2D_lgns8")
 
-[node name="LIFETIME" type="Timer" parent="." unique_id=135106035]
+[node name="LIFETIME" type="Timer" parent="." unique_id=135106035 groups=["destroyable_player_projectile"]]
 wait_time = 3.0
 
 [connection signal="timeout" from="LIFETIME" to="." method="impact"]
