@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dmbakstr7xykp"]
+
+[sub_resource type="Theme" id="Theme_ifefo"]
+
+[sub_resource type="Theme" id="Theme_7q1b3"]
+
+[node name="Control" type="Control" unique_id=1649813556]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ifefo")
+
+[node name="Button" type="Button" parent="." unique_id=1451975869]
+layout_mode = 0
+offset_right = 289.0
+offset_bottom = 115.0
+theme = SubResource("Theme_7q1b3")
+theme_type_variation = &"FlatButton"
+text = "MUSICS (pixabay) : 
+OceanKing
+Psychronic
+-------
+ASSETS (itch.io) : 
+Actifs de jeu gratuits (GUI, Sprite, Tilesets)
+Chronos333
+KiyoZ
+Luis Zuno aka Ansimuz
+-------
+DEVS (itch.io) : 
+BobbyDourne
+Chronos333
+TheJamDealer
+MrM0che 
+-------
+GRAPHIST (itch.io) : 
+Chronos333
+-------
+SONG MASTER : 
+Chronos333
+-------
+MERCI à tous d'avoir jouer à notre jeu !  
+Thank you for playing our game !
+
+IN GODOT 
+
+! FOR a GameJam event !"

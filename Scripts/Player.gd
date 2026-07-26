@@ -107,7 +107,9 @@ func take_damage(raw_damage:int)->void:
 	print("player : take_damage passed")
 	animation_waiting_ended = false
 	LifeIsLife.remove_time(raw_damage)
+	print("Damage :  ", raw_damage)
 	if LifeIsLife.temps > 0:
+		print("Aïe")
 		animated_sprite.play("hit")
 
 func death():

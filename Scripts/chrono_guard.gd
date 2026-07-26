@@ -37,10 +37,10 @@ func _process(delta: float) -> void:
 	if player != null && player.global_position.distance_to(self.global_position) < range_to_attack:
 		self.summon_chrono_slash()
 	elif player:
-		speed = 550
+		speed = 250
 		chase()
 	else:
-		speed = 250
+		speed = 150
 		roaming()
 	move_and_slide()
 	if velocity.x * facing_direction > 0:
@@ -89,7 +89,8 @@ func summon_chrono_slash():
 		self.anims.visible = true
 
 func take_damage(raw_damage:float)->void:
-	self.anims.play("taking_damage")
+	if not self.anims.animation == "taking_damage" :
+		self.anims.play("taking_damage")
 	print("CG : taking damage -> before : ",self.life," after : ",(self.life - raw_damage))
 	self.life -= raw_damage
 	if self.life <= 0:
@@ -114,3 +115,8 @@ func death()->void:
 
 func _on_chrono_slash_cooldown_timeout() -> void:
 	self.is_allowed_chrono_slash = true
+
+
+func _on_anims_animation_finished() -> void:
+	if self.anims.animation == "taking_damage":
+		self.anims.play("running")
