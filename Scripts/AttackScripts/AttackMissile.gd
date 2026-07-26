@@ -17,7 +17,6 @@ func summon(entity) -> void:
 		is_allowed_fire = false
 		var attack = self.attack_scene.instantiate();
 		entity.add_child(attack);
-		print("target : ",self.target)
 		attack.target = self.target
 		
 		self.cooldown_timer.start(self.cooldown)

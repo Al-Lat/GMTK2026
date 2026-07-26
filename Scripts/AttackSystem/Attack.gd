@@ -1,8 +1,8 @@
-class_name Attack extends RefCounted
+class_name Attack extends Area2D
 
 
-#DEPRECIATED
+
 
 ##A implementer dans les classes filles
-func summon(entity) -> void:
-	pass
+func summon(entity, boolean_setter:Callable):
+	return null

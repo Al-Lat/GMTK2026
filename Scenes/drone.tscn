@@ -68,8 +68,9 @@ shape = SubResource("CapsuleShape2D_dqhsf")
 shape = SubResource("CircleShape2D_x74uf")
 
 [node name="cooldown" type="Timer" parent="." unique_id=1635696348]
+wait_time = 1.2
 one_shot = true
 
 [connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]
-[connection signal="timeout" from="cooldown" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

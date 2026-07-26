@@ -12,24 +12,23 @@ var mainAnimation:AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#ajuster l'animation en fonction du joueur
 	parent = $".."
 	player = player_singleton.player
 	animation.flip_h = (player.facing_direction == -1)
 	animation.position.x += player.facing_direction * 16
 	
+	#cacher l'animation du joueur et lancer l'animation de l'attaque
 	mainAnimation =  parent.get_node("playerAnimation")
-	
-	print("position avant : ",mainAnimation.position.x)
 	mainAnimation.visible = false
 	anim_player.play("new_animation")
-	print("position apres : ",mainAnimation.position.x)
 	
+	#connecter le signal pour agir en cas de collision
 	body_entered.connect(_on_body_entered)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#animation.position.x *= player.facing_direction
+
 
 #TODO traitement collision
 func _on_body_entered(body: Node) -> void:
