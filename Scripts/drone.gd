@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 		self.summon_missile(player)
 
 func _on_detection_body_entered(body: Node2D) -> void:
-	print(body.name)
+	#print("Drone : body entered",body.name)
 	if (body.name == "Player"):
 		player = body
 		in_range = true

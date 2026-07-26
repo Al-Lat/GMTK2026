@@ -46,7 +46,7 @@ func _process(delta: float) -> void:
 	if velocity.x * facing_direction > 0:
 		scale.x = abs(scale.x)
 	elif velocity.x * facing_direction < 0:
-		print("changement direction")
+		#print("CG : changement direction")
 		scale.x = -abs(scale.x)
 		facing_direction *= -1
 

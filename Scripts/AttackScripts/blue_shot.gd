@@ -24,7 +24,7 @@ func _on_body_entered(body: Node) -> void:
 	
 	print("Touché : ", body.name)
 	if (body.is_in_group("destroyable_mobs_projectile")):
-		body.queue_free()
+		body.impact()
 	if (body.is_in_group("Mobs")):
 		body.take_damage(self.damage)
 	
