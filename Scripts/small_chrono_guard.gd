@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 	if player:
 		speed = 350
 		chase()
-	else:	
+	else:
 		speed = 150
 		roaming()
 	move_and_slide()
