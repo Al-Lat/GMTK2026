@@ -22,6 +22,8 @@ const MELEE_ATTACK_OFFSET = 40.0
 var is_animation_melee_sprite_offset:bool = false
 
 var is_in_shop:bool = false
+var jump_ended:bool = true
+var in_air:bool = false
 
 
 func _ready() -> void:
@@ -39,6 +41,9 @@ func _physics_process(delta: float) -> void:
 	var direction_movment = Input.get_axis("player_move_left", "player_move_right")
 	
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
+		animated_sprite.play("jump")
+		in_air = true
+		jump_ended = false
 		velocity.y = -jump_force
 		
 	velocity.x = lerp(velocity.x, direction_movment * speed, acceleration)
@@ -54,32 +59,37 @@ func _process(delta: float) -> void:
 
 
 func update_animations(direction_movment):
-
-	if is_on_floor():
-		if direction_movment == 0:
-			animated_sprite.play("idle")
+	if jump_ended:
+		if is_on_floor():
+			if in_air:
+				in_air = false
+				jump_ended = false
+				animated_sprite.play("touch_ground")
+			elif direction_movment == 0:
+				animated_sprite.play("idle")
+			else:
+				animated_sprite.play("run")
 		else:
-			animated_sprite.play("run")
-	else:
-		animated_sprite.play("jump")
-		
-	#decalage du sprite pour animation melee
-	if animated_sprite.animation == "attack_slash" && !is_animation_melee_sprite_offset:
-		animated_sprite.position.x = 16 * facing_direction
-		is_animation_melee_sprite_offset = true
-	#sinon reset du decalage du sprite
-	elif animated_sprite.animation != "attack_slash" && is_animation_melee_sprite_offset:
-		#print("xpos : ",animated_sprite.position.x)
-		animated_sprite.position.x = 0
-		is_animation_melee_sprite_offset = false
-		
-	if (facing_direction != sign(direction_to_mouse.x)):
-		facing_direction = sign(direction_to_mouse.x)
-		animated_sprite.flip_h = (facing_direction == -1)
-		
-		#inverser le décalage du sprite pour animation melee
-		if animated_sprite.animation == "attack_slash" && is_animation_melee_sprite_offset:
-			animated_sprite.position.x *= -1
+			in_air = true
+			animated_sprite.play("falling")
+			
+		#decalage du sprite pour animation melee
+		if animated_sprite.animation == "attack_slash" && !is_animation_melee_sprite_offset:
+			animated_sprite.position.x = 16 * facing_direction
+			is_animation_melee_sprite_offset = true
+		#sinon reset du decalage du sprite
+		elif animated_sprite.animation != "attack_slash" && is_animation_melee_sprite_offset:
+			#print("xpos : ",animated_sprite.position.x)
+			animated_sprite.position.x = 0
+			is_animation_melee_sprite_offset = false
+			
+		if (facing_direction != sign(direction_to_mouse.x)):
+			facing_direction = sign(direction_to_mouse.x)
+			animated_sprite.flip_h = (facing_direction == -1)
+			
+			#inverser le décalage du sprite pour animation melee
+			if animated_sprite.animation == "attack_slash" && is_animation_melee_sprite_offset:
+				animated_sprite.position.x *= -1
 
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
@@ -96,3 +106,7 @@ func _on_bus_shop_dedans() -> void:
 
 func _on_bus_shop_dehors() -> void:
 	is_in_shop = false
+
+func _on_player_animation_animation_looped() -> void:
+	if animated_sprite.animation == "jump" || animated_sprite.animation == "touch_ground":
+		jump_ended = true
