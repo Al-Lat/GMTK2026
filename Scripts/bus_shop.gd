@@ -1,4 +1,6 @@
 extends Area2D
+signal dedans
+signal dehors
 
 @onready var shop_hud: CanvasLayer = $shop_hud
 @onready var label_text_shop: Label = $LabelTextShop
@@ -18,6 +20,7 @@ func _process(delta: float) -> void:
 	if interactable_truck and Input.is_action_pressed("interaction") and in_shop == false:
 		print("dans shop")
 		shop_hud.visible = true
+		dedans.emit()
 		in_shop = true
 
 func player_detected(body:Node2D) -> void:
@@ -32,6 +35,8 @@ func player_lost(body:Node2D) -> void:
 		if in_shop:
 			in_shop = false
 			shop_hud.visible = false
+			dehors.emit()
 
 func _on_shop_hud_quitter() -> void:
 	in_shop = false
+	dehors.emit()

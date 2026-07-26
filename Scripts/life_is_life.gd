@@ -2,6 +2,7 @@ extends Node
 
 var temps;
 var hud:CanvasLayer
+var shop_hud:Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +12,8 @@ func _ready() -> void:
 func add_time(time:int) -> void:
 	temps += time;
 	hud.update_time()
+	if (shop_hud != null):
+		shop_hud.update_time()
 
 func remove_time(time:int) -> void:
 	temps -= time;
@@ -19,6 +22,8 @@ func remove_time(time:int) -> void:
 		PlayerSingleton.player.mort()
 		end_level()
 	hud.update_time()
+	if (shop_hud != null):
+		shop_hud.update_time()
 
 func end_level() -> void:
 	$life_is_moins.stop();

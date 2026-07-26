@@ -16,6 +16,7 @@ var map = MapSingleton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	LifeIsLife.end_level()
 	$Elements/Portals/portail_1.animation_to_play("default")
 	$Elements/Portals/portail_2_1.animation_to_play("default")
 	$Elements/Portals/portail_2_2.animation_to_play("default")
@@ -45,6 +46,7 @@ func _input(event: InputEvent) -> void:
 		var play_rect_l_1 = level_1.shape.get_rect()
 		play_rect_l_1.position += level_1.position 
 		if play_rect_l_1.has_point(mouse_pos) and !level_1.disabled:
+			LifeIsLife.start_level()
 			level_1.disabled = true
 			map.to_shop_1 = true
 			map.to_level_1 = false
@@ -94,6 +96,7 @@ func _input(event: InputEvent) -> void:
 		var play_rect_l_2_1 = level_2_1.shape.get_rect()
 		play_rect_l_2_1.position += level_2_1.position 
 		if play_rect_l_2_1.has_point(mouse_pos) and !level_2_1.disabled and map.to_level2:
+			LifeIsLife.start_level()
 			level_2_1.disabled = true
 			map.to_shop_2 = true
 			map.to_level2 = false
@@ -104,6 +107,7 @@ func _input(event: InputEvent) -> void:
 		var play_rect_l_2_2 = level_2_2.shape.get_rect()
 		play_rect_l_2_2.position += level_2_2.position 
 		if play_rect_l_2_2.has_point(mouse_pos) and !level_2_2.disabled and map.to_level2:
+			LifeIsLife.start_level()
 			level_2_2.disabled = true
 			map.to_shop_2 = true
 			map.to_level2 = false
@@ -114,6 +118,7 @@ func _input(event: InputEvent) -> void:
 		var play_rect_l_2_3 = level_2_3.shape.get_rect()
 		play_rect_l_2_3.position += level_2_3.position 
 		if play_rect_l_2_3.has_point(mouse_pos) and !level_2_3.disabled and map.to_level2:
+			LifeIsLife.start_level()
 			level_2_3.disabled = true
 			map.to_shop_2 = true
 			map.to_level2 = false
@@ -153,6 +158,7 @@ func _input(event: InputEvent) -> void:
 		var play_rect_l_3 = level_3.shape.get_rect()
 		play_rect_l_3.position += level_3.position 
 		if play_rect_l_3.has_point(mouse_pos) && !level_3.disabled and map.to_level_3 :
+			LifeIsLife.start_level()
 			level_3.disabled = true
 			map.to_level_3 = false
 			print("Clic sur Play !")

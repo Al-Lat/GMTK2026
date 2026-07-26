@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bc04xyrs2xxch"]
 
+[ext_resource type="Script" uid="uid://ioa338mv6sru" path="res://Scripts/small_recap.gd" id="1_2ifda"]
 [ext_resource type="Texture2D" uid="uid://ccgccwf40v2s5" path="res://Graphics/ressources/Skillicon8_05.png" id="1_5p2qm"]
 [ext_resource type="Texture2D" uid="uid://cs4hyxiq1ilb4" path="res://Graphics/ressources/Skillicon8_29-export.png" id="2_2ifda"]
 [ext_resource type="Texture2D" uid="uid://bk4g5n2rfuwla" path="res://Graphics/ressources/Skillicon8_13.png" id="3_vooo2"]
 [ext_resource type="Texture2D" uid="uid://dl6vv67ey10rx" path="res://Graphics/ressources/Skillicon8_32.png" id="4_qhwqf"]
 
 [node name="small_recap" type="Node2D" unique_id=734409016]
+script = ExtResource("1_2ifda")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=2057135509]
 position = Vector2(0, 3)
