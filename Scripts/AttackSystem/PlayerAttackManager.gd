@@ -26,7 +26,7 @@ func process_attacks(delta: float) -> void:
 		player_melee_attack()
 	elif ranged_attack.isInputPatternOk():
 		player_ranged_attack()
-	elif special_attack.isInputPatternOk():
+	elif PlayerSingleton.special_attack && special_attack.isInputPatternOk():
 		player_special_attack()
 
 func set_ranged_attacks(boolValue:bool)->void:

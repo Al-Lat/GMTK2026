@@ -21,6 +21,8 @@ const MELEE_ATTACK_OFFSET = 40.0
 @onready var attack_manager:PlayerAttackManager = $attack_manager
 var is_animation_melee_sprite_offset:bool = false
 
+var is_in_shop:bool = false
+
 
 func _ready() -> void:
 	player_singleton.player = self
@@ -47,7 +49,8 @@ func _process(delta: float) -> void:
 	var raw = get_global_mouse_position() - global_position
 	if raw.length() > 0:
 		self.direction_to_mouse = raw.normalized()
-	attack_manager.process_attacks(delta)
+	if !is_in_shop:
+		attack_manager.process_attacks(delta)
 
 
 func update_animations(direction_movment):
@@ -85,3 +88,11 @@ func _on_death_zone_body_entered(body: Node2D) -> void:
 
 func mort():
 	animated_sprite.play("dead")
+
+
+func _on_bus_shop_dedans() -> void:
+	is_in_shop = true
+
+
+func _on_bus_shop_dehors() -> void:
+	is_in_shop = false

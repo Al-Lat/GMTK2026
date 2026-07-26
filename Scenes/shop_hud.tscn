@@ -34,12 +34,12 @@ offset_bottom = 597.0
 theme_override_font_sizes/font_size = 44
 text = "back"
 
-[node name="item" parent="." unique_id=1183463424 instance=ExtResource("3_pks6j")]
+[node name="skill" parent="." unique_id=1183463424 instance=ExtResource("3_pks6j")]
 position = Vector2(944.00006, 347)
 scale = Vector2(1.5, 1.5)
 
 [node name="small_recap" parent="." unique_id=734409016 instance=ExtResource("4_p0ar8")]
-position = Vector2(918, 135)
+position = Vector2(912, 136)
 scale = Vector2(2, 2)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
