@@ -1,5 +1,6 @@
 class_name AttackStaticFire extends PlayerAttack
 
+const BASE_COOLDOWN = 2.5
 const ATTACK_RANGE = 240
 
 func _init(player:Player):
@@ -10,6 +11,9 @@ func _init(player:Player):
 	self.special_cooldown_timer.timeout.connect(self.allow_fire)
 
 func summon() -> void:
+	self.cooldown = BASE_COOLDOWN * (1 - 0.05 * KillThemFast.force_rapide)
+	if self.cooldown <= 1.25:
+		self.cooldown = 1.25
 	if self.is_allowed_fire:
 		self.is_allowed_fire = false
 		var projectile = self.attack_scene.instantiate()

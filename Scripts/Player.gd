@@ -12,6 +12,7 @@ var facing_direction:int = 1  # 1 = droite, -1 = gauche
 var direction_to_mouse: Vector2 = Vector2.ZERO
 var start_point:Marker2D
 
+const BASE_SPEED = 500.0
 const SPECIAL_ATTACK_OFFSET = 300.0
 const RANGED_ATTACK_OFFSET = 110
 const MELEE_ATTACK_OFFSET = 40.0
@@ -36,6 +37,7 @@ func _ready() -> void:
 	print("Player :",self)
 
 func _physics_process(delta: float) -> void:
+	speed = BASE_SPEED * (1 + 0.1 * Speedrun.we_are_speed)
 	if not is_on_floor():
 		velocity.y = clamp(velocity.y + gravity * delta, -800, 1000)
 	if not is_dead:
@@ -101,9 +103,12 @@ func _on_death_zone_body_entered(body: Node2D) -> void:
 
 
 
-func take_damage(raw_damage)->void:
+func take_damage(raw_damage:int)->void:
 	print("player : take_damage passed")
-	pass
+	animation_waiting_ended = false
+	LifeIsLife.remove_time(raw_damage)
+	if LifeIsLife.temps > 0:
+		animated_sprite.play("hit")
 
 func death():
 	animation_waiting_ended = false
@@ -118,7 +123,7 @@ func _on_bus_shop_dehors() -> void:
 	is_in_shop = false
 
 func _on_player_animation_animation_looped() -> void:
-	if animated_sprite.animation == "jump" || animated_sprite.animation == "touch_ground":
+	if animated_sprite.animation == "jump" || animated_sprite.animation == "touch_ground" || animated_sprite.animation == "hit":
 		animation_waiting_ended = true
 	elif animated_sprite.animation == "dead":
 		get_tree().change_scene_to_file("res://Scenes/menu.tscn")

@@ -2,12 +2,12 @@ extends CanvasLayer
 signal quitter
 
 func _ready() -> void:
-	set_item($buy_robot_legs, "robot legs", "robot_legs", 12, true)
-	set_item($buy_robot_arms, "robot arms", "robot_arms", 125, true)
-	set_item($buy_robot_gears, "robot gears", "robot_gears", 25, true)
-	set_item($sell_robot_legs, "robot legs", "robot_legs", 62, false)
-	set_item($sell_robot_arms, "robot arms", "robot_arms", 96, false)
-	set_item($sell_robot_gears, "robot gears", "robot_gears", 42, false)
+	set_item($buy_robot_legs, "robot legs", "robot_legs", 40, true)
+	set_item($buy_robot_arms, "robot arms", "robot_arms", 50, true)
+	set_item($buy_robot_gears, "robot gears", "robot_gears", 20, true)
+	set_item($sell_robot_legs, "robot legs", "robot_legs", 35, false)
+	set_item($sell_robot_arms, "robot arms", "robot_arms", 40, false)
+	set_item($sell_robot_gears, "robot gears", "robot_gears", 15, false)
 
 func _on_button_pressed() -> void:
 	print("bouton presser")

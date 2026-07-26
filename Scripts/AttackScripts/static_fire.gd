@@ -9,6 +9,8 @@ var time_between_damage_ticks = 0.2
 var damage = 35
 var hit_list : Dictionary
 
+const BASE_DAMAGE = 35
+
 func _init():
 	hit_list = {}
 
@@ -27,6 +29,7 @@ func _physics_process(delta: float) -> void:
 		_handle_body_in_zone(body)
 
 func _handle_body_in_zone(body: Node2D) -> void:
+	damage = BASE_DAMAGE * (1 + 0.1 * KillThemAll.force_pure)
 	if body.is_in_group("Mobs"):
 		#print("static fire : has body check ",body," ",hit_list.has(body))
 		if hit_list.has(body):

@@ -1,5 +1,7 @@
 class_name AttackBlueSlash extends PlayerAttack
 
+const BASE_COOLDOWN = 0.8
+
 func _init(player:Player):
 	super(player)
 	self.attack_type = AttackType.MELEE
@@ -11,6 +13,9 @@ func isInputPatternOk()->bool:
 	return Input.is_action_pressed("player_attack_melee")
 
 func summon() -> void:
+	self.cooldown = BASE_COOLDOWN * (1 - 0.05 * KillThemFast.force_rapide)
+	if self.cooldown <= 0.4:
+		self.cooldown = 0.4
 	if self.is_allowed_fire:
 		print("default summon")
 		self.is_allowed_fire = false

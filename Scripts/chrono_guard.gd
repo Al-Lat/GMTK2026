@@ -16,7 +16,7 @@ var tourner_droit = true
 var ancienne_pos_x = 0
 
 var is_allowed_chrono_slash = true
-var range_to_attack = 200
+var range_to_attack = 400
 
 #var life = 400
 
@@ -98,7 +98,17 @@ func take_damage(raw_damage:float)->void:
 	
 
 func death()->void:
+	var loot = randf()
+	if loot > 0.99:
+		KillThemAll.add_time(2)
+	elif loot > 0.4:
+		KillThemAll.add_time(1)
+	elif loot > 0.2:
+		Speedrun.add_time(1)
+	elif loot > 0:
+		KillThemFast.add_time(1)
 	self.chrono_kamikaze.execute()
+	
 	queue_free()
 
 

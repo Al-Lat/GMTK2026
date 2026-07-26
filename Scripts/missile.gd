@@ -2,7 +2,7 @@ class_name missile extends RigidBody2D
 
 var speed = 200
 var target = null
-var damage = 50
+var damage = 5
 
 func _ready() -> void:
 	$disparition.start()
@@ -19,9 +19,8 @@ func _process(delta: float) -> void:
 func collision_detected(collision):
 	var body := collision.get_collider() as Node2D
 	print("missile : collision on : ",body)
-	if(body.is_in_group("player")):
+	if(body.is_in_group("Player")):
 		body.take_damage(self.damage)
-	
 	impact()
 		
 

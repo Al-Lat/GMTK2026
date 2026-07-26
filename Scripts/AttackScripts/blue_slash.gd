@@ -1,6 +1,6 @@
 extends Area2D
 
-
+const BASE_DAMAGE = 200
 
 @onready var colision = $attack_colision2d
 @onready var anim_player =$AnimationPlayer 
@@ -37,6 +37,7 @@ func execute()->void:
 
 #TODO traitement collision
 func _on_body_entered(body: Node) -> void:
+	damage = BASE_DAMAGE * (1 + 0.1 * KillThemAll.force_pure)
 	print("blue_slash : Touché : ", body.name)
 	if (body.is_in_group("destroyable_mobs_projectile")):
 		body.impact()

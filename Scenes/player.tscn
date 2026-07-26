@@ -415,7 +415,7 @@ offset = Vector2(0, -50)
 [node name="playerAnimation" type="AnimatedSprite2D" parent="." unique_id=316748901]
 scale = Vector2(0.99999994, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_bowxp")
-animation = &"idle"
+animation = &"hit"
 
 [node name="attack_manager" type="Node2D" parent="." unique_id=711593596]
 script = ExtResource("4_vgqql")
