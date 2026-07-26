@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ci1ndepyr810p" path="res://Graphics/plateforms/wall.png" id="6_wiyvx"]
 [ext_resource type="PackedScene" uid="uid://gr433xggaun0" path="res://Scenes/drone.tscn" id="8_0u0nw"]
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="8_nihrp"]
+[ext_resource type="Script" uid="uid://b56d6vrxuhpqd" path="res://Scripts/niveau_2.gd" id="8_oihkd"]
 [ext_resource type="PackedScene" uid="uid://bwvx5qirfged" path="res://Scenes/portal_niveau.tscn" id="8_wiyvx"]
 [ext_resource type="PackedScene" uid="uid://fu85tobtxrj7" path="res://Scenes/Chrono-Guard.tscn" id="9_oihkd"]
 [ext_resource type="PackedScene" uid="uid://cp1y2sbwwn1v7" path="res://Scenes/hud.tscn" id="10_li606"]
@@ -1201,7 +1202,7 @@ texture = ExtResource("5_lervj")
 
 [sub_resource type="TileSet" id="TileSet_c1oy1"]
 physics_layer_0/collision_layer = 3
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_ubbiv")
 sources/2 = SubResource("TileSetAtlasSource_h6w1h")
 sources/0 = SubResource("TileSetAtlasSource_1fp3u")
@@ -1282,6 +1283,7 @@ tile_map_data = PackedByteArray("AAAGAPH/AQAUAAcAAAAGAPL/AQAUAAgAAAAGAPP/AQAUAAk
 tile_set = SubResource("TileSet_c1oy1")
 
 [node name="ennemies" type="Node2D" parent="." unique_id=1638790726]
+script = ExtResource("8_oihkd")
 
 [node name="drones" type="Node2D" parent="ennemies" unique_id=403018644]
 
@@ -1350,7 +1352,7 @@ position = Vector2(5118, 1668.0001)
 patrol_points = [NodePath("../../marker/Marker2D9"), NodePath("../../marker/Marker2D10")]
 
 [node name="Small_Chrono_Guard5" parent="ennemies/small_chrono_guard" unique_id=1631324636 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(2074.0002, 190.99998)
+position = Vector2(2221, 164)
 patrol_points = [NodePath("../../marker/Marker2D"), NodePath("../../marker/Marker2D2")]
 
 [node name="Small_Chrono_Guard6" parent="ennemies/small_chrono_guard" unique_id=716832179 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
@@ -1372,7 +1374,7 @@ patrol_points = [NodePath("../../marker/Marker2D17"), NodePath("../../marker/Mar
 [node name="marker" type="Node2D" parent="ennemies" unique_id=1758593221]
 
 [node name="Marker2D" type="Marker2D" parent="ennemies/marker" unique_id=2085771091]
-position = Vector2(1864, 0)
+position = Vector2(1891, 29)
 
 [node name="Marker2D2" type="Marker2D" parent="ennemies/marker" unique_id=958662817]
 position = Vector2(2554, 9)
@@ -1428,7 +1430,7 @@ position = Vector2(9070, 3223)
 [node name="portail" parent="." unique_id=1727511125 instance=ExtResource("8_wiyvx")]
 position = Vector2(9660.999, 3052.9998)
 
-[node name="player" parent="." unique_id=2142611481 instance=ExtResource("8_nihrp")]
+[node name="Player" parent="." unique_id=2142611481 instance=ExtResource("8_nihrp")]
 position = Vector2(1095.9995, -115.99999)
 
 [node name="start" type="Marker2D" parent="." unique_id=103146223]

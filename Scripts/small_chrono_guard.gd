@@ -44,7 +44,10 @@ func roaming() -> void:
 			velocity.y = 1000
 		else:
 			velocity.y = 0
+		if self.name == "Small_Chrono_Guard5":
+			print(position.distance_to(target),self.name)
 		if position.distance_to(target) < 30:
+			print("j'ai réussie", self.name)
 			if time :
 				$Timer.stop()
 				time = false
