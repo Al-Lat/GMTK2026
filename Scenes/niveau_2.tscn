@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ci1ndepyr810p" path="res://Graphics/plateforms/wall.png" id="6_wiyvx"]
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="8_nihrp"]
 [ext_resource type="PackedScene" uid="uid://bwvx5qirfged" path="res://Scenes/portal_niveau.tscn" id="8_wiyvx"]
+[ext_resource type="PackedScene" uid="uid://cp1y2sbwwn1v7" path="res://Scenes/hud.tscn" id="10_li606"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("5_lervj")
@@ -1281,7 +1282,8 @@ position = Vector2(9660.999, 3052.9998)
 
 [node name="player" parent="." unique_id=2142611481 instance=ExtResource("8_nihrp")]
 position = Vector2(1095.9995, -115.99999)
-jump_force = 1000
 
 [node name="start" type="Marker2D" parent="." unique_id=103146223]
 position = Vector2(915, -27)
+
+[node name="HUD" parent="." unique_id=311553630 instance=ExtResource("10_li606")]

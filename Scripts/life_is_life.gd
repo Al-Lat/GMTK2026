@@ -1,12 +1,16 @@
 extends Node
 
-var temps;
+var temps:int;
 var hud:CanvasLayer
 var shop_hud:Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	temps = 100;
+	end_level()
+
+func reset():
+	temps = 100
 	end_level()
 
 func add_time(time:int) -> void:
