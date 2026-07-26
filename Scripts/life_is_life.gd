@@ -23,7 +23,7 @@ func remove_time(time:int) -> void:
 	temps -= time;
 	if temps <= 0:
 		temps = 0
-		PlayerSingleton.player.mort()
+		PlayerSingleton.player.death()
 		end_level()
 	hud.update_time()
 	if (shop_hud != null):

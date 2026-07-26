@@ -16,7 +16,7 @@ var tourner_droit = true
 var ancienne_pos_x = 0
 
 var is_allowed_chrono_slash = true
-var range_to_attack = 200
+var range_to_attack = 400
 
 #var life = 400
 
@@ -100,6 +100,7 @@ func take_damage(raw_damage:float)->void:
 
 func death()->void:
 	self.chrono_kamikaze.execute()
+	
 	queue_free()
 
 

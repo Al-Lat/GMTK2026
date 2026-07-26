@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c7318j7k06erc" path="res://Scripts/small_chrono_guard.gd" id="1_ri0mx"]
 [ext_resource type="Texture2D" uid="uid://delr1vkq4rjjw" path="res://Graphics/Characters/NightBorne.png" id="2_oglxs"]
-[ext_resource type="PackedScene" uid="uid://bh0146r02r5dw" path="res://Scenes/AttackScenes/small_chrono_kamikaze.tscn" id="3_uqeje"]
-[ext_resource type="PackedScene" uid="uid://dtx3awbmy2i20" path="res://Scenes/AttackScenes/small_chrono_slash.tscn" id="4_yesu5"]
+[ext_resource type="Script" uid="uid://dd6g3ebkbpk4q" path="res://Scripts/AttackScripts/chrono_slash.gd" id="4_uqeje"]
+[ext_resource type="Script" uid="uid://cs14ffklpfdk5" path="res://Scenes/AttackScenes/small_chrono_kamikaze.gd" id="4_yesu5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ncn7"]
 atlas = ExtResource("2_oglxs")
@@ -352,6 +352,42 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_36i7w"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chrono_slash/CollisionPolygon2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("chrono_slash/CollisionPolygon2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chrono_slash/CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-14.599999, -29.399998, 6.9999995, -30.399998, 28.399998, -19.999998, 37.8, -5.9999995, 38.999996, 11.799999, 30.199999, 22.399998, 15.199999, 29.199999, 1.1999999, 27.599998, -2.3999999, 14.799999, 10.2, 14.799999, 23.199999, 13.199999, 29.199999, 6.9999995, 29.199999, -8.999999, 15.599999, -22.999998, -2.9999998, -28.8)]
+}
 
 [sub_resource type="Animation" id="Animation_7i8ua"]
 resource_name = "attack"
@@ -380,6 +416,42 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chrono_slash/CollisionPolygon2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.85038614, 0.87528914, 0.92064726, 0.94761693, 0.9533613, 1.0456885),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0.8, 1.8000001)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("chrono_slash/CollisionPolygon2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.85038614, 0.87528914, 0.92064726, 0.94761693, 0.9533613, 1.0456885),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(16.538889, 16.132391)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("chrono_slash/CollisionPolygon2D:polygon")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8274792, 0.85038614, 0.87528914, 0.92064726, 0.94761693, 0.9533613, 1.0456885, 1.051433, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [PackedVector2Array(), PackedVector2Array(), PackedVector2Array(-14.599999, -29.399998, 6.9999995, -30.399998, 28.399998, -19.999998, 37.8, -5.9999995, 38.999996, 11.799999, 30.199999, 22.399998, 15.199999, 29.199999, 1.1999999, 27.599998, -2.3999999, 14.799999, 10.2, 14.799999, 23.199999, 13.199999, 29.199999, 6.9999995, 29.199999, -8.999999, 15.599999, -22.999998, -2.9999998, -28.8), PackedVector2Array(-13.999999, -29.799997, 12.4, -23.399998, 22.999998, -17.999998, 29.799997, -8.4, 29.799997, 8.999999, 19.4, 15.399999, 9.2, 14.999999, -1.9999999, 14.199999, -1.1999999, 26.999998, 11.4, 30.399998, 27.999998, 25.399998, 38.399998, 11.4, 38.8, -5.9999995, 24.399998, -22.8, 7.9999995, -29.799997), PackedVector2Array(20.4, -19.4, 2.1999998, -27.599998, -14.599999, -29.799997, 12.799999, -29.199999, 30.799997, -17.999998, 38.199997, -5.2, 38.199997, 12.199999, 29.399998, 24.599998, 16.599998, 28.8, -0.39999998, 28.199999, -1.5999999, 13.599999, 22.8, 14.999999, 28.599998, 9.799999, 29.799997, -5.9999995, 27.399998, -12.799999), PackedVector2Array(22.8, -19.8, 7.5999994, -25.199999, -14.799999, -29.599998, 7.5999994, -30.599998, 27.999998, -20.599998, 37.8, -7.7999997, 38.399998, 12.199999, 29.999998, 24.399998, 15.599999, 29.399998, -1.1999999, 27.199999, -2.3999999, 13.999999, 10.599999, 16.199999, 24.999998, 13.999999, 29.399998, 7.9999995, 28.999998, -9.999999), PackedVector2Array(22.199999, 22.399998, -0.39999998, 26.8, -15.599999, 17.8, -8.599999, 9.999999, 2.6, 18.8, 20.199999, 16.8, 28.399998, 11.999999), PackedVector2Array(1.3003445, 1.3120594, -0.023429394, 1.5697861, -0.9137554, 1.0426178, -0.5037384, 0.58574104, 0.15229416, 1.1011925, 1.183197, 0.9840431, 1.6635036, 0.7028885), PackedVector2Array(), PackedVector2Array()]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igqgg"]
@@ -450,6 +522,9 @@ _data = {
 &"RESET": SubResource("Animation_2gtf7")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lcpo7"]
+radius = 17.85497
+
 [node name="Small_Chrono_Guard" type="CharacterBody2D" unique_id=954976129 groups=["Mobs"]]
 scale = Vector2(5, 5)
 collision_layer = 2
@@ -466,7 +541,7 @@ frame = 2
 
 [node name="EnnemyCollision" type="CollisionPolygon2D" parent="." unique_id=283109774]
 scale = Vector2(0.99999976, 0.99999976)
-polygon = PackedVector2Array(-0.6999999, -0.19999999, -0.19999999, 1.6999999, -7.7999997, 2.6999998, -20.999998, 14.4, -21.4, 18.999998, -15.799999, 23.099998, -7.9999995, 20.499998, -1.0999999, 22.3, 7.9999995, 17.8, 14.899999, 11.699999, 15.299999, 1.5999999, 13.099999, -2.7999997, 6.7, -2.1999998)
+polygon = PackedVector2Array(-0.6999999, -0.19999999, -0.80000013, -0.20000003, -7.7999997, 2.6999998, -20.999998, 14.4, -21.4, 18.999998, -15.799999, 23.099998, -7.9999995, 20.499998, -1.0999999, 22.3, 7.9999995, 17.8, 14.899999, 11.699999, 15.299999, 1.5999999, 13.099999, -2.7999997, 6.7, -2.1999998)
 
 [node name="detection_area" type="Area2D" parent="." unique_id=752777228]
 position = Vector2(0.20000002, 0.100000225)
@@ -486,11 +561,23 @@ libraries/ = SubResource("AnimationLibrary_aox8c")
 wait_time = 5.0
 one_shot = true
 
-[node name="chrono_kamikaze" parent="." unique_id=1361911615 instance=ExtResource("3_uqeje")]
-
-[node name="chrono_slash" parent="." unique_id=1366001344 instance=ExtResource("4_yesu5")]
-
 [node name="chrono_slash_cooldown" type="Timer" parent="." unique_id=502368093]
+
+[node name="chrono_slash" type="Area2D" parent="." unique_id=1776519990]
+script = ExtResource("4_uqeje")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chrono_slash" unique_id=1627024773]
+polygon = PackedVector2Array(-14.599999, -29.399998, 6.9999995, -30.399998, 28.399998, -19.999998, 37.8, -5.9999995, 38.999996, 11.799999, 30.199999, 22.399998, 15.199999, 29.199999, 1.1999999, 27.599998, -2.3999999, 14.799999, 10.2, 14.799999, 23.199999, 13.199999, 29.199999, 6.9999995, 29.199999, -8.999999, 15.599999, -22.999998, -2.9999998, -28.8)
+disabled = true
+
+[node name="chrono_kamikaze" type="Area2D" parent="." unique_id=64463216]
+script = ExtResource("4_yesu5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chrono_kamikaze" unique_id=885221262]
+position = Vector2(-2.3999999, 11.9)
+scale = Vector2(1.001358e-05, 1.001358e-05)
+shape = SubResource("CircleShape2D_lcpo7")
 
 [connection signal="timeout" from="control_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="chrono_slash_cooldown" to="." method="_on_chrono_slash_cooldown_timeout"]
+[connection signal="body_entered" from="chrono_slash" to="chrono_slash" method="_on_body_entered"]
