@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bb7ofskejl61d"]
 
 [ext_resource type="Texture2D" uid="uid://c6m2bq8hes6hr" path="res://Graphics/Characters/boss/ArchDemonBasicAtk001-Sheet.png" id="1_jspv8"]
+[ext_resource type="Script" uid="uid://cup48nw8rx23q" path="res://Scripts/Mobs/boss.gd" id="1_ukjjc"]
+[ext_resource type="Script" uid="uid://cmf14wsgw22f2" path="res://Scripts/AttackScripts/attack_ball_collision.gd" id="4_n725y"]
 [ext_resource type="Texture2D" uid="uid://dr31sctnvo1lx" path="res://Graphics/Characters/boss/boss.png" id="4_ukjjc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3eom"]
@@ -363,19 +365,44 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_idooy"]
 radius = 7.28011
 
-[node name="boss" type="Node2D" unique_id=1511067568]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgns8"]
+size = Vector2(41, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgns8"]
+radius = 74.330345
+
+[node name="boss" type="CharacterBody2D" unique_id=1382836900]
+script = ExtResource("1_ukjjc")
 
 [node name="Boss_Anims" type="AnimatedSprite2D" parent="." unique_id=752555888]
-position = Vector2(-1, 2)
+position = Vector2(61, 18)
 sprite_frames = SubResource("SpriteFrames_bowxp")
 animation = &"attack"
 
 [node name="AttackAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1006412118]
 libraries/ = SubResource("AnimationLibrary_mh6p8")
 
-[node name="Attack_Ball_Collision" type="Area2D" parent="." unique_id=9099205]
+[node name="Attack_Ball_Collision" type="Area2D" parent="." unique_id=9099205 groups=["Mobs"]]
+script = ExtResource("4_n725y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_Ball_Collision" unique_id=1670822837]
 position = Vector2(8, -7)
 scale = Vector2(1e-05, 1e-05)
 shape = SubResource("CircleShape2D_idooy")
+
+[node name="repere" type="CollisionShape2D" parent="." unique_id=1740165001]
+position = Vector2(-2.5, 3)
+shape = SubResource("RectangleShape2D_lgns8")
+
+[node name="detection_area" type="Area2D" parent="." unique_id=136156191]
+position = Vector2(0.20000002, 0.100000225)
+
+[node name="EnnemySightCollision" type="CollisionShape2D" parent="detection_area" unique_id=1027105293]
+visible = false
+position = Vector2(-0.20000076, -0.10000038)
+shape = SubResource("CircleShape2D_lgns8")
+
+[connection signal="animation_finished" from="Boss_Anims" to="." method="_animation_finished"]
+[connection signal="animation_finished" from="AttackAnimationPlayer" to="." method="_animation_player_anim_finished"]
+[connection signal="body_entered" from="Attack_Ball_Collision" to="Attack_Ball_Collision" method="_on_body_entered"]
+[connection signal="body_entered" from="detection_area" to="." method="on_player_detected"]

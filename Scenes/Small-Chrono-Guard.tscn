@@ -347,7 +347,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"taking_damage",
-"speed": 4.0
+"speed": 12.0
 }]
 
 [sub_resource type="Animation" id="Animation_36i7w"]
