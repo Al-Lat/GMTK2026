@@ -101,9 +101,12 @@ func _on_death_zone_body_entered(body: Node2D) -> void:
 
 
 
-func take_damage(raw_damage)->void:
+func take_damage(raw_damage:int)->void:
 	print("player : take_damage passed")
-	pass
+	animation_waiting_ended = false
+	LifeIsLife.remove_time(raw_damage)
+	if LifeIsLife.temps > 0:
+		animated_sprite.play("hit")
 
 func death():
 	animation_waiting_ended = false
@@ -118,7 +121,7 @@ func _on_bus_shop_dehors() -> void:
 	is_in_shop = false
 
 func _on_player_animation_animation_looped() -> void:
-	if animated_sprite.animation == "jump" || animated_sprite.animation == "touch_ground":
+	if animated_sprite.animation == "jump" || animated_sprite.animation == "touch_ground" || animated_sprite.animation == "hit":
 		animation_waiting_ended = true
 	elif animated_sprite.animation == "dead":
 		get_tree().change_scene_to_file("res://Scenes/menu.tscn")

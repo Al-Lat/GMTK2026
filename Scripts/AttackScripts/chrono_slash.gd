@@ -5,6 +5,7 @@ class_name chrono_slash extends Area2D
 var main_animation:AnimatedSprite2D
 var main_animation_player:AnimationPlayer
 var facing_direction:int = 1  # 1 = droite, -1 = gauche
+var damage = 5
 @onready var caster = $".."
 
 
@@ -28,11 +29,12 @@ func execute():
 	#animation.flip_h = (caster.facing_direction == -1)
 	self.main_animation_player.play("attack")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _on_body_entered():
-	pass #TODO gestion collision
-
 func _on_attack_animation_player_animation_finished(anim_name: StringName) -> void:
 	main_animation.play("running")
 	main_animation_player.animation_finished.disconnect(_on_attack_animation_player_animation_finished)
+
+
+func _on_body_entered(body: Node2D) -> void:
+	print("touché",body)
+	if body.name == "Player":
+		body.take_damage(self.damage)

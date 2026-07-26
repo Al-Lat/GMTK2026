@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://tyqir35acmnl" path="res://Scripts/chrono_guard.gd" id="1_36i7w"]
 [ext_resource type="Texture2D" uid="uid://delr1vkq4rjjw" path="res://Graphics/Characters/NightBorne.png" id="1_ad8dv"]
-[ext_resource type="PackedScene" uid="uid://dtx3awbmy2i20" path="res://Scenes/AttackScenes/small_chrono_slash.tscn" id="4_4cva1"]
-[ext_resource type="PackedScene" uid="uid://bh0146r02r5dw" path="res://Scenes/AttackScenes/small_chrono_kamikaze.tscn" id="5_ggmpm"]
+[ext_resource type="Script" uid="uid://cs14ffklpfdk5" path="res://Scenes/AttackScenes/small_chrono_kamikaze.gd" id="4_4cva1"]
+[ext_resource type="Script" uid="uid://dd6g3ebkbpk4q" path="res://Scripts/AttackScripts/chrono_slash.gd" id="4_igqgg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ncn7"]
 atlas = ExtResource("1_ad8dv")
@@ -358,6 +358,42 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_36i7w"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chrono_slash/CollisionPolygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("chrono_slash/CollisionPolygon2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16.538889, 16.132391)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chrono_slash/CollisionPolygon2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 1.8000001)]
+}
 
 [sub_resource type="Animation" id="Animation_7i8ua"]
 resource_name = "attack"
@@ -386,6 +422,42 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chrono_slash/CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.847344, 0.8527375, 0.9492977, 0.95255256, 1.0469431, 1.0512829, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [PackedVector2Array(), PackedVector2Array(), PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812), PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812), PackedVector2Array(-0.5381257, 0.5950761, 0.13906619, 0.98559475, 1.0641586, 0.9360051, 1.6687942, 0.6880567, 1.3483373, 1.214947, 0.41115218, 1.5248824, -0.18743703, 1.5062864, -0.9674169, 0.95460117), PackedVector2Array(-0.5381257, 0.5950761, 0.13906622, 0.98559475, 1.0641586, 0.9360051, 1.6687942, 0.6880567, 1.3483373, 1.2149469, 0.41115218, 1.5248824, -0.18743706, 1.5062865, -0.9674169, 0.95460117), PackedVector2Array(), PackedVector2Array()]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("chrono_slash/CollisionPolygon2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.847344, 0.8527375, 0.9492977, 0.95255256, 1.0469431, 1.0512829),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("chrono_slash/CollisionPolygon2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.847344, 0.85382235, 0.9492977, 0.95255256, 1.0469431, 1.0512829),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igqgg"]
@@ -456,6 +528,9 @@ _data = {
 &"RESET": SubResource("Animation_2gtf7")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ggmpm"]
+radius = 17.85497
+
 [node name="Chrono_Guard" type="CharacterBody2D" unique_id=954976129 groups=["Mobs"]]
 scale = Vector2(10, 10)
 collision_layer = 2
@@ -488,13 +563,25 @@ libraries/ = SubResource("AnimationLibrary_igqgg")
 [node name="DeathAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1233695404]
 libraries/ = SubResource("AnimationLibrary_aox8c")
 
-[node name="chrono_slash" parent="." unique_id=1366001344 instance=ExtResource("4_4cva1")]
-visible = false
-
-[node name="chrono_kamikaze" parent="." unique_id=1361911615 instance=ExtResource("5_ggmpm")]
-visible = false
-
 [node name="chrono_slash_cooldown" type="Timer" parent="." unique_id=1502436570]
 wait_time = 2.5
 
+[node name="chrono_slash" type="Area2D" parent="." unique_id=538108591]
+script = ExtResource("4_igqgg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chrono_slash" unique_id=1256296431]
+position = Vector2(0.8, 1.8000001)
+scale = Vector2(16.538889, 16.132391)
+polygon = PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812)
+disabled = true
+
+[node name="chrono_kamikaze" type="Area2D" parent="." unique_id=224847202]
+script = ExtResource("4_4cva1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chrono_kamikaze" unique_id=1860022803]
+position = Vector2(-2.3999999, 11.9)
+scale = Vector2(1.001358e-05, 1.001358e-05)
+shape = SubResource("CircleShape2D_ggmpm")
+
 [connection signal="timeout" from="chrono_slash_cooldown" to="." method="_on_chrono_slash_cooldown_timeout"]
+[connection signal="body_entered" from="chrono_slash" to="chrono_slash" method="_on_body_entered"]
