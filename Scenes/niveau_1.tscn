@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://cp1y2sbwwn1v7" path="res://Scenes/hud.tscn" id="11_m8emv"]
 [ext_resource type="PackedScene" uid="uid://clyvtkbaiir8x" path="res://Scenes/Small-Chrono-Guard.tscn" id="12_e8uax"]
 [ext_resource type="PackedScene" uid="uid://xl7ge4tcyu7w" path="res://Scenes/death_zone.tscn" id="14_2nsxt"]
+[ext_resource type="AudioStream" uid="uid://dxpkh8l5gjn4t" path="res://Song/level.ogg" id="15_wus1d"]
+
+[sub_resource type="GDScript" id="GDScript_wus1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy46"]
 texture = ExtResource("5_m8emv")
@@ -1070,6 +1073,7 @@ sources/1 = SubResource("TileSetAtlasSource_ubbiv")
 sources/2 = SubResource("TileSetAtlasSource_h6w1h")
 
 [node name="Level" type="Node2D" unique_id=84989578]
+script = SubResource("GDScript_wus1d")
 
 [node name="Background" type="Node2D" parent="." unique_id=1352421070]
 position = Vector2(576, 370)
@@ -1082,6 +1086,14 @@ scroll_scale = Vector2(0, 0)
 position = Vector2(3.75, -5.75)
 scale = Vector2(1.1905001, 1.1044302)
 texture = ExtResource("1_h6w1h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Background/Sky" unique_id=763565819]
+position = Vector2(-143.99994, -92.50001)
+scale = Vector2(0.24999999, 0.24999999)
+stream = ExtResource("15_wus1d")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
 
 [node name="Buildings_3" type="Parallax2D" parent="Background" unique_id=930270213]
 scale = Vector2(2, 2)

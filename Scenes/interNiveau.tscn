@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cebyvldryubsc" path="res://Graphics/Backgrounds/city/Sky.png" id="1_p6gg1"]
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://Scenes/player.tscn" id="1_ulcgi"]
 [ext_resource type="Texture2D" uid="uid://ctvdw2ql2dd1v" path="res://Graphics/Backgrounds/city/Buildings 3.png" id="2_lrus4"]
+[ext_resource type="AudioStream" uid="uid://bq4rawcx88dny" path="res://Song/boutique.mp3" id="2_x6kj6"]
 [ext_resource type="Texture2D" uid="uid://cu3fcps71sbhr" path="res://Graphics/Backgrounds/city/Buildings 2.png" id="3_yp48q"]
 [ext_resource type="Texture2D" uid="uid://de8gp70m7pt8e" path="res://Graphics/Backgrounds/city/Buildings 1.png" id="4_3bdrj"]
 [ext_resource type="Texture2D" uid="uid://cjij41wluh7jr" path="res://Graphics/plateforms/Sprite-0001.png" id="5_6yy46"]
@@ -1566,6 +1567,11 @@ scroll_scale = Vector2(0, 0)
 position = Vector2(-135.3125, -144.25)
 scale = Vector2(1.1905001, 1.1044302)
 texture = ExtResource("1_p6gg1")
+
+[node name="Boutique" type="AudioStreamPlayer" parent="Background/Sky/Sprite2D" unique_id=2018463316]
+stream = ExtResource("2_x6kj6")
+autoplay = true
+parameters/looping = true
 
 [node name="Buildings_3" type="Parallax2D" parent="Background" unique_id=930270213]
 scale = Vector2(2, 2)

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bwls01rs3p6sk" path="res://Graphics/Backgrounds/boss-room/back.png" id="2_yf5bo"]
 [ext_resource type="Texture2D" uid="uid://byrcqhvyq0uit" path="res://Graphics/Backgrounds/boss-room/buildings.png" id="2_yu7p8"]
 [ext_resource type="Texture2D" uid="uid://beo7nlhghvfdm" path="res://Graphics/Backgrounds/boss-room/far-buildings.png" id="3_ffyqo"]
+[ext_resource type="AudioStream" uid="uid://0nqdpyumukl0" path="res://Song/level-boss.mp3" id="4_swe2r"]
 [ext_resource type="Texture2D" uid="uid://dm2o8lc84v5nd" path="res://Graphics/Backgrounds/boss-room/skill-foreground.png" id="4_yf5bo"]
 [ext_resource type="Texture2D" uid="uid://b15ihchclmm42" path="res://Graphics/Elements/Free P all.png" id="5_yu7p8"]
 [ext_resource type="Texture2D" uid="uid://ci1ndepyr810p" path="res://Graphics/plateforms/wall.png" id="6_ffyqo"]
@@ -1607,6 +1608,12 @@ scroll_scale = Vector2(0, 0)
 position = Vector2(3.75, -5.75)
 scale = Vector2(1.1905001, 1.1044302)
 texture = ExtResource("1_5wgfj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Background/Sky/Sprite2D" unique_id=359090610]
+stream = ExtResource("4_swe2r")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [node name="Buildings_3" type="Parallax2D" parent="Background" unique_id=1897822852]
 scale = Vector2(2, 2)

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dq4j58dh8ayl0" path="res://Graphics/Elements/Sprite-0005.png" id="1_myvm1"]
 [ext_resource type="Script" uid="uid://bjjbumhujjish" path="res://Scripts/map.gd" id="1_q0mm3"]
 [ext_resource type="Texture2D" uid="uid://6566ggc3j2ut" path="res://Graphics/Elements/Sprite-0002.png" id="2_q0mm3"]
+[ext_resource type="AudioStream" uid="uid://bs6srmuj3oayh" path="res://Song/menu.ogg" id="3_4c2oa"]
 [ext_resource type="PackedScene" uid="uid://bha5ow0wratmn" path="res://Scenes/map_item.tscn" id="3_np2xp"]
 [ext_resource type="Texture2D" uid="uid://2e78f1lepinl" path="res://Graphics/Elements/pointillé_blanc.png" id="4_6q3n4"]
 [ext_resource type="Texture2D" uid="uid://bk4g5n2rfuwla" path="res://Graphics/ressources/Skillicon8_13.png" id="5_w7jjh"]
@@ -250,6 +251,12 @@ script = ExtResource("1_q0mm3")
 position = Vector2(199.85602, -296.64)
 scale = Vector2(77.0625, 44.687496)
 texture = ExtResource("1_myvm1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Parallax2D/Sprite2D" unique_id=1800101338]
+stream = ExtResource("3_4c2oa")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [node name="Path" type="Node" parent="." unique_id=190173954]
 
