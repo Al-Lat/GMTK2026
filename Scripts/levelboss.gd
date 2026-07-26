@@ -10,6 +10,10 @@ extends Node2D # Remplace par le type exact de LevelBoss si ce n'est pas Node2D
 
 var ciel_deja_change: bool = false
 
+func _ready() -> void:
+	$boss.queue_free()
+	$portail.is_boss()
+
 func _process(_delta: float) -> void:
 	# Si le joueur n'est pas assigné ou que le ciel a déjà changé, on ne fait rien
 	if not joueur or ciel_deja_change:

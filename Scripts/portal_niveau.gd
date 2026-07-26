@@ -4,16 +4,23 @@ extends Area2D
 
 
 var in_portal = false
+var boss:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animated_sprite.play("default")
 
+func is_boss():
+	animated_sprite.play("boss")
+	boss = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if in_portal && Input.is_action_pressed("interaction"):
-		get_tree().change_scene_to_file("res://Scenes/map.tscn")
+		if (boss):
+			get_tree().change_scene_to_file("res://Scenes/Cinematique/scene_fin.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/map.tscn")
 
 
 func _on_body_entered(body: Node2D) -> void:

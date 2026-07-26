@@ -18,6 +18,7 @@ var temps_disparition : float = 1.5
 var pause_entre_phrases : float = 0.5 
 
 func _ready() -> void:
+	LifeIsLife.end_level()
 	label.modulate.a = 0.0
 	
 	if audio_player.stream:

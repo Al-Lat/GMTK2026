@@ -2,8 +2,33 @@
 
 [ext_resource type="Script" uid="uid://fvs07bxpgf6h" path="res://Scripts/portal_niveau.gd" id="1_pgusx"]
 [ext_resource type="Texture2D" uid="uid://cmydtyq6lf7e5" path="res://Graphics/Elements/sprite-sheet.png" id="2_1v3l5"]
+[ext_resource type="Texture2D" uid="uid://b4j5g2wgrqox6" path="res://Graphics/Characters/boss/ArchDemonIdle001-Sheet.png" id="2_tqaj6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bowxp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwwns"]
+atlas = ExtResource("2_tqaj6")
+region = Rect2(0, 0, 128, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfx12"]
+atlas = ExtResource("2_tqaj6")
+region = Rect2(128, 0, 128, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aafcr"]
+atlas = ExtResource("2_tqaj6")
+region = Rect2(256, 0, 128, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjegx"]
+atlas = ExtResource("2_tqaj6")
+region = Rect2(384, 0, 128, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnttf"]
+atlas = ExtResource("2_tqaj6")
+region = Rect2(512, 0, 128, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow371"]
+atlas = ExtResource("2_tqaj6")
+region = Rect2(640, 0, 128, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8sdh4"]
 atlas = ExtResource("2_1v3l5")
@@ -35,6 +60,29 @@ region = Rect2(128, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dlnr4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwwns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfx12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aafcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjegx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnttf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow371")
+}],
+"loop": 1,
+"name": &"boss",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8sdh4")
@@ -71,7 +119,7 @@ shape = SubResource("CapsuleShape2D_bowxp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2016662623]
 sprite_frames = SubResource("SpriteFrames_dlnr4")
-frame_progress = 0.76957357
+animation = &"boss"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
