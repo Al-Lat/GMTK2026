@@ -1317,115 +1317,140 @@ position = Vector2(5479, 582)
 [node name="chrono_guard" type="Node2D" parent="ennemies" unique_id=1648612832]
 
 [node name="Chrono_Guard" parent="ennemies/chrono_guard" unique_id=954976129 node_paths=PackedStringArray("patrol_points") instance=ExtResource("9_oihkd")]
-position = Vector2(7061.9995, 3696.9998)
-patrol_points = [NodePath("../../marker/Marker2D15"), NodePath("../../marker/Marker2D14")]
+position = Vector2(7739, 3709.9998)
+patrol_points = [NodePath("../../marker_guard/Marker2D7"), NodePath("../../marker_guard/Marker2D8")]
 
 [node name="Chrono_Guard2" parent="ennemies/chrono_guard" unique_id=1356235969 node_paths=PackedStringArray("patrol_points") instance=ExtResource("9_oihkd")]
 position = Vector2(5847.0005, 3680.9998)
-patrol_points = [NodePath("../../marker/Marker2D6"), NodePath("../../marker/Marker2D9")]
+patrol_points = [NodePath("../../marker_guard/Marker2D5"), NodePath("../../marker_guard/Marker2D6")]
 
 [node name="Chrono_Guard3" parent="ennemies/chrono_guard" unique_id=85285951 node_paths=PackedStringArray("patrol_points") instance=ExtResource("9_oihkd")]
 position = Vector2(3074.0002, -192)
-patrol_points = [NodePath("../../marker/Marker2D"), NodePath("../../marker/Marker2D4")]
+patrol_points = [NodePath("../../marker_guard/Marker2D"), NodePath("../../marker_guard/Marker2D2")]
 
 [node name="Chrono_Guard4" parent="ennemies/chrono_guard" unique_id=1619278503 node_paths=PackedStringArray("patrol_points") instance=ExtResource("9_oihkd")]
 position = Vector2(5800, 781.99994)
-patrol_points = [NodePath("../../marker/Marker2D7"), NodePath("../../marker/Marker2D8")]
+patrol_points = [NodePath("../../marker_guard/Marker2D3"), NodePath("../../marker_guard/Marker2D4")]
 
 [node name="small_chrono_guard" type="Node2D" parent="ennemies" unique_id=1505470788]
-position = Vector2(14, -217)
 
 [node name="Small_Chrono_Guard" parent="ennemies/small_chrono_guard" unique_id=893513448 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(4972, 962.99994)
-patrol_points = [NodePath("../../marker/Marker2D5"), NodePath("../../marker/Marker2D6")]
+position = Vector2(4989.0005, 710.99994)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D5"), NodePath("../../marker_small_guard/Marker2D6")]
 
 [node name="Small_Chrono_Guard2" parent="ennemies/small_chrono_guard" unique_id=1533120056 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(5733, 1094.9999)
-patrol_points = [NodePath("../../marker/Marker2D7"), NodePath("../../marker/Marker2D8")]
+position = Vector2(5747.0005, 878.0001)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D7"), NodePath("../../marker_small_guard/Marker2D8")]
 
 [node name="Small_Chrono_Guard3" parent="ennemies/small_chrono_guard" unique_id=1135785706 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(4908.0005, 2540.0002)
-patrol_points = [NodePath("../../marker/Marker2D11"), NodePath("../../marker/Marker2D12")]
+position = Vector2(4957, 2314.0002)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D11"), NodePath("../../marker_small_guard/Marker2D12")]
 
 [node name="Small_Chrono_Guard4" parent="ennemies/small_chrono_guard" unique_id=595470660 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(5118, 1668.0001)
-patrol_points = [NodePath("../../marker/Marker2D9"), NodePath("../../marker/Marker2D10")]
+position = Vector2(5142, 1502.0001)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D9"), NodePath("../../marker_small_guard/Marker2D10")]
 
 [node name="Small_Chrono_Guard5" parent="ennemies/small_chrono_guard" unique_id=1631324636 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(2221, 164)
-patrol_points = [NodePath("../../marker/Marker2D"), NodePath("../../marker/Marker2D2")]
+position = Vector2(2310.0002, -126.99997)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D"), NodePath("../../marker_small_guard/Marker2D2")]
 
 [node name="Small_Chrono_Guard6" parent="ennemies/small_chrono_guard" unique_id=716832179 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(3725, 208.99998)
-patrol_points = [NodePath("../../marker/Marker2D3"), NodePath("../../marker/Marker2D4")]
+position = Vector2(3754, -99.999985)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D3"), NodePath("../../marker_small_guard/Marker2D4")]
 
 [node name="Small_Chrono_Guard7" parent="ennemies/small_chrono_guard" unique_id=1605692551 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(6064, 3995.9998)
-patrol_points = [NodePath("../../marker/Marker2D15"), NodePath("../../marker/Marker2D16")]
+position = Vector2(6108.0005, 3802.9998)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D15"), NodePath("../../marker_small_guard/Marker2D16")]
 
 [node name="Small_Chrono_Guard8" parent="ennemies/small_chrono_guard" unique_id=1954365875 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(7754, 4015.9998)
-patrol_points = [NodePath("../../marker/Marker2D13"), NodePath("../../marker/Marker2D14")]
+position = Vector2(7808, 3772.9998)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D13"), NodePath("../../marker_small_guard/Marker2D14")]
 
 [node name="Small_Chrono_Guard9" parent="ennemies/small_chrono_guard" unique_id=748987584 node_paths=PackedStringArray("patrol_points") instance=ExtResource("10_nihrp")]
-position = Vector2(8940.001, 3386.0002)
-patrol_points = [NodePath("../../marker/Marker2D17"), NodePath("../../marker/Marker2D18")]
+position = Vector2(8956.001, 3227)
+patrol_points = [NodePath("../../marker_small_guard/Marker2D17"), NodePath("../../marker_small_guard/Marker2D18")]
 
-[node name="marker" type="Node2D" parent="ennemies" unique_id=1758593221]
+[node name="marker_small_guard" type="Node2D" parent="ennemies" unique_id=1758593221]
 
-[node name="Marker2D" type="Marker2D" parent="ennemies/marker" unique_id=2085771091]
-position = Vector2(1891, 29)
+[node name="Marker2D" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=2085771091]
+position = Vector2(1974, 26)
 
-[node name="Marker2D2" type="Marker2D" parent="ennemies/marker" unique_id=958662817]
+[node name="Marker2D2" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=958662817]
 position = Vector2(2554, 9)
 
-[node name="Marker2D3" type="Marker2D" parent="ennemies/marker" unique_id=1916458831]
+[node name="Marker2D3" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1916458831]
 position = Vector2(3400, 3)
 
-[node name="Marker2D4" type="Marker2D" parent="ennemies/marker" unique_id=1340684175]
+[node name="Marker2D4" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1340684175]
 position = Vector2(4090, 12)
 
-[node name="Marker2D5" type="Marker2D" parent="ennemies/marker" unique_id=807145090]
+[node name="Marker2D5" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=807145090]
 position = Vector2(4797, 765)
 
-[node name="Marker2D6" type="Marker2D" parent="ennemies/marker" unique_id=9884992]
+[node name="Marker2D6" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=9884992]
 position = Vector2(5210, 770)
 
-[node name="Marker2D7" type="Marker2D" parent="ennemies/marker" unique_id=1546973609]
-position = Vector2(5479, 930)
+[node name="Marker2D7" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1546973609]
+position = Vector2(5480, 945)
 
-[node name="Marker2D8" type="Marker2D" parent="ennemies/marker" unique_id=1466207791]
-position = Vector2(5967, 950)
+[node name="Marker2D8" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1466207791]
+position = Vector2(5943, 948)
 
-[node name="Marker2D9" type="Marker2D" parent="ennemies/marker" unique_id=2130991894]
-position = Vector2(4943, 1519)
+[node name="Marker2D9" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=2130991894]
+position = Vector2(4943, 1531)
 
-[node name="Marker2D10" type="Marker2D" parent="ennemies/marker" unique_id=1345056268]
-position = Vector2(5326, 1504)
+[node name="Marker2D10" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1345056268]
+position = Vector2(5325, 1531)
 
-[node name="Marker2D11" type="Marker2D" parent="ennemies/marker" unique_id=489538554]
+[node name="Marker2D11" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=489538554]
 position = Vector2(4689, 2382)
 
-[node name="Marker2D12" type="Marker2D" parent="ennemies/marker" unique_id=1092657298]
+[node name="Marker2D12" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1092657298]
 position = Vector2(5288, 2370)
 
-[node name="Marker2D13" type="Marker2D" parent="ennemies/marker" unique_id=1630340856]
-position = Vector2(7471, 3817)
+[node name="Marker2D13" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1630340856]
+position = Vector2(7470, 3834)
 
-[node name="Marker2D14" type="Marker2D" parent="ennemies/marker" unique_id=136876446]
-position = Vector2(8070, 3805)
+[node name="Marker2D14" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=136876446]
+position = Vector2(8068, 3826)
 
-[node name="Marker2D15" type="Marker2D" parent="ennemies/marker" unique_id=715016149]
-position = Vector2(5757, 3801)
+[node name="Marker2D15" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=715016149]
+position = Vector2(5754, 3827)
 
-[node name="Marker2D16" type="Marker2D" parent="ennemies/marker" unique_id=2146763394]
-position = Vector2(6356, 3789)
+[node name="Marker2D16" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=2146763394]
+position = Vector2(6359, 3826)
 
-[node name="Marker2D17" type="Marker2D" parent="ennemies/marker" unique_id=44979588]
-position = Vector2(8798, 3217)
+[node name="Marker2D17" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=44979588]
+position = Vector2(8820, 3271)
 
-[node name="Marker2D18" type="Marker2D" parent="ennemies/marker" unique_id=1670805392]
-position = Vector2(9070, 3223)
+[node name="Marker2D18" type="Marker2D" parent="ennemies/marker_small_guard" unique_id=1670805392]
+position = Vector2(9072, 3255)
+
+[node name="marker_guard" type="Node2D" parent="ennemies" unique_id=284561166]
+
+[node name="Marker2D" type="Marker2D" parent="ennemies/marker_guard" unique_id=1141865318]
+position = Vector2(2477, -90)
+
+[node name="Marker2D2" type="Marker2D" parent="ennemies/marker_guard" unique_id=1637575101]
+position = Vector2(3558, -99)
+
+[node name="Marker2D3" type="Marker2D" parent="ennemies/marker_guard" unique_id=144170978]
+position = Vector2(5479, 843)
+
+[node name="Marker2D4" type="Marker2D" parent="ennemies/marker_guard" unique_id=1586576469]
+position = Vector2(5949, 852)
+
+[node name="Marker2D5" type="Marker2D" parent="ennemies/marker_guard" unique_id=1846641416]
+position = Vector2(5628, 3707)
+
+[node name="Marker2D6" type="Marker2D" parent="ennemies/marker_guard" unique_id=1062015208]
+position = Vector2(6812, 3695)
+
+[node name="Marker2D7" type="Marker2D" parent="ennemies/marker_guard" unique_id=1336740955]
+position = Vector2(7206, 3717)
+
+[node name="Marker2D8" type="Marker2D" parent="ennemies/marker_guard" unique_id=1426595020]
+position = Vector2(8373, 3727)
 
 [node name="portail" parent="." unique_id=1727511125 instance=ExtResource("8_wiyvx")]
 position = Vector2(9660.999, 3052.9998)
