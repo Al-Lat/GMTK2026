@@ -1435,10 +1435,10 @@ position = Vector2(2477, -90)
 position = Vector2(3558, -99)
 
 [node name="Marker2D3" type="Marker2D" parent="ennemies/marker_guard" unique_id=144170978]
-position = Vector2(5479, 843)
+position = Vector2(5479, 886)
 
 [node name="Marker2D4" type="Marker2D" parent="ennemies/marker_guard" unique_id=1586576469]
-position = Vector2(5949, 852)
+position = Vector2(5921, 866)
 
 [node name="Marker2D5" type="Marker2D" parent="ennemies/marker_guard" unique_id=1846641416]
 position = Vector2(5628, 3707)
