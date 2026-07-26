@@ -1,12 +1,9 @@
 class_name Mob extends CharacterBody2D
 
-var health:int
+var life:float
 
-func take_damage(damage:int):
-	if (health - damage) <= 0:
-		death()
-	else:
-		health -= damage
+func take_damage(damage:float)->void:
+	pass
 
 func death():
 	self.queue_free()

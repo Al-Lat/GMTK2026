@@ -169,6 +169,26 @@ region = Rect2(320, 80, 80, 80)
 atlas = ExtResource("1_ad8dv")
 region = Rect2(400, 80, 80, 80)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap21b"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(0, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gtf7"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(80, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhutc"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(240, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aox8c"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(160, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fujpr"]
+atlas = ExtResource("1_ad8dv")
+region = Rect2(320, 240, 80, 80)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_idooy"]
 animations = [{
 "frames": [{
@@ -210,7 +230,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attack",
-"speed": 20.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -307,7 +327,33 @@ animations = [{
 }],
 "loop": 1,
 "name": &"running",
-"speed": 20.0
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap21b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gtf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhutc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aox8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aox8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhutc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fujpr")
+}],
+"loop": 0,
+"name": &"taking_damage",
+"speed": 24.0
 }]
 
 [sub_resource type="Animation" id="Animation_36i7w"]
@@ -410,7 +456,7 @@ _data = {
 &"RESET": SubResource("Animation_2gtf7")
 }
 
-[node name="Chrono_Guard" type="CharacterBody2D" unique_id=954976129]
+[node name="Chrono_Guard" type="CharacterBody2D" unique_id=954976129 groups=["Mobs"]]
 scale = Vector2(10, 10)
 collision_layer = 2
 collision_mask = 2
@@ -424,7 +470,7 @@ animation = &"death"
 autoplay = "running"
 frame = 2
 
-[node name="EnnemyCollision" type="CollisionPolygon2D" parent="." unique_id=283109774]
+[node name="EnnemyCollision" type="CollisionPolygon2D" parent="." unique_id=283109774 groups=["Mobs"]]
 scale = Vector2(0.99999976, 0.99999976)
 polygon = PackedVector2Array(-0.6999999, -0.19999999, -0.19999999, 1.6999999, -7.7999997, 2.6999998, -20.999998, 14.4, -21.4, 18.999998, -15.799999, 23.099998, -7.9999995, 20.499998, -1.0999999, 22.3, 7.9999995, 17.8, 14.899999, 11.699999, 15.299999, 1.5999999, 13.099999, -2.7999997, 6.7, -2.1999998)
 

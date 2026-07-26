@@ -1,4 +1,4 @@
-class_name ChronoGuard extends CharacterBody2D
+class_name ChronoGuard extends Mob
 
 @export var patrol_points: Array[Marker2D] = []
 @onready var detection_area: Area2D = $detection_area
@@ -17,6 +17,11 @@ var ancienne_pos_x = 0
 
 var is_allowed_chrono_slash = true
 var range_to_attack = 200
+
+#var life = 400
+
+func _init():
+	self.life = 600
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -44,9 +49,6 @@ func _process(delta: float) -> void:
 		print("changement direction")
 		scale.x = -abs(scale.x)
 		facing_direction *= -1
-	
-
-	
 
 func roaming() -> void:
 	if patrol_points.size() > 0 :
@@ -83,11 +85,16 @@ func summon_chrono_slash():
 		self.anims.visible = false
 		self.chrono_slash.execute()
 		
-		
 		self.cooldown_timer.start()
 		self.anims.visible = true
-		
 
+func take_damage(raw_damage:float)->void:
+	self.anims.play("taking_damage")
+	print("CG : taking damage -> before : ",self.life," after : ",(self.life - raw_damage))
+	self.life -= raw_damage
+	if self.life <= 0:
+		print("CG : death called")
+		self.death()
 	
 
 func death()->void:

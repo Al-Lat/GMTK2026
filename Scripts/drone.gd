@@ -9,10 +9,11 @@ var player = null
 var orientation = 1
 var is_allowed_missile = true
 
+func _init():
+	self.life = 150
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.health = 10
 	animated_sprite.play("idle")
 	#self.attack = AttackFactory.get_mob_attack(AttackFactory.MobAttackEnum.MISSILE,$cooldown)
 
@@ -34,7 +35,12 @@ func _on_detection_body_exited(body: Node2D) -> void:
 		in_range = false
 
 
-
+func take_damage(raw_damage:float)->void:
+	#TODO animation de degats
+	print("Drone : taking damage -> before : ",self.life," after : ",(self.life - raw_damage))
+	self.life -= raw_damage
+	if self.life <=0 :
+		self.death()
 
 func summon_missile(target) -> void:
 	if is_allowed_missile:

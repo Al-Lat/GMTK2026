@@ -1,6 +1,7 @@
 extends Area2D
 
 
+
 @onready var colision = $attack_colision2d
 @onready var anim_player =$AnimationPlayer 
 @onready var animation = $playerAnimation
@@ -9,9 +10,17 @@ var parent:CharacterBody2D
 var player_singleton = PlayerSingleton
 var player:Player
 var mainAnimation:AnimatedSprite2D 
+var damage = 200.0
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	execute()
+
+
+func execute()->void:
 	#ajuster l'animation en fonction du joueur
 	parent = $".."
 	player = player_singleton.player
@@ -26,15 +35,14 @@ func _ready() -> void:
 	#connecter le signal pour agir en cas de collision
 	body_entered.connect(_on_body_entered)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
-
 #TODO traitement collision
 func _on_body_entered(body: Node) -> void:
 	print("blue_slash : Touché : ", body.name)
-	if (body.is_in_group("missiles")):
+	if (body.is_in_group("destroyable_mobs_projectile")):
 		body.queue_free()
+	if (body.is_in_group("Mobs")):
+		body.take_damage(self.damage)
+	
 
 
 

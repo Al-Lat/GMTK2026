@@ -1,4 +1,4 @@
-class_name chrono_slash extends Attack
+class_name chrono_slash extends Area2D
 
 @onready var colision = $CollisionPolygon2D
 

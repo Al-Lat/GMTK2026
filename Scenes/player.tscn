@@ -356,7 +356,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2142611481]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2142611481 groups=["Player"]]
 scale = Vector2(5, 5)
 script = ExtResource("1_6t5aa")
 
@@ -377,6 +377,7 @@ script = ExtResource("4_vgqql")
 
 [node name="ranged_cooldown" type="Timer" parent="." unique_id=1663103256]
 process_callback = 0
+wait_time = 0.6
 one_shot = true
 
 [node name="melee_cooldown" type="Timer" parent="." unique_id=1463005188]

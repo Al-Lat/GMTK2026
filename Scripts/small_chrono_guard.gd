@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Mob
 
 @export var patrol_points: Array[Marker2D] = []
 @onready var detection_area: Area2D = $detection_area
@@ -19,6 +19,9 @@ var time = false
 
 var is_allowed_chrono_slash = true
 var range_to_attack = 300
+
+func _init():
+	self.life = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -94,6 +97,13 @@ func summon_chrono_slash():
 		
 		self.cooldown_timer.start()
 		self.anims.visible = true
+
+func take_damage(raw_damage:float)->void:
+	self.anims.play("taking_damage")
+	print("Small CG : taking damage -> before : ",self.life," after : ",(self.life - raw_damage))
+	self.life -= raw_damage
+	if self.life <=0 :
+		self.death()
 
 func death()->void:
 	self.chrono_kamikaze.execute()

@@ -24,6 +24,13 @@ PlayerSingleton="*uid://bpbyhqiujicc6"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+Mobs=""
+destroyable_mobs_projectile=""
+destroyable_player_projectile=""
+player=""
+
 [input]
 
 player_attack_special={

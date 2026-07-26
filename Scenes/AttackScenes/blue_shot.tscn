@@ -253,7 +253,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgns8"]
 size = Vector2(58, 47)
 
-[node name="blue_shot" type="Area2D" unique_id=1465479808]
+[node name="blue_shot" type="Area2D" unique_id=1465479808 groups=["destroyable_player_projectile"]]
 scale = Vector2(0.25, 0.25)
 collision_layer = 0
 collision_mask = 3
@@ -269,3 +269,8 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135571586]
 position = Vector2(6.666666, 0)
 shape = SubResource("RectangleShape2D_lgns8")
+
+[node name="LIFETIME" type="Timer" parent="." unique_id=135106035]
+wait_time = 3.0
+
+[connection signal="timeout" from="LIFETIME" to="." method="impact"]

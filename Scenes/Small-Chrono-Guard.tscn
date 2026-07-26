@@ -169,6 +169,26 @@ region = Rect2(320, 80, 80, 80)
 atlas = ExtResource("2_oglxs")
 region = Rect2(400, 80, 80, 80)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap21b"]
+atlas = ExtResource("2_oglxs")
+region = Rect2(0, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gtf7"]
+atlas = ExtResource("2_oglxs")
+region = Rect2(80, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aox8c"]
+atlas = ExtResource("2_oglxs")
+region = Rect2(160, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhutc"]
+atlas = ExtResource("2_oglxs")
+region = Rect2(240, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fujpr"]
+atlas = ExtResource("2_oglxs")
+region = Rect2(320, 240, 80, 80)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_idooy"]
 animations = [{
 "frames": [{
@@ -308,6 +328,26 @@ animations = [{
 "loop": 1,
 "name": &"running",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap21b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gtf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aox8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhutc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fujpr")
+}],
+"loop": 0,
+"name": &"taking_damage",
+"speed": 4.0
 }]
 
 [sub_resource type="Animation" id="Animation_36i7w"]
@@ -410,7 +450,7 @@ _data = {
 &"RESET": SubResource("Animation_2gtf7")
 }
 
-[node name="Small_Chrono_Guard" type="CharacterBody2D" unique_id=954976129]
+[node name="Small_Chrono_Guard" type="CharacterBody2D" unique_id=954976129 groups=["Mobs"]]
 scale = Vector2(5, 5)
 collision_layer = 2
 collision_mask = 2
@@ -439,7 +479,7 @@ polygon = PackedVector2Array(13.673586, -8.451979, 54.3049, -13.978272, 55.08378
 [node name="AttackAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1444332173]
 libraries/ = SubResource("AnimationLibrary_igqgg")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1233695404]
+[node name="DeathAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1233695404]
 libraries/ = SubResource("AnimationLibrary_aox8c")
 
 [node name="control_timer" type="Timer" parent="." unique_id=1143437035]
