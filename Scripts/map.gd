@@ -11,6 +11,18 @@ extends Node2D
 @onready var b_2_2: CollisionShape2D = $b_2_2
 @onready var b_2_3: CollisionShape2D = $b_2_3
 @onready var level_3: CollisionShape2D = $level3
+@onready var p_1_1:AnimatedSprite2D = $Path/pointille_1_1
+@onready var p_1_2:AnimatedSprite2D = $Path/pointille_1_2
+@onready var p_1_3:AnimatedSprite2D = $Path/pointille_1_3
+@onready var p_2_1:AnimatedSprite2D = $Path/pointille_2_1
+@onready var p_2_2:AnimatedSprite2D = $Path/pointille_2_2
+@onready var p_2_3:AnimatedSprite2D = $Path/pointille_2_3
+@onready var p_3_1:AnimatedSprite2D = $Path/pointille_3_1
+@onready var p_3_2:AnimatedSprite2D = $Path/pointille_3_2
+@onready var p_3_3:AnimatedSprite2D = $Path/pointille_3_3
+@onready var p_4_1:AnimatedSprite2D = $Path/pointille_4_1
+@onready var p_4_2:AnimatedSprite2D = $Path/pointille_4_2
+@onready var p_4_3:AnimatedSprite2D = $Path/pointille_4_3
 
 var map = MapSingleton
 
@@ -167,16 +179,22 @@ func _input(event: InputEvent) -> void:
 func next_level() -> void:
 	if map.to_level_1:
 		level_1.disabled = false
+		pointille()
 	elif map.to_shop_1:
 		b_1_1.disabled = false
 		b_1_2.disabled = false
 		b_1_3.disabled = false 
+		pointille()
 	elif map.to_level2:
 		restriction()
+		pointille()
 	elif map.to_shop_2:
-		restriction()	
+		restriction()
+		pointille()
 	elif map.to_level_3:
+		$Path/boss.text = "boss"
 		level_3.disabled = false
+		pointille()
 		
 func restriction() -> void:
 	if map.side == "top":
@@ -188,3 +206,64 @@ func restriction() -> void:
 	elif map.side == "bot":
 		level_2_3.disabled = false
 		b_2_3.disabled = false	
+
+func pointille():
+	if map.side == "":
+		if not map.to_shop_1:
+			p_1_1.play("disable")
+			p_1_2.play("disable")
+			p_1_3.play("disable")
+		p_2_1.play("disable")
+		p_2_2.play("disable")
+		p_2_3.play("disable")
+		p_3_1.play("disable")
+		p_3_2.play("disable")
+		p_3_3.play("disable")
+		p_4_1.play("disable")
+		p_4_2.play("disable")
+		p_4_3.play("disable")
+	elif map.side == "top":
+		p_1_2.play("disable")
+		p_1_3.play("disable")
+		if not map.to_level2 && not map.to_shop_2 && not map.to_level_3:
+			p_2_1.play("disable")
+		p_2_2.play("disable")
+		p_2_3.play("disable")
+		if not map.to_shop_2 && not map.to_level_3:
+			p_3_1.play("disable")
+		p_3_2.play("disable")
+		p_3_3.play("disable")
+		if not map.to_level_3:
+			p_4_1.play("disable")
+		p_4_2.play("disable")
+		p_4_3.play("disable")
+	elif map.side == "mid":
+		p_1_1.play("disable")
+		p_1_3.play("disable")
+		p_2_1.play("disable")
+		if not map.to_level2 && not map.to_shop_2 && not map.to_level_3:
+			p_2_2.play("disable")
+		p_2_3.play("disable")
+		p_3_1.play("disable")
+		if not map.to_shop_2 && not map.to_level_3:
+			p_3_2.play("disable")
+		p_3_3.play("disable")
+		p_4_1.play("disable")
+		if not map.to_level_3:
+			p_4_2.play("disable")
+		p_4_3.play("disable")
+	elif map.side == "bot":
+		p_1_1.play("disable")
+		p_1_2.play("disable")
+		p_2_1.play("disable")
+		p_2_2.play("disable")
+		if not map.to_level2 && not map.to_shop_2 && not map.to_level_3:
+			p_2_3.play("disable")
+		p_3_1.play("disable")
+		p_3_2.play("disable")
+		if not map.to_shop_2 && not map.to_level_3:
+			p_3_3.play("disable")
+		p_4_1.play("disable")
+		p_4_2.play("disable")
+		if not map.to_level_3:
+			p_4_3.play("disable")

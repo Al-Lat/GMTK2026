@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://brta6w1enoexe" path="res://Graphics/Backgrounds/boss-room/tank-2.png" id="11_7xsg5"]
 [ext_resource type="Texture2D" uid="uid://o0f05rxxdwl4" path="res://Graphics/Backgrounds/boss-room/tank-1.png" id="12_71iom"]
 [ext_resource type="PackedScene" uid="uid://bb7ofskejl61d" path="res://Scenes/boss.tscn" id="14_17imm"]
+[ext_resource type="PackedScene" uid="uid://cp1y2sbwwn1v7" path="res://Scenes/hud.tscn" id="15_cjk0w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xsg5"]
 texture = ExtResource("5_yu7p8")
@@ -1675,3 +1676,5 @@ position = Vector2(-1535, -3)
 
 [node name="start" type="Marker2D" parent="." unique_id=1250340688]
 position = Vector2(-3776, -73)
+
+[node name="HUD" parent="." unique_id=311553630 instance=ExtResource("15_cjk0w")]
