@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 
 var lifeIsLife = LifeIsLife
 var speedrun = Speedrun
@@ -11,10 +11,10 @@ func _ready() -> void:
 	$speed_ressources.text = str(speedrun.we_are_speed)
 	$strength_ressources.text = str(killThemAll.force_pure)
 	$attack_speed_ressources.text = str(killThemFast.force_rapide)
-	lifeIsLife.hud = self
-	speedrun.hud = self
-	killThemAll.hud = self
-	killThemFast.hud = self
+	lifeIsLife.shop_hud = self
+	speedrun.shop_hud = self
+	killThemAll.shop_hud = self
+	killThemFast.shop_hud = self
 
 
 func update_time() -> void:
@@ -28,11 +28,3 @@ func update_strength() -> void:
 
 func update_attack_speed() -> void:
 	$attack_speed_ressources.text = str(killThemFast.force_rapide)
-
-
-func _on_bus_shop_dedans() -> void:
-	self.visible = false
-
-
-func _on_bus_shop_dehors() -> void:
-	self.visible = true

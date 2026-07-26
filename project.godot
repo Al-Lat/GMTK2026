@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Nouveau projet de jeu"
-run/main_scene="uid://bw3pxfcyk4fpc"
+run/main_scene="uid://cs3uff3qyxw5b"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://Graphics/icon.svg"
 
@@ -22,6 +22,7 @@ LifeIsLife="*uid://d3ixtrk5c0flv"
 Speedrun="*uid://doyjb2cm5siyk"
 KillThemAll="*uid://dvxnrv4i3jbgj"
 KillThemFast="*uid://dicr8vhni6wnn"
+MapSingleton="*uid://koawf2nogukn"
 
 [display]
 

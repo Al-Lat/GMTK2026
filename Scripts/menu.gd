@@ -7,6 +7,8 @@ extends Node2D
 func _ready() -> void:
 	animated_play.play("default")
 	animated_quit.play("default")
+	MapSingleton.reset()
+	LifeIsLife.reset()
 
 func _process(delta: float) -> void:
 	pass

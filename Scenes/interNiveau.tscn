@@ -1646,3 +1646,8 @@ position = Vector2(2492.0005, 28)
 position = Vector2(1876, 33)
 
 [node name="HUD" parent="." unique_id=311553630 instance=ExtResource("10_i6wvx")]
+
+[connection signal="dedans" from="Bus_Shop" to="Player" method="_on_bus_shop_dedans"]
+[connection signal="dedans" from="Bus_Shop" to="HUD" method="_on_bus_shop_dedans"]
+[connection signal="dehors" from="Bus_Shop" to="Player" method="_on_bus_shop_dehors"]
+[connection signal="dehors" from="Bus_Shop" to="HUD" method="_on_bus_shop_dehors"]

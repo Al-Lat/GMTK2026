@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bc04xyrs2xxch"]
+
+[ext_resource type="Script" uid="uid://ioa338mv6sru" path="res://Scripts/small_recap.gd" id="1_2ifda"]
+[ext_resource type="Texture2D" uid="uid://ccgccwf40v2s5" path="res://Graphics/ressources/Skillicon8_05.png" id="1_5p2qm"]
+[ext_resource type="Texture2D" uid="uid://cs4hyxiq1ilb4" path="res://Graphics/ressources/Skillicon8_29-export.png" id="2_2ifda"]
+[ext_resource type="Texture2D" uid="uid://bk4g5n2rfuwla" path="res://Graphics/ressources/Skillicon8_13.png" id="3_vooo2"]
+[ext_resource type="Texture2D" uid="uid://dl6vv67ey10rx" path="res://Graphics/ressources/Skillicon8_32.png" id="4_qhwqf"]
+
+[node name="small_recap" type="Node2D" unique_id=734409016]
+script = ExtResource("1_2ifda")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2057135509]
+position = Vector2(0, 3)
+color = Color(0, 0, 0.13333334, 1)
+polygon = PackedVector2Array(-46, -58, 84, -58, 84, 24, -46, 24)
+
+[node name="the_world" type="Label" parent="." unique_id=1131002068]
+offset_left = -39.0
+offset_top = -50.0
+offset_right = 13.0
+offset_bottom = -25.0
+text = "0"
+
+[node name="speed_ressources" type="Label" parent="." unique_id=1565563815]
+offset_left = -40.0
+offset_top = -7.0
+offset_right = 15.0
+offset_bottom = 20.0
+text = "0"
+
+[node name="strength_ressources" type="Label" parent="." unique_id=1969449367]
+offset_left = 22.0
+offset_top = -51.0
+offset_right = 105.0
+offset_bottom = -25.0
+text = "0"
+
+[node name="attack_speed_ressources" type="Label" parent="." unique_id=900460138]
+offset_left = 23.0
+offset_top = -6.0
+offset_right = 96.0
+offset_bottom = 26.0
+text = "0"
+
+[node name="sprite_the_world" type="Sprite2D" parent="." unique_id=97139821]
+position = Vector2(-8, -40)
+texture = ExtResource("1_5p2qm")
+
+[node name="sprite_speed_ressources" type="Sprite2D" parent="." unique_id=861717943]
+position = Vector2(-9, 7)
+texture = ExtResource("2_2ifda")
+
+[node name="sprite_strength_ressources" type="Sprite2D" parent="." unique_id=423132828]
+position = Vector2(58, -38)
+texture = ExtResource("3_vooo2")
+
+[node name="sprite_attack_speed_ressources" type="Sprite2D" parent="." unique_id=2132648838]
+position = Vector2(57, 4)
+texture = ExtResource("4_qhwqf")
