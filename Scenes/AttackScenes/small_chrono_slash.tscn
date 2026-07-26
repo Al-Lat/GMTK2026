@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dtx3awbmy2i20"]
+
+[ext_resource type="Script" uid="uid://dd6g3ebkbpk4q" path="res://Scripts/AttackScripts/chrono_slash.gd" id="1_1ww4k"]
+
+[node name="chrono_slash" type="Area2D" unique_id=1366001344]
+script = ExtResource("1_1ww4k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=762666898]
+disabled = true

@@ -1,16 +1,27 @@
-extends CharacterBody2D
+extends Mob
 
 @export var patrol_points: Array[Marker2D] = []
 @onready var detection_area: Area2D = $detection_area
+@onready var control_timer = $control_timer
+@onready var cooldown_timer = $chrono_slash_cooldown
+@onready var anims = $Anims
+@onready var chrono_slash = $chrono_slash
+@onready var chrono_kamikaze = $chrono_kamikaze
 
 var current_point_index = 0
 var player : Node2D = null
-var speed = 150.0
+var speed = 250.0
 var orientation = 1
 var tourner_gauche = false
 var tourner_droit = true
 var ancienne_pos_x = 0
 var time = false
+
+var is_allowed_chrono_slash = true
+var range_to_attack = 300
+
+func _init():
+	self.life = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,6 +34,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+
+	if player != null && player.global_position.distance_to(self.global_position) < range_to_attack:
+		self.summon_chrono_slash()
+
 	if player:
 		speed = 350
 		chase()
@@ -37,6 +52,7 @@ func _process(delta: float) -> void:
 		orientation *= -1
 
 func roaming() -> void:
+	
 	if patrol_points.size() > 0 :
 		var target = patrol_points[current_point_index].position
 		velocity = (target - position).normalized() * speed
@@ -46,7 +62,7 @@ func roaming() -> void:
 			velocity.y = 0
 		if position.distance_to(target) < 30:
 			if time :
-				$Timer.stop()
+				self.control_timer.stop()
 				time = false
 			current_point_index += 1
 			#scale.x *=-1
@@ -65,14 +81,40 @@ func on_player_detected(body: Node2D) -> void:
 		player = body
 		if time :
 			time = false
-			$Timer.stop()
+			self.control_timer.stop()
 
 func on_player_lost(body: Node2D) -> void:
 	if body.name == "Player":
 		player = null
-		$Timer.start()
+		self.control_timer.start()
 		time = true
+
+func summon_chrono_slash():
+	if is_allowed_chrono_slash:
+		is_allowed_chrono_slash = false
+		self.anims.visible = false
+		self.chrono_slash.execute()
+		
+		self.cooldown_timer.start()
+		self.anims.visible = true
+
+func take_damage(raw_damage:float)->void:
+	self.anims.play("taking_damage")
+	print("Small CG : taking damage -> before : ",self.life," after : ",(self.life - raw_damage))
+	self.life -= raw_damage
+	if self.life <=0 :
+		self.death()
+
+func death()->void:
+	self.chrono_kamikaze.execute()
+	queue_free()
+
 
 func _on_timer_timeout() -> void:
 	self.global_position = patrol_points[current_point_index].global_position
 	time = false
+	
+
+
+func _on_chrono_slash_cooldown_timeout() -> void:
+	self.is_allowed_chrono_slash = true

@@ -99,7 +99,13 @@ func _on_death_zone_body_entered(body: Node2D) -> void:
 	if (body == self):
 		self.global_position = start_point.global_position
 
-func mort():
+
+
+func take_damage(raw_damage)->void:
+	print("player : take_damage passed")
+	pass
+
+func death():
 	animation_waiting_ended = false
 	is_dead = true
 	animated_sprite.play("dead")
