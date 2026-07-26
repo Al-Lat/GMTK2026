@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rdds0nmx6uiw"
-path="res://.godot/imported/Idle.png-3ae1682eaaebb1620dcefe2a75081966.ctex"
+uid="uid://bqpoeol6mg3mx"
+path="res://.godot/imported/test2test.png-b779a015beb7fe6da1b0ba73b515953d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Characters/Drone/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-3ae1682eaaebb1620dcefe2a75081966.ctex"]
+source_file="res://Graphics/Characters/boss/test2test.png"
+dest_files=["res://.godot/imported/test2test.png-b779a015beb7fe6da1b0ba73b515953d.ctex"]
 
 [params]
 
