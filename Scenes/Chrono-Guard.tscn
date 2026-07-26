@@ -361,38 +361,26 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("chrono_slash/CollisionPolygon2D:polygon")
+tracks/0/path = NodePath("chrono_slash/CollisionShape2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812)]
+"values": [Vector2(7.200001, 13.099999)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("chrono_slash/CollisionPolygon2D:scale")
+tracks/1/path = NodePath("chrono_slash/CollisionShape2D:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(16.538889, 16.132391)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("chrono_slash/CollisionPolygon2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.8, 1.8000001)]
+"values": [Vector2(0.6, 0.6)]
 }
 
 [sub_resource type="Animation" id="Animation_7i8ua"]
@@ -426,38 +414,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("chrono_slash/CollisionPolygon2D:polygon")
+tracks/2/path = NodePath("chrono_slash/CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.847344, 0.8527375, 0.9492977, 0.95255256, 1.0469431, 1.0512829, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.85056067, 0.9591744),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [PackedVector2Array(), PackedVector2Array(), PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812), PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812), PackedVector2Array(-0.5381257, 0.5950761, 0.13906619, 0.98559475, 1.0641586, 0.9360051, 1.6687942, 0.6880567, 1.3483373, 1.214947, 0.41115218, 1.5248824, -0.18743703, 1.5062864, -0.9674169, 0.95460117), PackedVector2Array(-0.5381257, 0.5950761, 0.13906622, 0.98559475, 1.0641586, 0.9360051, 1.6687942, 0.6880567, 1.3483373, 1.2149469, 0.41115218, 1.5248824, -0.18743706, 1.5062865, -0.9674169, 0.95460117), PackedVector2Array(), PackedVector2Array()]
+"values": [Vector2(12.000002, -1.5000002), Vector2(7.200001, 13.099999)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("chrono_slash/CollisionPolygon2D:scale")
+tracks/3/path = NodePath("chrono_slash/CollisionShape2D:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.847344, 0.8527375, 0.9492977, 0.95255256, 1.0469431, 1.0512829),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.8374276, 0.85056067, 0.9591744, 1.0536212, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391), Vector2(16.538889, 16.132391)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("chrono_slash/CollisionPolygon2D:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.847344, 0.85382235, 0.9492977, 0.95255256, 1.0469431, 1.0512829),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001), Vector2(0.8, 1.8000001)]
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(0.6, 0.6), Vector2(1e-05, 1e-05), Vector2(1.001358e-05, 1.001358e-05)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igqgg"]
@@ -528,6 +504,10 @@ _data = {
 &"RESET": SubResource("Animation_2gtf7")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_idooy"]
+radius = 28.199997
+height = 66.2
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ggmpm"]
 radius = 17.85497
 
@@ -569,11 +549,10 @@ wait_time = 2.5
 [node name="chrono_slash" type="Area2D" parent="." unique_id=538108591]
 script = ExtResource("4_igqgg")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chrono_slash" unique_id=1256296431]
-position = Vector2(0.8, 1.8000001)
-scale = Vector2(16.538889, 16.132391)
-polygon = PackedVector2Array(-0.13301983, 0.80583227, 1.2213639, 0.8306271, 1.6748406, 0.4401084, 1.7473968, -0.7004541, 1.088344, -1.450498, -0.8888143, -1.9030038, 0.33254957, -1.9897858, 1.7050723, -1.3575174, 2.3157542, -0.23555095, 2.261337, 0.6880567, 1.6446087, 1.3265238, 0.68928456, 1.7108438, -0.13301983, 1.5310812)
-disabled = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chrono_slash" unique_id=275015415]
+position = Vector2(7.200001, 13.099999)
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CapsuleShape2D_idooy")
 
 [node name="chrono_kamikaze" type="Area2D" parent="." unique_id=224847202]
 script = ExtResource("4_4cva1")

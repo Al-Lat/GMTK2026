@@ -37,10 +37,10 @@ func _process(delta: float) -> void:
 	if player != null && player.global_position.distance_to(self.global_position) < range_to_attack:
 		self.summon_chrono_slash()
 	elif player:
-		speed = 550
+		speed = 250
 		chase()
 	else:
-		speed = 250
+		speed = 150
 		roaming()
 	move_and_slide()
 	if velocity.x * facing_direction > 0:

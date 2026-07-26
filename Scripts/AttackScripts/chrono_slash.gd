@@ -7,6 +7,7 @@ var main_animation_player:AnimationPlayer
 var facing_direction:int = 1  # 1 = droite, -1 = gauche
 var damage = 5
 @onready var caster = $".."
+@onready var chrono_slash: chrono_slash = $"."
 
 
 func _ready() -> void:
@@ -22,7 +23,6 @@ func _ready() -> void:
 	#animation.scale = main_animation.scale
 
 	#connecter le signal pour agir en cas de collision
-	body_entered.connect(_on_body_entered)
 
 func execute():
 	main_animation_player.animation_finished.connect(_on_attack_animation_player_animation_finished)
